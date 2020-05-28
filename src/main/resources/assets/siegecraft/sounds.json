@@ -1,0 +1,23 @@
+{
+  "breachCharge": {
+    "category": "players",
+    "sounds": [
+      "siegecraft:breach_charge"
+    ],
+    "subtitle": "subtitle.siegecraft.breach_charge"
+  },
+  "thermite": {
+    "category": "players",
+    "sounds": [
+      "siegecraft:thermite"
+    ],
+    "subtitle": "subtitle.siegecraft.thermite"
+  },
+  "menu_music": {
+    "category": "music",
+    "sounds": [
+      "siegecraft:menu_music"
+    ],
+    "subtitle": "subtitle.siegecraft.menu_music"
+  }
+}
