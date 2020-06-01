@@ -1,7 +1,7 @@
 package com.alexjw.siegecraft.client.renderer.entity.operators;
 
 import com.alexjw.siegecraft.client.renderer.entity.SiegeRendererManager;
-import com.alexjw.siegecraft.common.entity.operator.EntityJackal;
+import com.alexjw.siegecraft.server.entity.operator.EntityJackal;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.client.renderer.entity.RenderManager;

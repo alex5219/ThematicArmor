@@ -2,13 +2,10 @@ package com.alexjw.siegecraft.client.event;
 
 import com.alexjw.siegecraft.Siege;
 import com.alexjw.siegecraft.client.gui.GuiCustomMenu;
-import com.alexjw.siegecraft.client.settings.SiegeKeys;
-import com.alexjw.siegecraft.common.data.SiegeData;
-import com.alexjw.siegecraft.common.data.SiegePlayer;
-import com.alexjw.siegecraft.common.entity.EntityRope;
-import com.alexjw.siegecraft.common.helper.GameHelper;
-import com.alexjw.siegecraft.common.helper.SiegeHelper;
-import javafx.scene.transform.Scale;
+import com.alexjw.siegecraft.server.data.SiegeData;
+import com.alexjw.siegecraft.server.data.SiegePlayer;
+import com.alexjw.siegecraft.server.helper.GameHelper;
+import com.alexjw.siegecraft.server.helper.SiegeHelper;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
@@ -23,7 +20,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.client.event.*;
-import net.minecraftforge.client.settings.KeyBindingMap;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -105,7 +101,7 @@ public class ClientEventHandler {
                         ScaledResolution scaledResolution = new ScaledResolution(Minecraft.getMinecraft());
                         int xPos = scaledResolution.getScaledWidth();
                         int yPos = scaledResolution.getScaledHeight();
-                        Minecraft.getMinecraft().ingameGUI.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "Press 'F' to rappel.", xPos / 2, (yPos / 2) + 90, -1);
+                        Minecraft.getMinecraft().ingameGUI.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "Press 'F' to begin rappelling.", xPos / 2, (yPos / 2) + 90, -1);
                     }
                 }
             }

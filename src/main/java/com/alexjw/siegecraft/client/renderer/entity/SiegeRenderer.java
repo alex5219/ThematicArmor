@@ -1,7 +1,7 @@
 package com.alexjw.siegecraft.client.renderer.entity;
 
 import com.alexjw.siegecraft.Siege;
-import com.alexjw.siegecraft.common.operators.Operator;
+import com.alexjw.siegecraft.server.operators.Operator;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.util.ResourceLocation;
 

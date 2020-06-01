@@ -1,7 +1,7 @@
 package com.alexjw.siegecraft.client.renderer.entity;
 
 import com.alexjw.siegecraft.client.model.operators.*;
-import com.alexjw.siegecraft.common.operators.OperatorManager;
+import com.alexjw.siegecraft.server.operators.OperatorManager;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

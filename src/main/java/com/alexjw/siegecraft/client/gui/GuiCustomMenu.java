@@ -42,9 +42,8 @@ public class GuiCustomMenu extends GuiScreen {
 
     protected void actionPerformed(GuiButton button) throws IOException {
         if (button.id == 0) {
-            ServerData serverData = new ServerData("Official", "144.012.12.24:25565", false);
+            ServerData serverData = new ServerData("Official", "207.244.243.195:25565", false);
             this.mc.displayGuiScreen(new GuiConnecting(this, this.mc, serverData));
-            this.mc.displayGuiScreen(this);
         } else if (button.id == 1) {
             this.mc.displayGuiScreen(new GuiWorldSelection(this));
         } else if (button.id == 6) {

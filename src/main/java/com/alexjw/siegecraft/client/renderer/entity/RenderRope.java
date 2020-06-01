@@ -2,7 +2,7 @@ package com.alexjw.siegecraft.client.renderer.entity;
 
 import com.alexjw.siegecraft.Siege;
 import com.alexjw.siegecraft.client.model.ModelRope;
-import com.alexjw.siegecraft.common.entity.EntityRope;
+import com.alexjw.siegecraft.server.entity.EntityRope;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

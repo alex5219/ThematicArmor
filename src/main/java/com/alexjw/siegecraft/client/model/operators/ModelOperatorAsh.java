@@ -9,12 +9,12 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class ModelOperatorAsh extends ModelBiped {
-    private final ModelRenderer bipedHeadHat;
-    private final ModelRenderer bipedBodyVest;
-    private final ModelRenderer bipedRightArmShoulder;
-    private final ModelRenderer bipedLeftArmShoulder;
-    private final ModelRenderer bipedRightLegHolster;
-    private final ModelRenderer bipedLeftLegStrap;
+    public final ModelRenderer bipedHeadHat;
+    public final ModelRenderer bipedBodyVest;
+    public final ModelRenderer bipedRightArmShoulder;
+    public final ModelRenderer bipedLeftArmShoulder;
+    public final ModelRenderer bipedRightLegHolster;
+    public final ModelRenderer bipedLeftLegStrap;
 
     public ModelOperatorAsh() {
         super(0.1f, 0.0f, 128, 128);
@@ -125,6 +125,28 @@ public class ModelOperatorAsh extends ModelBiped {
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         super.render(entity, f, f1, f2, f3, f4, f5);
         this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    }
+
+    public static void sync(ModelRenderer parent, ModelRenderer... children) {
+        ModelRenderer[] var2 = children;
+        int var3 = children.length;
+
+        for (int var4 = 0; var4 < var3; ++var4) {
+            ModelRenderer child = var2[var4];
+            child.rotateAngleX = parent.rotateAngleX;
+            child.rotateAngleY = parent.rotateAngleY;
+            child.rotateAngleZ = parent.rotateAngleZ;
+            child.rotationPointX = parent.rotationPointX;
+            child.rotationPointY = parent.rotationPointY;
+            child.rotationPointZ = parent.rotationPointZ;
+            child.showModel = parent.showModel;
+            child.isHidden = parent.isHidden;
+            child.mirror = parent.mirror;
+            child.offsetX = parent.offsetX;
+            child.offsetY = parent.offsetY;
+            child.offsetZ = parent.offsetZ;
+        }
+
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

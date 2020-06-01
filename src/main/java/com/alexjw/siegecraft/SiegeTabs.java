@@ -1,7 +1,7 @@
 package com.alexjw.siegecraft;
 
-import com.alexjw.siegecraft.common.items.ModItems;
-import com.alexjw.siegecraft.common.operators.OperatorManager;
+import com.alexjw.siegecraft.server.items.ModItems;
+import com.alexjw.siegecraft.server.operators.OperatorManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 

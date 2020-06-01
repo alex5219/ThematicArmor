@@ -2,7 +2,6 @@ package com.alexjw.siegecraft.client.model;// Made with Blockbench 3.5.2
 // Exported for Minecraft version 1.12
 // Paste this class into your mod and generate all required imports
 
-
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;

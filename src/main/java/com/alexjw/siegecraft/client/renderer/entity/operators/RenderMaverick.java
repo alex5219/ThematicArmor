@@ -1,7 +1,7 @@
 package com.alexjw.siegecraft.client.renderer.entity.operators;
 
 import com.alexjw.siegecraft.client.renderer.entity.SiegeRendererManager;
-import com.alexjw.siegecraft.common.entity.operator.EntityMaverick;
+import com.alexjw.siegecraft.server.entity.operator.EntityMaverick;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

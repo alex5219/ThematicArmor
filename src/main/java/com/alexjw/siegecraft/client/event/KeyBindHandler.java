@@ -2,9 +2,9 @@ package com.alexjw.siegecraft.client.event;
 
 import com.alexjw.siegecraft.Siege;
 import com.alexjw.siegecraft.client.settings.SiegeKeys;
-import com.alexjw.siegecraft.common.network.MessageAttemptRappel;
-import com.alexjw.siegecraft.common.network.MessageSwitchCamera;
-import com.alexjw.siegecraft.common.network.SiegeNetworkHandler;
+import com.alexjw.siegecraft.network.MessageAttemptRappel;
+import com.alexjw.siegecraft.network.MessageSwitchCamera;
+import com.alexjw.siegecraft.network.SiegeNetworkHandler;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
