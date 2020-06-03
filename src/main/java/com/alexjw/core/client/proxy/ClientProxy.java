@@ -44,7 +44,6 @@ public class ClientProxy extends ServerProxy {
     }
 
     @Override
-    @SuppressWarnings({"ConstantConditions"})
     public void init() {
         super.init();
     }

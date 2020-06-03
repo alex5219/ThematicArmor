@@ -3,32 +3,25 @@ package com.alexjw.core.server.guns;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public abstract class Gun {
+public class Gun {
     private float reloadTime = 0.0f;
-    private float shootCooldown = 0.0f;
+    private int shootCooldown = 0;
     private float gunDamage = 0.0f;
     private float gunRecoil = 0.0f;
     private String modID = "";
     private String gunName = "";
-    private ArrayList<Bullet> bullets = new ArrayList<>();
+    private ArrayList<Bullet> gunBullets = new ArrayList<>();
+    private ArrayList<FireMode> gunFireMode = new ArrayList<>();
     //TODO: add the attachments
 
-    public Gun() {
-    }
-
-    public Gun(String name) {
-        this.modID = "thematic";
-        this.gunName = name;
-    }
-
-    public Gun(String modID, String gunName, float shootCooldown, float reloadTime, float gunDamage, float gunRecoil, Bullet... bullets) {
+    public Gun(String modID, String gunName, int shootCooldown, float reloadTime, float gunDamage, float gunRecoil) {
         this.modID = modID;
         this.gunName = gunName;
         this.shootCooldown = shootCooldown;
         this.reloadTime = reloadTime;
         this.gunDamage = gunDamage;
         this.gunRecoil = gunRecoil;
-        this.bullets.addAll(Arrays.asList(bullets));
+        Guns.guns.add(this);
     }
 
     public float getGunDamage() {
@@ -55,11 +48,11 @@ public abstract class Gun {
         this.reloadTime = reloadTime;
     }
 
-    public float getShootCooldown() {
+    public int getShootCooldown() {
         return shootCooldown;
     }
 
-    public void setShootCooldown(float shootCooldown) {
+    public void setShootCooldown(int shootCooldown) {
         this.shootCooldown = shootCooldown;
     }
 
@@ -71,19 +64,35 @@ public abstract class Gun {
         return gunName;
     }
 
+    public ArrayList<FireMode> getGunFireMode() {
+        return gunFireMode;
+    }
+
+    public void setGunFireMode(ArrayList<FireMode> gunFireMode) {
+        this.gunFireMode = gunFireMode;
+    }
+
     public void setGunName(String gunName) {
         this.gunName = gunName;
     }
 
-    public ArrayList<Bullet> getBullets() {
-        return this.bullets;
+    public ArrayList<Bullet> getGunBullets() {
+        return this.gunBullets;
     }
 
-    private void setBullets(ArrayList<Bullet> bullets) {
-        this.bullets.addAll(bullets);
+    public void setGunBullets(ArrayList<Bullet> gunBullets) {
+        this.gunBullets.addAll(gunBullets);
     }
 
-    private void addBullet(Bullet bullet) {
-        this.bullets.add(bullet);
+    public void addFireMode(FireMode fireMode) {
+        this.gunFireMode.add(fireMode);
+    }
+
+    public void addBullet(Bullet bullet) {
+        this.gunBullets.add(bullet);
+    }
+
+    public enum FireMode {
+        SEMI, AUTO, BURST, SPECIAL
     }
 }

@@ -25,7 +25,7 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12.2-14.23.5.2838"
+    version = "1.12.2-14.23.5.2772"
     runDir = "run"
     mappings = "snapshot_20171003"
     buildDir = "C:/Users/Alex/AppData/Roaming/.technic/modpacks/modernwarfaredrugs/mods"

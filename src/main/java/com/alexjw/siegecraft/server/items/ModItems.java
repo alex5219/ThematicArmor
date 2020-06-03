@@ -1,6 +1,11 @@
 package com.alexjw.siegecraft.server.items;
 
+import com.alexjw.core.server.items.ItemBullet;
+import com.alexjw.core.server.items.ItemGun;
+import com.alexjw.siegecraft.server.bullets.SiegeBullets;
+import com.alexjw.siegecraft.server.guns.SiegeGuns;
 import com.alexjw.siegecraft.server.items.armor.ItemDroneArmor;
+import com.alexjw.siegecraft.server.items.guns.ItemStimPistol;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 
@@ -21,5 +26,5 @@ public class ModItems {
     public static ItemSwapDevice itemSwapDevice = new ItemSwapDevice();
     public static ItemCameraMonitor itemCameraMonitor = new ItemCameraMonitor();
     public static ItemCamera itemCamera = new ItemCamera();
-
+    public static ItemGun itemStimPistol = new ItemStimPistol(SiegeGuns.stimPistol);
 }

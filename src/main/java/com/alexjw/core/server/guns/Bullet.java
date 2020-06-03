@@ -1,28 +1,26 @@
 package com.alexjw.core.server.guns;
 
-public abstract class Bullet {
+import com.alexjw.core.server.items.ItemBullet;
+
+public class Bullet {
     private String bulletName = "";
     private int bulletMag = 0;
     private float bulletSpeed = 0.0f;
     private String modID = "";
+    protected ItemBullet itemBullet;
     //TODO: add the attachments
 
-    public Bullet() {
-        Bullets.bullets.add(this);
-    }
-
-    public Bullet(String bulletName) {
-        Bullets.bullets.add(this);
-        this.modID = "thematic";
-        this.bulletName = bulletName;
-    }
-
     public Bullet(String modID, String bulletName, int bulletMag, float bulletSpeed) {
-        Bullets.bullets.add(this);
+        this.itemBullet = new ItemBullet(this);
         this.modID = modID;
         this.bulletName = bulletName;
         this.bulletMag = bulletMag;
         this.bulletSpeed = bulletSpeed;
+        Bullets.bullets.add(this);
+    }
+
+    public ItemBullet getItemBullet() {
+        return itemBullet;
     }
 
     public String getBulletName() {
