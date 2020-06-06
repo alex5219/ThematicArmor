@@ -7,6 +7,6 @@ public class OperatorVigilInvis extends Operator {
 
     @Override
     public boolean isHidden() {
-        return false;
+        return true;
     }
 }
