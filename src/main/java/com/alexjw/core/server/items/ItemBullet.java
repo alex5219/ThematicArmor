@@ -10,12 +10,13 @@ public class ItemBullet extends Item {
     private Bullet bullet;
 
     public ItemBullet(Bullet bullet) {
+        super();
+        this.bullet = bullet;
         ThematicItems.ITEMS.add(this);
         this.setUnlocalizedName(bullet.getBulletName());
         this.setRegistryName(bullet.getModID(), bullet.getBulletName());
         this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTabs.COMBAT);
-        this.bullet = bullet;
     }
 
     /**

@@ -18,6 +18,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer sledge = new SiegeRenderer(OperatorManager.operatorSledge, new ModelOperatorSledge());
     public static SiegeRenderer smoke = new SiegeRenderer(OperatorManager.operatorSmoke, new ModelOperatorSmoke());
     public static SiegeRenderer vigil = new SiegeRenderer(OperatorManager.operatorVigil, new ModelOperatorVigil());
+    public static SiegeRenderer vigilinvis = new SiegeRenderer(OperatorManager.operatorVigilInvis, new ModelOperatorVigil());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();

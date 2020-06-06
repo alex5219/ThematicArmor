@@ -81,7 +81,7 @@ public class CommonEventHandler {
         if (SiegeHelper.isDroning(event.player)) {
             event.player.noClip = true;
             if (event.side.isServer()) {
-                SiegeNetworkHandler.wrapper.sendTo(new MessagePlayerUpdate(0.25f), (EntityPlayerMP) event.player);
+                SiegeNetworkHandler.wrapper.sendToServer(new MessagePlayerUpdate(0.25f));
             } else if (event.side.isClient()) {
                 event.player.eyeHeight = 0.35f;
                 double d0 = (double) event.player.width / 2.0D;

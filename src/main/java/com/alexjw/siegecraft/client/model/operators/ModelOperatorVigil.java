@@ -6,6 +6,7 @@ package com.alexjw.siegecraft.client.model.operators;// Made with Blockbench 3.5
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 
 public class ModelOperatorVigil extends ModelBiped {

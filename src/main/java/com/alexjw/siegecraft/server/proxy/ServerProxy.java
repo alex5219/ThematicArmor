@@ -1,6 +1,8 @@
 package com.alexjw.siegecraft.server.proxy;
 
+import com.alexjw.siegecraft.server.bullets.SiegeBullets;
 import com.alexjw.siegecraft.server.event.CommonEventHandler;
+import com.alexjw.siegecraft.server.guns.SiegeGuns;
 import com.alexjw.siegecraft.server.operators.OperatorManager;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +15,8 @@ public class ServerProxy {
 
     public void preInit() {
         OperatorManager.init();
+        SiegeBullets.init();
+        SiegeGuns.init();
         this.registerEventHandler(new CommonEventHandler());
     }
 

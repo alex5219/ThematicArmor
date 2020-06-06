@@ -14,6 +14,7 @@ public class OperatorManager {
     public static OperatorSledge operatorSledge = new OperatorSledge();
     public static OperatorSmoke operatorSmoke = new OperatorSmoke();
     public static OperatorVigil operatorVigil = new OperatorVigil();
+    public static OperatorVigilInvis operatorVigilInvis = new OperatorVigilInvis();
 
     public static void init() {
         for (Operator operator : operatorArrayList) operator.init();

@@ -1,4 +1,4 @@
-package com.alexjw.siegecraft.network;
+package com.alexjw.core.network;
 
 import com.alexjw.siegecraft.Siege;
 import com.google.common.collect.Maps;
@@ -9,11 +9,11 @@ import net.minecraftforge.fml.relauncher.Side;
 
 import java.util.Map;
 
-public class SiegeNetworkHelper {
+public class ThematicNetworkHelper {
     private static Map<String, SimpleNetworkWrapper> wrappers = Maps.newHashMap();
     private static Map<String, Integer> ids = Maps.newHashMap();
 
-    public SiegeNetworkHelper() {
+    public ThematicNetworkHelper() {
     }
 
     public static <REQ extends IMessage & IMessageHandler<REQ, IMessage>> void registerMessage(Class<REQ> msg) {

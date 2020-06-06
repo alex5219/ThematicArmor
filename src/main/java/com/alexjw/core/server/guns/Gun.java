@@ -1,9 +1,13 @@
 package com.alexjw.core.server.guns;
 
+import com.alexjw.core.server.items.ItemGun;
+import net.minecraft.item.Item;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Gun {
+    protected Item itemGun;
     private float reloadTime = 0.0f;
     private int shootCooldown = 0;
     private float gunDamage = 0.0f;
@@ -22,7 +26,10 @@ public class Gun {
         this.gunDamage = gunDamage;
         this.gunRecoil = gunRecoil;
         Guns.guns.add(this);
+        this.itemGun = new ItemGun(this);
     }
+
+    public void init(){}
 
     public float getGunDamage() {
         return gunDamage;
@@ -46,6 +53,10 @@ public class Gun {
 
     public void setReloadTime(float reloadTime) {
         this.reloadTime = reloadTime;
+    }
+
+    public Item getItemGun() {
+        return itemGun;
     }
 
     public int getShootCooldown() {

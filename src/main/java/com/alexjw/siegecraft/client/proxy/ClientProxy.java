@@ -2,6 +2,7 @@ package com.alexjw.siegecraft.client.proxy;
 
 import com.alexjw.siegecraft.client.event.ClientEventHandler;
 import com.alexjw.siegecraft.client.event.KeyBindHandler;
+import com.alexjw.siegecraft.client.event.RenderHandler;
 import com.alexjw.siegecraft.client.renderer.entity.RenderCamera;
 import com.alexjw.siegecraft.client.renderer.entity.RenderDrone;
 import com.alexjw.siegecraft.client.renderer.entity.RenderRope;
@@ -46,6 +47,7 @@ public class ClientProxy extends ServerProxy {
 
         this.registerEventHandler(new ClientEventHandler());
         this.registerEventHandler(new KeyBindHandler());
+        this.registerEventHandler(new RenderHandler());
     }
 
     public void init() {

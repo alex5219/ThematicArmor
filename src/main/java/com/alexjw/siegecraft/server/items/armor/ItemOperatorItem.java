@@ -28,7 +28,9 @@ public class ItemOperatorItem extends Item {
         super();
         this.setUnlocalizedName(operator.getUnlocalizedName());
         this.setRegistryName(Siege.MODID, operator.getUnlocalizedName());
-        this.setCreativeTab(SiegeTabs.tabOperators);
+        if(!operator.isHidden()) {
+            this.setCreativeTab(SiegeTabs.tabOperators);
+        }
         this.operator = operator;
         this.setMaxDamage(1);
         ModItems.ITEMS.add(this);

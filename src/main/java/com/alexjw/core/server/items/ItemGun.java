@@ -1,12 +1,17 @@
 package com.alexjw.core.server.items;
 
+import com.alexjw.core.network.MessageReload;
+import com.alexjw.core.network.MessageShoot;
+import com.alexjw.core.network.ThematicNetworkHandler;
 import com.alexjw.core.server.guns.Bullet;
 import com.alexjw.core.server.guns.Bullets;
 import com.alexjw.core.server.guns.Gun;
+import com.alexjw.core.server.guns.Guns;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -22,15 +27,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.List;
 
 public class ItemGun extends Item {
-    private Gun gun;
+    private static Gun gun;
 
     public ItemGun(Gun gun) {
-        ThematicItems.ITEMS.add(this);
+        super();
+        ItemGun.gun = gun;
         this.setUnlocalizedName(gun.getGunName());
         this.setRegistryName(gun.getModID(), gun.getGunName());
         this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTabs.COMBAT);
-        this.gun = gun;
+        ThematicItems.ITEMS.add(this);
     }
 
     @SideOnly(Side.CLIENT)
@@ -46,47 +52,64 @@ public class ItemGun extends Item {
         list.add(TextFormatting.GRAY + "Fire Rate: " + TextFormatting.GRAY + fireRate);
         list.add(TextFormatting.GRAY + "Magazines: ");
         for(Bullet magazine : gun.getGunBullets())
-            list.add(TextFormatting.GRAY + magazine.getItemBullet().getUnlocalizedName());
+            list.add(TextFormatting.GRAY + magazine.getItemBullet().getItemStackDisplayName(itemStack));
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
+    public int getMaxItemUseDuration(ItemStack stack)
     {
-        ItemStack heldItem = playerIn.getHeldItem(handIn);
-        if(worldIn.isRemote)
-        {
-            if(!MrCrayfishGunMod.proxy.canShoot())
-            {
-                return new ActionResult<>(EnumActionResult.FAIL, heldItem);
-            }
+        return 72000;
+    }
 
-            if(ItemGun.hasAmmo(heldItem) || playerIn.capabilities.isCreativeMode)
-            {
-                if(playerIn.isHandActive())
-                {
+    @Override
+    public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack)
+    {
+        return true;
+    }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+        ItemStack heldItem = playerIn.getHeldItem(handIn);
+        if(worldIn.isRemote) {
+            if (!hasAmmo(heldItem))
+                if(hasAmmo(playerIn)){
+                    ThematicNetworkHandler.wrapper.sendToServer(new MessageReload());
+                }else {
                     return new ActionResult<>(EnumActionResult.FAIL, heldItem);
                 }
+            if (hasAmmo(heldItem) || playerIn.capabilities.isCreativeMode) {
+                if (playerIn.isHandActive())
+                    return new ActionResult<>(EnumActionResult.FAIL, heldItem);
                 playerIn.setActiveHand(handIn);
-
-                if(!modifiedGun.general.auto)
-                {
-                    CooldownTracker tracker = playerIn.getCooldownTracker();
-                    if(!tracker.hasCooldown(heldItem.getItem()))
-                    {
-                        tracker.setCooldown(heldItem.getItem(), gun.getShootCooldown());
-                        PacketHandler.INSTANCE.sendToServer(new MessageShoot());
-                    }
+                CooldownTracker tracker = playerIn.getCooldownTracker();
+                if (!tracker.hasCooldown(heldItem.getItem())) {
+                    tracker.setCooldown(heldItem.getItem(), gun.getShootCooldown());
+                    ThematicNetworkHandler.wrapper.sendToServer(new MessageShoot());
                 }
             }
         }
         return new ActionResult<>(EnumActionResult.FAIL, heldItem);
     }
 
+    public Boolean hasAmmo(EntityPlayer entityPlayer) {
+        boolean hasAmmo = false;
+        for (int i = 0; i < entityPlayer.inventory.getSizeInventory(); i++) {
+            ItemStack stack = entityPlayer.inventory.getStackInSlot(i);
+            for(Bullet bullet: getGun().getGunBullets()){
+                if(stack.isItemEqual(new ItemStack(bullet.getItemBullet()))){
+                    hasAmmo = true;
+                    break;
+                }
+            }
+        }
+        return hasAmmo;
+    }
+
     /**
      * Check if the gun has ammo set.
      * @param itemStack - ItemGun
      */
-    public Boolean hasAmmo(ItemStack itemStack){
+    public static Boolean hasAmmo(ItemStack itemStack){
         return (getAmmo(itemStack) > 0) && (getLoadedAmmo(itemStack) != null);
     }
 
@@ -94,7 +117,7 @@ public class ItemGun extends Item {
      * Get the gun for outside use.
      */
     public Gun getGun() {
-        return gun;
+        return this.gun;
     }
 
     /**
@@ -122,7 +145,7 @@ public class ItemGun extends Item {
      *
      * @param itemStack - This itemstack.
      */
-    public Bullet getLoadedAmmo(ItemStack itemStack) {
+    public static Bullet getLoadedAmmo(ItemStack itemStack) {
         NBTTagCompound nbtTagCompound = itemStack.getTagCompound();
         if (nbtTagCompound != null) {
             return Bullets.getBulletByName(nbtTagCompound.getString("loaded_ammo"));
@@ -136,7 +159,7 @@ public class ItemGun extends Item {
      *
      * @param itemStack - This itemstack
      */
-    public int getAmmo(ItemStack itemStack) {
+    public static int getAmmo(ItemStack itemStack) {
         NBTTagCompound nbtTagCompound = itemStack.getTagCompound();
         if (nbtTagCompound != null) {
             return nbtTagCompound.getInteger("ammo");

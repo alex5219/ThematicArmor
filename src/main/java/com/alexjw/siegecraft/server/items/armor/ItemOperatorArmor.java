@@ -46,8 +46,9 @@ public class ItemOperatorArmor extends ItemArmor {
         this.operator = operator;
         this.setUnlocalizedName(operator.getUnlocalizedName() + "_" + compatibleEntityEquipmentSlot.toString().toLowerCase());
         this.setRegistryName(Siege.MODID, operator.getUnlocalizedName() + "_" + compatibleEntityEquipmentSlot.toString().toLowerCase());
-        this.setCreativeTab(SiegeTabs.tabOperatorsArmor);
-
+        if(!operator.isHidden()) {
+            this.setCreativeTab(SiegeTabs.tabOperatorsArmor);
+        }
         ModItems.ITEMS.add(this);
     }
 
@@ -120,9 +121,7 @@ public class ItemOperatorArmor extends ItemArmor {
                     }
                 }
             }
-
             if (armorModel != null) {
-                entityLiving.setInvisible(true);
                 armorModel.bipedHead.showModel = armorSlot == EntityEquipmentSlot.HEAD;
                 armorModel.bipedHeadwear.showModel = armorSlot == EntityEquipmentSlot.HEAD;
                 armorModel.bipedBody.showModel = armorSlot == EntityEquipmentSlot.CHEST;
@@ -139,7 +138,6 @@ public class ItemOperatorArmor extends ItemArmor {
                     assert renderPlayer != null;
                     armorModel.leftArmPose = renderPlayer.getMainModel().leftArmPose;
                     armorModel.rightArmPose = renderPlayer.getMainModel().rightArmPose;
-
                 }
 
                 return armorModel;

@@ -25,6 +25,7 @@ public class Operator {
     private ArrayList<Item> loadoutItems = new ArrayList<Item>();
     private ArrayList<Gadget> gadgets = new ArrayList<>();
     private Team enumTeam;
+    private Boolean isHidden = false;
 
     public Operator(Team enumTeam, int speed, int armor, int difficulty) {
         OperatorManager.operatorArrayList.add(this);
@@ -50,6 +51,9 @@ public class Operator {
         }
     }
 
+    public boolean isHidden(){
+        return this.isHidden;
+    }
 
     public String getName() {
         return this.getClass().getSimpleName().toLowerCase();

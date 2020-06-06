@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class GunStimPistol extends Gun {
     public GunStimPistol() {
-        super(Siege.MODID, "stim_pistol", 0.2f, 0.2f, -2.0f, 0.1f);
+        super(Siege.MODID, "stim_pistol", 2, 0.2f, -2.0f, 0.1f);
     }
 
     public ArrayList<Bullet> getGunBullets() {
