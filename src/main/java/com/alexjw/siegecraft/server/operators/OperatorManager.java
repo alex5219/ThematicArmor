@@ -6,6 +6,7 @@ public class OperatorManager {
     public static ArrayList<Operator> operatorArrayList = new ArrayList<>();
     public static OperatorAsh operatorAsh = new OperatorAsh();
     public static OperatorBandit operatorBandit = new OperatorBandit();
+    public static OperatorCapitao operatorCapitao = new OperatorCapitao();
     public static OperatorDoc operatorDoc = new OperatorDoc();
     public static OperatorFinka operatorFinka = new OperatorFinka();
     public static OperatorFrost operatorFrost = new OperatorFrost();

@@ -1,6 +1,7 @@
 package com.alexjw.siegecraft.client.renderer.entity;
 
 import com.alexjw.siegecraft.client.model.operators.*;
+import com.alexjw.siegecraft.server.operators.Operator;
 import com.alexjw.siegecraft.server.operators.OperatorManager;
 
 import java.lang.reflect.Field;
@@ -13,11 +14,13 @@ public class SiegeRendererManager {
     public static SiegeRenderer doc = new SiegeRenderer(OperatorManager.operatorDoc, new ModelOperatorDoc());
     public static SiegeRenderer capitao = new SiegeRenderer(OperatorManager.operatorCapitao, new ModelOperatorCapitao());
     public static SiegeRenderer finka = new SiegeRenderer(OperatorManager.operatorFinka, new ModelOperatorFinka());
+    public static SiegeRenderer frost = new SiegeRenderer(OperatorManager.operatorFrost, new ModelOperatorFrost());
     public static SiegeRenderer jackal = new SiegeRenderer(OperatorManager.operatorJackal, new ModelOperatorJackal());
     public static SiegeRenderer maverick = new SiegeRenderer(OperatorManager.operatorMaverick, new ModelOperatorMaverick());
     public static SiegeRenderer rook = new SiegeRenderer(OperatorManager.operatorRook, new ModelOperatorRook());
     public static SiegeRenderer sledge = new SiegeRenderer(OperatorManager.operatorSledge, new ModelOperatorSledge());
     public static SiegeRenderer smoke = new SiegeRenderer(OperatorManager.operatorSmoke, new ModelOperatorSmoke());
+    public static SiegeRenderer thermite = new SiegeRenderer(OperatorManager.operatorThermite, new ModelOperatorThermite());
     public static SiegeRenderer vigil = new SiegeRenderer(OperatorManager.operatorVigil, new ModelOperatorVigil());
     public static SiegeRenderer vigilinvis = new SiegeRenderer(OperatorManager.operatorVigilInvis, new ModelOperatorVigil());
 
