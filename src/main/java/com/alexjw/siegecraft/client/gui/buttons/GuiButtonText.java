@@ -8,8 +8,9 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiButtonText extends GuiButton {
-    private int textureWidth, textureHeight;
-    private ResourceLocation texture;
+    private final int textureWidth;
+    private final int textureHeight;
+    private final ResourceLocation texture;
 
     public GuiButtonText(int buttonId, int x, int y, int width, int height, int widthIn, int heightIn, ResourceLocation resourceLocation) {
         super(buttonId, x, y, width, height, "");

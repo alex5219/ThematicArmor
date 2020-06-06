@@ -108,13 +108,6 @@ public class ModRenderGlobal extends RenderGlobal implements IWorldEventListener
     }
 
     /**
-     * Checks if the given entity should have an outline rendered.
-     */
-    private boolean isOutlineActive(Entity entityIn, Entity viewer, ICamera camera) {
-        return this.isOutlineActive(entityIn, viewer, camera);
-    }
-
-    /**
      * Gets the render info for use on the Debug screen
      */
     public String getDebugInfoRenders() {
@@ -244,13 +237,14 @@ public class ModRenderGlobal extends RenderGlobal implements IWorldEventListener
     }
 
     @SideOnly(Side.CLIENT)
+    static
     class ContainerLocalRenderInformation {
         final RenderChunk renderChunk;
         final EnumFacing facing;
         final int counter;
         byte setFacing;
 
-        private ContainerLocalRenderInformation(RenderChunk renderChunkIn, EnumFacing facingIn, @Nullable int counterIn) {
+        private ContainerLocalRenderInformation(RenderChunk renderChunkIn, EnumFacing facingIn, int counterIn) {
             this.renderChunk = renderChunkIn;
             this.facing = facingIn;
             this.counter = counterIn;

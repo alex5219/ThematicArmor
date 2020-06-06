@@ -1,7 +1,6 @@
 package com.alexjw.siegecraft.server.guns;
 
 import com.alexjw.core.server.guns.Gun;
-import com.alexjw.siegecraft.server.operators.Operator;
 
 import java.lang.reflect.Field;
 
@@ -12,7 +11,7 @@ public class SiegeGuns {
         for (Field field : SiegeGuns.class.getFields()) {
             if(field.getType() == Gun.class){
                 try {
-                    Gun gun = (Gun)field.get((Object) null);
+                    Gun gun = (Gun) field.get(null);
                     gun.init();
                 } catch (Exception var5) {
                     var5.printStackTrace();

@@ -33,9 +33,9 @@ import static com.alexjw.core.client.util.GuiUtil.drawTexturedQuadFit;
 public class ClientEventHandler {
     public static boolean isLeaningLeft = false;
     public static boolean isLeaningRight = false;
-    private static ResourceLocation droneHudTexture = new ResourceLocation(Siege.MODID, "textures/gui/camera_hud.png");
-    private static ResourceLocation hudTexture = new ResourceLocation(Siege.MODID, "textures/gui/rainbow_hud.png");
-    private static ResourceLocation none = new ResourceLocation(Siege.MODID, "textures/gui/icon/none.png");
+    private static final ResourceLocation droneHudTexture = new ResourceLocation(Siege.MODID, "textures/gui/camera_hud.png");
+    private static final ResourceLocation hudTexture = new ResourceLocation(Siege.MODID, "textures/gui/rainbow_hud.png");
+    private static final ResourceLocation none = new ResourceLocation(Siege.MODID, "textures/gui/icon/none.png");
     private static Framebuffer framebuffer = null;
 
     @SideOnly(Side.CLIENT)
@@ -143,11 +143,6 @@ public class ClientEventHandler {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void onRenderPost(RenderLivingEvent.Post event) {
-        /**
-         if(event.getEntity() instanceof EntityPlayer){
-         GlStateManager.popMatrix();
-         }
-         */
     }
 
     @SideOnly(Side.CLIENT)

@@ -3,7 +3,7 @@ package com.alexjw.core.server.guns;
 import java.util.ArrayList;
 
 public class Guns {
-    public static ArrayList<Gun> guns = new ArrayList<>();
+    public static final ArrayList<Gun> guns = new ArrayList<>();
 
     public static Gun getGunByName(String gunName) {
         Gun bullet = null;

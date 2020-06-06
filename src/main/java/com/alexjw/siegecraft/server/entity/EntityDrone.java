@@ -7,7 +7,6 @@ import net.minecraft.world.World;
 
 public class EntityDrone extends EntityLiving {
     protected ItemStack[] droneInventory;
-    private EntityPlayer entityPlayer;
 
     public EntityDrone(World worldIn) {
         super(worldIn);
@@ -27,6 +26,5 @@ public class EntityDrone extends EntityLiving {
     }
 
     public void setPlayer(EntityPlayer entityPlayer) {
-        this.entityPlayer = entityPlayer;
     }
 }

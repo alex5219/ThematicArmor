@@ -15,16 +15,16 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class SiegeData {
-    public static HashMap<EntityPlayer, Integer> viewingCamera = new HashMap<>();
-    public static HashMap<EntityPlayer, Integer> timeDroning = new HashMap<EntityPlayer, Integer>();
-    public static HashMap<EntityPlayer, Integer> lastJump = new HashMap<EntityPlayer, Integer>();
-    public static HashMap<EntityPlayer, EntityDrone> drones = new HashMap<>();
-    public static HashMap<EntityPlayer, EntityDummy> dummies = new HashMap<>();
+    public static final HashMap<EntityPlayer, Integer> viewingCamera = new HashMap<>();
+    public static final HashMap<EntityPlayer, Integer> timeDroning = new HashMap<EntityPlayer, Integer>();
+    public static final HashMap<EntityPlayer, Integer> lastJump = new HashMap<EntityPlayer, Integer>();
+    public static final HashMap<EntityPlayer, EntityDrone> drones = new HashMap<>();
+    public static final HashMap<EntityPlayer, EntityDummy> dummies = new HashMap<>();
     public static SiegeTeam teamA = null;
     public static SiegeTeam teamB = null;
     public static int roundNumber = 0;
     public static ArrayList<BlockPos> cameraBlocks = new ArrayList<BlockPos>();
-    private static Random random = new Random();
+    private static final Random random = new Random();
     private static ArrayList<EntityCamera> cameras = new ArrayList<EntityCamera>();
     private static boolean gameSetup = false;
 

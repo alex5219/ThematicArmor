@@ -6,12 +6,10 @@ import com.alexjw.core.network.ThematicNetworkHandler;
 import com.alexjw.core.server.guns.Bullet;
 import com.alexjw.core.server.guns.Bullets;
 import com.alexjw.core.server.guns.Gun;
-import com.alexjw.core.server.guns.Guns;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -25,7 +23,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
+import java.util.Objects;
 
+@SuppressWarnings("unchecked")
 public class ItemGun extends Item {
     private static Gun gun;
 
@@ -56,14 +56,12 @@ public class ItemGun extends Item {
     }
 
     @Override
-    public int getMaxItemUseDuration(ItemStack stack)
-    {
+    public int getMaxItemUseDuration(ItemStack stack) {
         return 72000;
     }
 
     @Override
-    public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack)
-    {
+    public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack) {
         return true;
     }
 
@@ -117,7 +115,7 @@ public class ItemGun extends Item {
      * Get the gun for outside use.
      */
     public Gun getGun() {
-        return this.gun;
+        return gun;
     }
 
     /**
@@ -175,7 +173,7 @@ public class ItemGun extends Item {
      */
     public int getMaxAmmo(ItemStack itemStack) {
         if(getLoadedAmmo(itemStack) != null){
-            return getLoadedAmmo(itemStack).getBulletMag();
+            return Objects.requireNonNull(getLoadedAmmo(itemStack)).getBulletMag();
         } else {
             return -1;
         }

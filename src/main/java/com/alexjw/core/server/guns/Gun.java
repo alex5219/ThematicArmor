@@ -4,17 +4,16 @@ import com.alexjw.core.server.items.ItemGun;
 import net.minecraft.item.Item;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Gun {
-    protected Item itemGun;
+    protected final Item itemGun;
     private float reloadTime = 0.0f;
     private int shootCooldown = 0;
     private float gunDamage = 0.0f;
     private float gunRecoil = 0.0f;
     private String modID = "";
     private String gunName = "";
-    private ArrayList<Bullet> gunBullets = new ArrayList<>();
+    private final ArrayList<Bullet> gunBullets = new ArrayList<>();
     private ArrayList<FireMode> gunFireMode = new ArrayList<>();
     //TODO: add the attachments
 

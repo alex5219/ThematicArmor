@@ -6,19 +6,9 @@ package com.alexjw.siegecraft.client.model.operators;// Made with Blockbench 3.5
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 
 public class ModelOperatorVigil extends ModelBiped {
-    private final ModelRenderer bipedHeadMask;
-    private final ModelRenderer bipedHeadMaskStrap2;
-    private final ModelRenderer bipedHeadMaskStrap1;
-    private final ModelRenderer bipedHeadMask7;
-    private final ModelRenderer bipedBodyVest;
-    private final ModelRenderer bipedBodyVestWalkie;
-    private final ModelRenderer bipedRightArmSleeve;
-    private final ModelRenderer bipedLeftArmSleeve;
-    private final ModelRenderer bipedRightLegHolster;
 
     public ModelOperatorVigil() {
         super(0.1f, 0.0f, 128, 128);
@@ -30,7 +20,7 @@ public class ModelOperatorVigil extends ModelBiped {
         this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
         this.bipedLeftArm.mirror = false;
 
-        bipedHeadMask = new ModelRenderer(this);
+        ModelRenderer bipedHeadMask = new ModelRenderer(this);
         bipedHeadMask.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedHead.addChild(bipedHeadMask);
         bipedHeadMask.cubeList.add(new ModelBox(bipedHeadMask, 100, 18, -4.0F, -26.75F, -4.5F, 8, 2, 1, 0.0F, false));
@@ -66,26 +56,26 @@ public class ModelOperatorVigil extends ModelBiped {
         bipedHeadMask.cubeList.add(new ModelBox(bipedHeadMask, 73, 80, 0.0F, -31.0F, -5.0F, 1, 2, 1, -0.3F, false));
         bipedHeadMask.cubeList.add(new ModelBox(bipedHeadMask, 66, 84, -1.0F, -31.0F, -5.0F, 1, 2, 1, -0.3F, false));
 
-        bipedHeadMaskStrap2 = new ModelRenderer(this);
+        ModelRenderer bipedHeadMaskStrap2 = new ModelRenderer(this);
         bipedHeadMaskStrap2.setRotationPoint(4.25F, -28.25F, 3.25F);
         bipedHeadMask.addChild(bipedHeadMaskStrap2);
         setRotationAngle(bipedHeadMaskStrap2, 0.0F, 0.0F, 0.2618F);
         bipedHeadMaskStrap2.cubeList.add(new ModelBox(bipedHeadMaskStrap2, 102, 52, -8.0647F, 1.0085F, 0.0F, 8, 1, 1, 0.0F, false));
 
-        bipedHeadMaskStrap1 = new ModelRenderer(this);
+        ModelRenderer bipedHeadMaskStrap1 = new ModelRenderer(this);
         bipedHeadMaskStrap1.setRotationPoint(6.75F, -2.25F, -0.75F);
         bipedHeadMask.addChild(bipedHeadMaskStrap1);
         setRotationAngle(bipedHeadMaskStrap1, 0.0F, 0.0F, -0.2618F);
         bipedHeadMaskStrap1.cubeList.add(new ModelBox(bipedHeadMaskStrap1, 100, 47, -3.7585F, -26.9353F, 4.0F, 8, 1, 1, 0.0F, false));
 
-        bipedHeadMask7 = new ModelRenderer(this);
+        ModelRenderer bipedHeadMask7 = new ModelRenderer(this);
         bipedHeadMask7.setRotationPoint(-6.0F, -0.25F, 0.0F);
         bipedHeadMask.addChild(bipedHeadMask7);
         setRotationAngle(bipedHeadMask7, 0.0F, 0.0F, 0.1745F);
         bipedHeadMask7.cubeList.add(new ModelBox(bipedHeadMask7, 75, 80, -1.2925F, -30.9744F, -5.0F, 1, 2, 1, -0.3F, false));
         bipedHeadMask7.cubeList.add(new ModelBox(bipedHeadMask7, 75, 80, 2.4006F, -31.6256F, -5.0F, 1, 2, 1, -0.3F, false));
 
-        bipedBodyVest = new ModelRenderer(this);
+        ModelRenderer bipedBodyVest = new ModelRenderer(this);
         bipedBodyVest.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedBody.addChild(bipedBodyVest);
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 94, 79, -4.0F, -22.5F, -2.5F, 8, 4, 1, 0.0F, false));
@@ -118,13 +108,13 @@ public class ModelOperatorVigil extends ModelBiped {
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 93, 79, -1.0F, -14.0F, -2.5F, 2, 2, 1, 0.0F, false));
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 94, 79, -3.5F, -21.75F, -2.25F, 7, 4, 1, 0.0F, false));
 
-        bipedBodyVestWalkie = new ModelRenderer(this);
+        ModelRenderer bipedBodyVestWalkie = new ModelRenderer(this);
         bipedBodyVestWalkie.setRotationPoint(-6.0F, 0.25F, -3.25F);
         bipedBodyVest.addChild(bipedBodyVestWalkie);
         setRotationAngle(bipedBodyVestWalkie, 0.0F, 0.6981F, 0.0F);
         bipedBodyVestWalkie.cubeList.add(new ModelBox(bipedBodyVestWalkie, 81, 40, -1.0F, -23.25F, 6.0F, 1, 2, 1, 0.0F, false));
 
-        bipedRightArmSleeve = new ModelRenderer(this);
+        ModelRenderer bipedRightArmSleeve = new ModelRenderer(this);
         bipedRightArmSleeve.setRotationPoint(5.0F, 22.0F, 0.0F);
         bipedRightArm.addChild(bipedRightArmSleeve);
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 105, 84, -8.25F, -21.25F, 1.25F, 3, 2, 1, 0.0F, false));
@@ -141,7 +131,7 @@ public class ModelOperatorVigil extends ModelBiped {
         bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
         bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
 
-        bipedLeftArmSleeve = new ModelRenderer(this);
+        ModelRenderer bipedLeftArmSleeve = new ModelRenderer(this);
         bipedLeftArmSleeve.setRotationPoint(-5.0F, 22.0F, 0.0F);
         bipedLeftArm.addChild(bipedLeftArmSleeve);
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 105, 84, 5.25F, -21.25F, -2.25F, 3, 2, 4, 0.0F, false));
@@ -155,7 +145,7 @@ public class ModelOperatorVigil extends ModelBiped {
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 105, 84, 6.25F, -23.25F, 1.25F, 2, 2, 1, 0.0F, false));
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 105, 84, 5.25F, -21.25F, 1.25F, 3, 2, 1, 0.0F, false));
 
-        bipedRightLegHolster = new ModelRenderer(this);
+        ModelRenderer bipedRightLegHolster = new ModelRenderer(this);
         bipedRightLegHolster.setRotationPoint(1.9F, 12.0F, 0.0F);
         bipedRightLeg.addChild(bipedRightLegHolster);
         bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 87, 46, -4.0F, -9.75F, -2.5F, 4, 1, 5, 0.0F, false));

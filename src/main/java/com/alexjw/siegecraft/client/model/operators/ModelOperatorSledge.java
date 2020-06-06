@@ -9,20 +9,6 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class ModelOperatorSledge extends ModelBiped {
-    private final ModelRenderer bipedHeadStrap2;
-    private final ModelRenderer bipedHeadStrap1;
-    private final ModelRenderer bipedHeadLenses;
-    private final ModelRenderer bipedHeadGasMask;
-    private final ModelRenderer bipedHeadGasCan1;
-    private final ModelRenderer bipedHeadGasCan2;
-    private final ModelRenderer bipedBodyVest;
-    private final ModelRenderer bipedBodyVestWalkieTalkie;
-    private final ModelRenderer bipedRightArmFlag;
-    private final ModelRenderer bipedRightLegBandolier;
-    private final ModelRenderer bipedRightLegStrap;
-    private final ModelRenderer bipedRightLegHolsterStrap;
-    private final ModelRenderer bipedLeftLegStrap;
-    private final ModelRenderer bipedLeftLegPouch;
 
     public ModelOperatorSledge() {
         super(0.1f, 0.0f, 128, 128);
@@ -34,19 +20,19 @@ public class ModelOperatorSledge extends ModelBiped {
         this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
         this.bipedLeftArm.mirror = false;
 
-        bipedHeadStrap2 = new ModelRenderer(this);
+        ModelRenderer bipedHeadStrap2 = new ModelRenderer(this);
         bipedHeadStrap2.setRotationPoint(5.2F, -6.0F, -1.0F);
         bipedHead.addChild(bipedHeadStrap2);
         setRotationAngle(bipedHeadStrap2, 0.0F, 0.0F, 0.6981F);
         bipedHeadStrap2.cubeList.add(new ModelBox(bipedHeadStrap2, 92, 56, -6.965F, 2.5129F, 4.224F, 8, 1, 1, 0.0F, false));
 
-        bipedHeadStrap1 = new ModelRenderer(this);
+        ModelRenderer bipedHeadStrap1 = new ModelRenderer(this);
         bipedHeadStrap1.setRotationPoint(3.2F, -8.0F, -1.0F);
         bipedHead.addChild(bipedHeadStrap1);
         setRotationAngle(bipedHeadStrap1, 0.0F, 0.0F, -0.6981F);
         bipedHeadStrap1.cubeList.add(new ModelBox(bipedHeadStrap1, 94, 56, -8.7235F, -1.257F, 4.1573F, 8, 1, 1, 0.0F, false));
 
-        bipedHeadLenses = new ModelRenderer(this);
+        ModelRenderer bipedHeadLenses = new ModelRenderer(this);
         bipedHeadLenses.setRotationPoint(3.0F, 21.0F, -5.0F);
         bipedHead.addChild(bipedHeadLenses);
         bipedHeadLenses.cubeList.add(new ModelBox(bipedHeadLenses, 60, 80, -2.0F, -26.0F, 0.6F, 3, 2, 1, 0.1F, false));
@@ -62,7 +48,7 @@ public class ModelOperatorSledge extends ModelBiped {
         bipedHeadLenses.cubeList.add(new ModelBox(bipedHeadLenses, 106, 56, -3.9748F, -27.83F, 8.44F, 2, 2, 1, 0.1F, false));
         bipedHeadLenses.cubeList.add(new ModelBox(bipedHeadLenses, 113, 12, 0.2F, -26.0F, 1.33F, 1, 2, 1, 0.1F, false));
 
-        bipedHeadGasMask = new ModelRenderer(this);
+        ModelRenderer bipedHeadGasMask = new ModelRenderer(this);
         bipedHeadGasMask.setRotationPoint(0.0F, 24.0F, 11.0F);
         bipedHead.addChild(bipedHeadGasMask);
         setRotationAngle(bipedHeadGasMask, 0.3491F, 0.0F, 0.0F);
@@ -70,19 +56,19 @@ public class ModelOperatorSledge extends ModelBiped {
         bipedHeadGasMask.cubeList.add(new ModelBox(bipedHeadGasMask, 30, 98, -1.0F, -29.81F, -7.0667F, 2, 2, 2, -0.3F, false));
         bipedHeadGasMask.cubeList.add(new ModelBox(bipedHeadGasMask, 35, 105, -0.4528F, -30.9523F, -5.3756F, 1, 2, 1, 0.0F, false));
 
-        bipedHeadGasCan1 = new ModelRenderer(this);
+        ModelRenderer bipedHeadGasCan1 = new ModelRenderer(this);
         bipedHeadGasCan1.setRotationPoint(-3.0F, 0.0F, 0.0F);
         bipedHead.addChild(bipedHeadGasCan1);
         setRotationAngle(bipedHeadGasCan1, 0.0F, -0.2618F, 0.0F);
         bipedHeadGasCan1.cubeList.add(new ModelBox(bipedHeadGasCan1, 36, 102, 4.0F, -2.0F, -6.0F, 2, 2, 2, 0.0F, false));
 
-        bipedHeadGasCan2 = new ModelRenderer(this);
+        ModelRenderer bipedHeadGasCan2 = new ModelRenderer(this);
         bipedHeadGasCan2.setRotationPoint(-1.0F, 0.0F, 0.0F);
         bipedHead.addChild(bipedHeadGasCan2);
         setRotationAngle(bipedHeadGasCan2, 0.0F, 0.2618F, 0.0F);
         bipedHeadGasCan2.cubeList.add(new ModelBox(bipedHeadGasCan2, 40, 102, -2.0353F, -2.0F, -4.8637F, 2, 2, 2, 0.0F, false));
 
-        bipedBodyVest = new ModelRenderer(this);
+        ModelRenderer bipedBodyVest = new ModelRenderer(this);
         bipedBodyVest.setRotationPoint(0.0F, 3.0F, -3.0F);
         bipedBody.addChild(bipedBodyVest);
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 26, 95, -4.0F, -1.0F, 0.6F, 8, 9, 1, 0.0F, false));
@@ -132,7 +118,7 @@ public class ModelOperatorSledge extends ModelBiped {
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 105, 59, -2.5F, -0.25F, 0.0F, 2, 3, 1, -0.3F, false));
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 28, 103, 0.25F, 4.5F, -0.25F, 3, 2, 2, -0.6F, false));
 
-        bipedBodyVestWalkieTalkie = new ModelRenderer(this);
+        ModelRenderer bipedBodyVestWalkieTalkie = new ModelRenderer(this);
         bipedBodyVestWalkieTalkie.setRotationPoint(0.0F, 2.0F, -2.0F);
         bipedBody.addChild(bipedBodyVestWalkieTalkie);
         setRotationAngle(bipedBodyVestWalkieTalkie, 0.0F, 0.0F, 0.4363F);
@@ -140,12 +126,12 @@ public class ModelOperatorSledge extends ModelBiped {
         bipedBodyVestWalkieTalkie.cubeList.add(new ModelBox(bipedBodyVestWalkieTalkie, 38, 102, 2.0F, -2.44F, -0.69F, 1, 2, 1, -0.2F, false));
         bipedBodyVestWalkieTalkie.cubeList.add(new ModelBox(bipedBodyVestWalkieTalkie, 40, 20, 2.4379F, -2.0925F, -0.44F, 1, 1, 1, -0.2F, false));
 
-        bipedRightArmFlag = new ModelRenderer(this);
+        ModelRenderer bipedRightArmFlag = new ModelRenderer(this);
         bipedRightArmFlag.setRotationPoint(5.0F, 22.0F, 0.0F);
         bipedRightArm.addChild(bipedRightArmFlag);
         bipedRightArmFlag.cubeList.add(new ModelBox(bipedRightArmFlag, 0, 0, -8.2128F, -23.0F, -1.3502F, 1, 2, 3, 0.0F, false));
 
-        bipedRightLegBandolier = new ModelRenderer(this);
+        ModelRenderer bipedRightLegBandolier = new ModelRenderer(this);
         bipedRightLegBandolier.setRotationPoint(1.9F, 12.0F, 0.0F);
         bipedRightLeg.addChild(bipedRightLegBandolier);
         bipedRightLegBandolier.cubeList.add(new ModelBox(bipedRightLegBandolier, 102, 84, -4.28F, -9.0F, -2.16F, 4, 1, 4, 0.0F, false));
@@ -158,27 +144,27 @@ public class ModelOperatorSledge extends ModelBiped {
         bipedRightLegBandolier.cubeList.add(new ModelBox(bipedRightLegBandolier, 99, 58, -4.346F, -5.0F, -1.0F, 1, 2, 2, -0.3F, false));
         bipedRightLegBandolier.cubeList.add(new ModelBox(bipedRightLegBandolier, 115, 81, -0.878F, -9.0F, -2.2032F, 1, 1, 1, 0.0F, false));
 
-        bipedRightLegStrap = new ModelRenderer(this);
+        ModelRenderer bipedRightLegStrap = new ModelRenderer(this);
         bipedRightLegStrap.setRotationPoint(0.0F, -9.0F, -3.0F);
         bipedRightLegBandolier.addChild(bipedRightLegStrap);
         setRotationAngle(bipedRightLegStrap, 0.0F, 0.0F, -0.6109F);
         bipedRightLegStrap.cubeList.add(new ModelBox(bipedRightLegStrap, 109, 88, -1.0F, -5.0F, 0.858F, 1, 5, 1, 0.0F, false));
         bipedRightLegStrap.cubeList.add(new ModelBox(bipedRightLegStrap, 108, 82, -1.0F, -5.0F, 4.12F, 1, 5, 1, 0.0F, false));
 
-        bipedRightLegHolsterStrap = new ModelRenderer(this);
+        ModelRenderer bipedRightLegHolsterStrap = new ModelRenderer(this);
         bipedRightLegHolsterStrap.setRotationPoint(0.0F, -7.0F, -1.16F);
         bipedRightLegBandolier.addChild(bipedRightLegHolsterStrap);
         setRotationAngle(bipedRightLegHolsterStrap, 0.4363F, 0.0F, 0.0F);
         bipedRightLegHolsterStrap.cubeList.add(new ModelBox(bipedRightLegHolsterStrap, 111, 83, -4.2F, -5.0F, 2.0F, 1, 5, 1, 0.0F, false));
 
-        bipedLeftLegStrap = new ModelRenderer(this);
+        ModelRenderer bipedLeftLegStrap = new ModelRenderer(this);
         bipedLeftLegStrap.setRotationPoint(6.1F, 8.0F, 0.0F);
         bipedLeftLeg.addChild(bipedLeftLegStrap);
         setRotationAngle(bipedLeftLegStrap, 0.0F, 0.0F, -1.0472F);
         bipedLeftLegStrap.cubeList.add(new ModelBox(bipedLeftLegStrap, 106, 83, 0.3F, -9.0F, -2.16F, 5, 1, 1, 0.0F, false));
         bipedLeftLegStrap.cubeList.add(new ModelBox(bipedLeftLegStrap, 111, 80, 0.3301F, -8.6962F, 1.12F, 5, 1, 1, 0.0F, false));
 
-        bipedLeftLegPouch = new ModelRenderer(this);
+        ModelRenderer bipedLeftLegPouch = new ModelRenderer(this);
         bipedLeftLegPouch.setRotationPoint(6.1F, 8.0F, 0.0F);
         bipedLeftLeg.addChild(bipedLeftLegPouch);
         bipedLeftLegPouch.cubeList.add(new ModelBox(bipedLeftLegPouch, 26, 54, -6.64F, -4.0F, -2.22F, 2, 3, 1, 0.0F, false));

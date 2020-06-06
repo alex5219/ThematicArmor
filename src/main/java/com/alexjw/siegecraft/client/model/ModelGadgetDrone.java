@@ -8,9 +8,9 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class ModelGadgetDrone extends ModelBiped {
-    public ModelRenderer entityDrone;
-    public ModelRenderer entityDroneLights;
-    public ModelRenderer entityDroneWheels;
+    public final ModelRenderer entityDrone;
+    public final ModelRenderer entityDroneLights;
+    public final ModelRenderer entityDroneWheels;
 
     public ModelGadgetDrone() {
         super(0.1f, 0.0f, 128, 128);

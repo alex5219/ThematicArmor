@@ -6,8 +6,8 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.util.ResourceLocation;
 
 public class SiegeRenderer {
-    private Operator operator;
-    private ModelBiped modelBiped;
+    private final Operator operator;
+    private final ModelBiped modelBiped;
 
     public SiegeRenderer(Operator operator, ModelBiped modelBiped) {
         SiegeRendererManager.siegeRenderers.add(this);

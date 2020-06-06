@@ -10,7 +10,6 @@ import com.alexjw.siegecraft.server.entity.EntityRope;
 import com.alexjw.siegecraft.server.helper.SiegeHelper;
 import net.minecraft.block.BlockAir;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntitySelectors;
 import net.minecraft.util.EnumFacing;
@@ -113,9 +112,9 @@ public class CommonEventHandler {
                 event.setCanceled(true);
                 SiegeHelper.stopDroning(entityPlayer, entityPlayer.world);
             } else {
-                /**
-                 * TODO:
-                 * - Death event for the game
+                /*
+                  TODO:
+                  - Death event for the game
                  */
             }
         } else if (event.getEntity() instanceof EntityCamera) {
@@ -130,9 +129,9 @@ public class CommonEventHandler {
         if (event.getEntityLiving() instanceof EntityPlayer) {
             EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
             if (SiegeHelper.getOperator(entityPlayer) != null) {
-                /**
-                 * TODO:
-                 * - Prevent taking off armor
+                /*
+                  TODO:
+                  - Prevent taking off armor
                  */
                 BlockPos blockPosInfront;
                 EnumFacing enumFacing = entityPlayer.getHorizontalFacing();

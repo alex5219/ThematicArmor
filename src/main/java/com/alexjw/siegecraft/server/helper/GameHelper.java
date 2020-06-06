@@ -15,8 +15,9 @@ public class GameHelper {
     /**
      * Score is first to 3
      */
-    public static int scoreA = 0, scoreB = 0;
-    public static int roundNumber = 1;
+    public static final int scoreA = 0;
+    public static final int scoreB = 0;
+    public static final int roundNumber = 1;
 
     public static void init(EntityPlayer entityPlayer) {
         TeamA = getTestPlayers(entityPlayer);
@@ -40,23 +41,21 @@ public class GameHelper {
     }
 
     public static void playerDeath(EntityPlayer entityPlayer) {
-        if (roundNumber != -1) {
-            SiegePlayer playerDead = new SiegePlayer(entityPlayer);
-            if (TeamA.contains(playerDead)) {
-                for (SiegePlayer siegePlayer : TeamA) {
-                    if (siegePlayer.equals(playerDead)) {
-                        TeamA.remove(siegePlayer);
-                        siegePlayer.setDead();
-                        TeamA.add(siegePlayer);
-                    }
+        SiegePlayer playerDead = new SiegePlayer(entityPlayer);
+        if (TeamA.contains(playerDead)) {
+            for (SiegePlayer siegePlayer : TeamA) {
+                if (siegePlayer.equals(playerDead)) {
+                    TeamA.remove(siegePlayer);
+                    siegePlayer.setDead();
+                    TeamA.add(siegePlayer);
                 }
-            } else if (TeamB.contains(playerDead)) {
-                for (SiegePlayer siegePlayer : TeamB) {
-                    if (siegePlayer.equals(playerDead)) {
-                        TeamB.remove(siegePlayer);
-                        siegePlayer.setDead();
-                        TeamB.add(siegePlayer);
-                    }
+            }
+        } else if (TeamB.contains(playerDead)) {
+            for (SiegePlayer siegePlayer : TeamB) {
+                if (siegePlayer.equals(playerDead)) {
+                    TeamB.remove(siegePlayer);
+                    siegePlayer.setDead();
+                    TeamB.add(siegePlayer);
                 }
             }
         }

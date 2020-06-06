@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 
+@SuppressWarnings("ALL")
 public class RenderVigil extends RenderLivingBase<EntityVigil> {
     public RenderVigil(RenderManager manager) {
         super(manager, SiegeRendererManager.vigil.getModelBiped(), 0.1f);

@@ -16,6 +16,7 @@ import org.lwjgl.opengl.Display;
 import java.io.File;
 import java.nio.file.Paths;
 
+@SuppressWarnings("ResultOfMethodCallIgnored")
 @Mod(modid = Siege.MODID, name = Siege.NAME, version = Siege.VERSION, acceptedMinecraftVersions = "1.12.2")
 public class Siege extends DummyModContainer {
     public static final String MODID = "siegecraft";

@@ -6,7 +6,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class CommandSiege extends CommandBase {
@@ -36,7 +36,7 @@ public class CommandSiege extends CommandBase {
      * Get a list of aliases for this command. <b>Never return null!</b>
      */
     public List<String> getAliases() {
-        return Arrays.asList("siege");
+        return Collections.singletonList("siege");
     }
 
     /**

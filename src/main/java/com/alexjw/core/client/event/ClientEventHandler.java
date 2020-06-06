@@ -1,6 +1,5 @@
 package com.alexjw.core.client.event;
 
-import com.alexjw.core.server.guns.Gun;
 import com.alexjw.core.server.items.ItemGun;
 import com.alexjw.siegecraft.Siege;
 import net.minecraft.client.Minecraft;
@@ -22,7 +21,7 @@ public class ClientEventHandler {
             if(heldItem.getItem() instanceof ItemGun) {
                 ItemGun gunItem = (ItemGun) heldItem.getItem();
 
-                /**
+                /*
                 if(this.isZooming(Minecraft.getInstance().player) && !SyncedPlayerData.instance().get(mc.player, ModSyncedDataKeys.RELOADING))
                 {
                     Gun modifiedGun = gunItem.getModifiedGun(heldItem);

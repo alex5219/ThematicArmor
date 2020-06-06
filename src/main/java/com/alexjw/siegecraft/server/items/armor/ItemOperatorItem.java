@@ -21,14 +21,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class ItemOperatorItem extends Item {
-    public Operator operator;
+    public final Operator operator;
 
     public ItemOperatorItem(Operator operator) {
         super();
         this.setUnlocalizedName(operator.getUnlocalizedName());
         this.setRegistryName(Siege.MODID, operator.getUnlocalizedName());
-        if(!operator.isHidden()) {
+        if (operator.isHidden()) {
             this.setCreativeTab(SiegeTabs.tabOperators);
         }
         this.operator = operator;

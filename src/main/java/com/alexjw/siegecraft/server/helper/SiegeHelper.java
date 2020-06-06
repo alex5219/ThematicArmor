@@ -20,6 +20,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
 public class SiegeHelper {
@@ -60,7 +61,7 @@ public class SiegeHelper {
     public static SiegePlayer getSiegePlayerByEntity(EntityPlayer player) {
         SiegePlayer siegePlayerByEntity = null;
         if (SiegeData.getTeam(player) != null) {
-            for (SiegePlayer siegePlayer : SiegeData.getTeam(player).getPlayers()) {
+            for (SiegePlayer siegePlayer : Objects.requireNonNull(SiegeData.getTeam(player)).getPlayers()) {
                 if (siegePlayer.getEntityPlayer().equals(player)) {
                     siegePlayerByEntity = siegePlayer;
                 }

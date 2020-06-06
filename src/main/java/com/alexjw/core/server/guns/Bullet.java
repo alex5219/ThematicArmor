@@ -8,7 +8,7 @@ public class Bullet {
     private int bulletMag = 0;
     private float bulletSpeed = 0.0f;
     private String modID = "";
-    protected Item itemBullet;
+    protected final Item itemBullet;
     //TODO: add the attachments
 
     public Bullet(String modID, String bulletName, int bulletMag, float bulletSpeed) {

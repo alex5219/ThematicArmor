@@ -5,7 +5,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import org.lwjgl.input.Keyboard;
 
 public class SiegeKeys {
-    public static KeyBinding[] keyBindings = new KeyBinding[3];
+    public static final KeyBinding[] keyBindings = new KeyBinding[3];
 
     public static void init() {
         keyBindings[0] = new KeyBinding("key.interact.desc", Keyboard.KEY_F, "key.siegemod.category");

@@ -9,17 +9,6 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class ModelOperatorDoc extends ModelBiped {
-    private final ModelRenderer headHelmet;
-    private final ModelRenderer visor;
-    private final ModelRenderer bodyChestplate;
-    private final ModelRenderer equipment;
-    private final ModelRenderer bone3;
-    private final ModelRenderer bone2;
-    private final ModelRenderer bone;
-    private final ModelRenderer rightarmShoulder2;
-    private final ModelRenderer rightarmShoulder;
-    private final ModelRenderer leftleggin;
-    private final ModelRenderer rightleggin;
 
     public ModelOperatorDoc() {
         super(0.1f, 0.0f, 128, 128);
@@ -31,7 +20,7 @@ public class ModelOperatorDoc extends ModelBiped {
         this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
         this.bipedLeftArm.mirror = false;
 
-        headHelmet = new ModelRenderer(this);
+        ModelRenderer headHelmet = new ModelRenderer(this);
         headHelmet.setRotationPoint(0.0F, 29.75F, 0.0F);
         bipedHead.addChild(headHelmet);
         headHelmet.cubeList.add(new ModelBox(headHelmet, 86, 84, -4.0F, -37.0F, 3.75F, 8, 8, 1, 0.0F, false));
@@ -42,7 +31,7 @@ public class ModelOperatorDoc extends ModelBiped {
         headHelmet.cubeList.add(new ModelBox(headHelmet, 71, 25, -5.0F, -37.0F, -4.5F, 10, 2, 1, 0.0F, true));
         headHelmet.cubeList.add(new ModelBox(headHelmet, 85, 80, -4.0F, -38.0F, -4.25F, 8, 1, 9, 0.0F, false));
 
-        visor = new ModelRenderer(this);
+        ModelRenderer visor = new ModelRenderer(this);
         visor.setRotationPoint(0.0F, -34.3333F, -0.8333F);
         headHelmet.addChild(visor);
         setRotationAngle(visor, -0.6109F, 0.0F, 0.0F);
@@ -54,7 +43,7 @@ public class ModelOperatorDoc extends ModelBiped {
         bipedBody.setRotationPoint(0.0F, 0.0F, 0.0F);
         bipedBody.cubeList.add(new ModelBox(bipedBody, 0, 16, -4.0F, 0.0F, -2.0F, 8, 12, 4, 0.0F, false));
 
-        bodyChestplate = new ModelRenderer(this);
+        ModelRenderer bodyChestplate = new ModelRenderer(this);
         bodyChestplate.setRotationPoint(0.0F, 29.5F, 0.0F);
         bipedBody.addChild(bodyChestplate);
         bodyChestplate.cubeList.add(new ModelBox(bodyChestplate, 94, 86, -4.0F, -29.0F, -3.0F, 8, 12, 1, 0.0F, false));
@@ -75,7 +64,7 @@ public class ModelOperatorDoc extends ModelBiped {
         bodyChestplate.cubeList.add(new ModelBox(bodyChestplate, 99, 81, 4.0F, -29.0F, 2.0F, 2, 3, 1, 0.0F, false));
         bodyChestplate.cubeList.add(new ModelBox(bodyChestplate, 87, 89, -4.0F, -29.0F, 2.0F, 8, 12, 1, 0.0F, false));
 
-        equipment = new ModelRenderer(this);
+        ModelRenderer equipment = new ModelRenderer(this);
         equipment.setRotationPoint(0.0F, 0.0F, 0.0F);
         bodyChestplate.addChild(equipment);
         equipment.cubeList.add(new ModelBox(equipment, 81, 30, 1.1F, -25.0F, -3.5F, 1, 2, 1, 0.0F, false));
@@ -86,40 +75,40 @@ public class ModelOperatorDoc extends ModelBiped {
         equipment.cubeList.add(new ModelBox(equipment, 105, 31, 1.0F, -23.35F, 2.75F, 2, 4, 1, -0.2F, false));
         equipment.cubeList.add(new ModelBox(equipment, 109, 28, -1.0F, -23.35F, 2.75F, 2, 4, 1, -0.2F, false));
 
-        bone3 = new ModelRenderer(this);
+        ModelRenderer bone3 = new ModelRenderer(this);
         bone3.setRotationPoint(-3.95F, 0.35F, 0.0F);
         equipment.addChild(bone3);
         bone3.cubeList.add(new ModelBox(bone3, 109, 26, 0.0F, -25.55F, -3.75F, 3, 3, 1, -0.3F, false));
         bone3.cubeList.add(new ModelBox(bone3, 108, 27, 2.95F, -25.4F, -3.75F, 2, 3, 1, -0.2F, false));
 
-        bone2 = new ModelRenderer(this);
+        ModelRenderer bone2 = new ModelRenderer(this);
         bone2.setRotationPoint(-5.7F, -3.4F, 0.0F);
         equipment.addChild(bone2);
         bone2.cubeList.add(new ModelBox(bone2, 102, 37, 0.75F, -23.75F, -3.5F, 2, 1, 1, -0.1F, false));
         bone2.cubeList.add(new ModelBox(bone2, 106, 33, 0.85F, -25.0F, -3.25F, 2, 1, 1, 0.0F, false));
 
-        bone = new ModelRenderer(this);
+        ModelRenderer bone = new ModelRenderer(this);
         bone.setRotationPoint(4.4F, -29.1F, -3.5F);
         equipment.addChild(bone);
         setRotationAngle(bone, 0.0F, 0.0F, 0.3491F);
         bone.cubeList.add(new ModelBox(bone, 106, 34, -0.75F, 0.5F, 0.0F, 1, 2, 1, 0.0F, false));
         bone.cubeList.add(new ModelBox(bone, 110, 30, -0.5F, -1.0F, -0.25F, 1, 2, 1, -0.4F, false));
 
-        rightarmShoulder2 = new ModelRenderer(this);
+        ModelRenderer rightarmShoulder2 = new ModelRenderer(this);
         rightarmShoulder2.setRotationPoint(5.0F, 27.0F, 0.0F);
         bipedRightArm.addChild(rightarmShoulder2);
         rightarmShoulder2.cubeList.add(new ModelBox(rightarmShoulder2, 102, 27, -8.5F, -29.5F, -2.5F, 3, 4, 5, 0.0F, false));
         rightarmShoulder2.cubeList.add(new ModelBox(rightarmShoulder2, 105, 29, -8.25F, -28.5F, -2.25F, 2, 4, 4, 0.0F, false));
         rightarmShoulder2.cubeList.add(new ModelBox(rightarmShoulder2, 96, 7, -9.0F, -29.0F, -1.5F, 1, 3, 3, 0.0F, false));
 
-        rightarmShoulder = new ModelRenderer(this);
+        ModelRenderer rightarmShoulder = new ModelRenderer(this);
         rightarmShoulder.setRotationPoint(-5.0F, 27.0F, 0.0F);
         bipedLeftArm.addChild(rightarmShoulder);
         rightarmShoulder.cubeList.add(new ModelBox(rightarmShoulder, 68, 26, 5.5F, -29.5F, -2.5F, 3, 4, 5, 0.0F, false));
         rightarmShoulder.cubeList.add(new ModelBox(rightarmShoulder, 68, 26, 6.25F, -28.5F, -2.25F, 2, 4, 4, 0.0F, false));
         rightarmShoulder.cubeList.add(new ModelBox(rightarmShoulder, 121, 7, 8.0F, -29.0F, -1.0F, 1, 3, 2, 0.0F, false));
 
-        leftleggin = new ModelRenderer(this);
+        ModelRenderer leftleggin = new ModelRenderer(this);
         leftleggin.setRotationPoint(7.0F, 2.0F, -5.0F);
         bipedRightLeg.addChild(leftleggin);
         leftleggin.cubeList.add(new ModelBox(leftleggin, 102, 77, -9.6415F, -0.5888F, 5.9F, 1, 4, 1, -0.1F, false));
@@ -137,7 +126,7 @@ public class ModelOperatorDoc extends ModelBiped {
         leftleggin.cubeList.add(new ModelBox(leftleggin, 98, 85, -5.6915F, 1.3112F, 2.9F, 1, 1, 4, 0.0F, false));
         leftleggin.cubeList.add(new ModelBox(leftleggin, 94, 84, -9.0585F, 1.5112F, 2.9F, 0, 1, 4, 0.0F, true));
 
-        rightleggin = new ModelRenderer(this);
+        ModelRenderer rightleggin = new ModelRenderer(this);
         rightleggin.setRotationPoint(3.0F, 2.0F, 5.0F);
         bipedLeftLeg.addChild(rightleggin);
         rightleggin.cubeList.add(new ModelBox(rightleggin, 106, 28, -1.25F, -3.0F, -7.0F, 1, 6, 4, 0.0F, false));

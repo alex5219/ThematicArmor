@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 public class ItemBullet extends Item {
-    private Bullet bullet;
+    private final Bullet bullet;
 
     public ItemBullet(Bullet bullet) {
         super();

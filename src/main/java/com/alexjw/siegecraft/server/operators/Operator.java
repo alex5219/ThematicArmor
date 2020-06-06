@@ -16,16 +16,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.ArrayList;
 
 public class Operator {
-    protected Item helmet;
-    protected Item chestplate;
-    protected Item leggings;
-    protected Item boots;
-    protected Item operatorItem;
+    protected final Item helmet;
+    protected final Item chestplate;
+    protected final Item leggings;
+    protected final Item boots;
+    protected final Item operatorItem;
     private int armor = 0, speed = 0, difficulty = 0;
-    private ArrayList<Item> loadoutItems = new ArrayList<Item>();
-    private ArrayList<Gadget> gadgets = new ArrayList<>();
-    private Team enumTeam;
-    private Boolean isHidden = false;
+    private final ArrayList<Item> loadoutItems = new ArrayList<Item>();
+    private final ArrayList<Gadget> gadgets = new ArrayList<>();
+    private final Team enumTeam;
 
     public Operator(Team enumTeam, int speed, int armor, int difficulty) {
         OperatorManager.operatorArrayList.add(this);
@@ -52,7 +51,7 @@ public class Operator {
     }
 
     public boolean isHidden(){
-        return this.isHidden;
+        return true;
     }
 
     public String getName() {

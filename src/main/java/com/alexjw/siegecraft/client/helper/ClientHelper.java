@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
+@SuppressWarnings("IntegerDivisionInFloatingPointContext")
 public class ClientHelper {
     public static ByteBuffer[] load(String filepath) {
         return load(new File(filepath));
@@ -113,7 +114,7 @@ public class ClientHelper {
         for (int i = 0; i < image.getHeight(); i++)
             for (int j = 0; j < image.getWidth(); j++) {
                 int colorSpace = image.getRGB(j, i);
-                buffer[counter + 0] = (byte) ((colorSpace << 8) >> 24);
+                buffer[counter] = (byte) ((colorSpace << 8) >> 24);
                 buffer[counter + 1] = (byte) ((colorSpace << 16) >> 24);
                 buffer[counter + 2] = (byte) ((colorSpace << 24) >> 24);
                 buffer[counter + 3] = (byte) (colorSpace >> 24);

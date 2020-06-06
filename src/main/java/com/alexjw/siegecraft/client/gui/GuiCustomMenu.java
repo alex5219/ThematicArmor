@@ -17,8 +17,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.io.IOException;
-
 import static com.alexjw.core.client.util.GuiUtil.drawTexturedQuadFit;
 
 @SideOnly(Side.CLIENT)
@@ -40,7 +38,7 @@ public class GuiCustomMenu extends GuiScreen {
         this.buttonList.add(new GuiButtonMultiplayer(7, 0, 0, 24, 24, 800, 800, GuiResources.OPTIONS));
     }
 
-    protected void actionPerformed(GuiButton button) throws IOException {
+    protected void actionPerformed(GuiButton button) {
         if (button.id == 0) {
             ServerData serverData = new ServerData("Official", "207.244.243.195:25565", false);
             this.mc.displayGuiScreen(new GuiConnecting(this, this.mc, serverData));

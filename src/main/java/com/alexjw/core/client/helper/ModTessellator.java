@@ -5,8 +5,8 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 
 public class ModTessellator {
-    private static Tessellator tessellator = Tessellator.getInstance();
-    private static ModTessellator modTessellator = new ModTessellator();
+    private static final Tessellator tessellator = Tessellator.getInstance();
+    private static final ModTessellator modTessellator = new ModTessellator();
     private boolean hasColor;
     private boolean hasLightMap;
     private float red;

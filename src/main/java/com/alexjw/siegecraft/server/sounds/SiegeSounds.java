@@ -16,8 +16,8 @@ import static com.alexjw.siegecraft.Siege.MODID;
 
 @Mod.EventBusSubscriber(modid = MODID)
 public class SiegeSounds {
-    public static Set<SoundEvent> registeredEvents = new HashSet<>();
-    public static SoundEvent breach_charge = registerSound("breach_charge");
+    public static final Set<SoundEvent> registeredEvents = new HashSet<>();
+    public static final SoundEvent breach_charge = registerSound("breach_charge");
     public static SoundEvent thermite = registerSound("thermite");
     public static SoundEvent menu_music = registerSound("menu_music");
 

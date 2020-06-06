@@ -2,7 +2,6 @@ package com.alexjw.core.server.registry;
 
 import com.alexjw.core.server.items.ThematicItems;
 import com.alexjw.siegecraft.Siege;
-import com.alexjw.siegecraft.server.items.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;

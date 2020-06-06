@@ -10,8 +10,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import java.util.Map;
 
 public class ThematicNetworkHelper {
-    private static Map<String, SimpleNetworkWrapper> wrappers = Maps.newHashMap();
-    private static Map<String, Integer> ids = Maps.newHashMap();
+    private static final Map<String, SimpleNetworkWrapper> wrappers = Maps.newHashMap();
+    private static final Map<String, Integer> ids = Maps.newHashMap();
 
     public ThematicNetworkHelper() {
     }

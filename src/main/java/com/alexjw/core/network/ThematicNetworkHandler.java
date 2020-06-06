@@ -1,7 +1,6 @@
 package com.alexjw.core.network;
 
 import com.alexjw.core.ThematicCore;
-import com.alexjw.siegecraft.Siege;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 public class ThematicNetworkHandler extends ThematicNetworkHelper {
