@@ -4,7 +4,6 @@ import com.alexjw.siegecraft.Siege;
 import com.alexjw.siegecraft.client.gui.GuiCustomMenu;
 import com.alexjw.siegecraft.server.data.SiegeData;
 import com.alexjw.siegecraft.server.data.SiegePlayer;
-import com.alexjw.siegecraft.server.helper.GameHelper;
 import com.alexjw.siegecraft.server.helper.SiegeHelper;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
@@ -179,10 +178,10 @@ public class ClientEventHandler {
                 int xPos = scaledResolution.getScaledWidth();
                 int yPos = 4;
                 int i = scaledResolution.getScaledWidth() / 2;
-                mc.ingameGUI.drawCenteredString(mc.fontRenderer, "" + GameHelper.scoreA, i - 33, yPos + 4, -1);
-                mc.ingameGUI.drawCenteredString(mc.fontRenderer, "" + GameHelper.scoreB, i + 31, yPos + 4, -1);
+                mc.ingameGUI.drawCenteredString(mc.fontRenderer, "" + SiegeData.teamA.getScore(), i - 33, yPos + 4, -1);
+                mc.ingameGUI.drawCenteredString(mc.fontRenderer, "" + SiegeData.teamB.getScore(), i + 31, yPos + 4, -1);
                 mc.ingameGUI.drawCenteredString(mc.fontRenderer, "0:00", (xPos / 2) - 1, yPos + 2, -1);
-                mc.ingameGUI.drawCenteredString(mc.fontRenderer, "ROUND " + GameHelper.roundNumber, (xPos / 2) - 1, yPos + 12, -1);
+                mc.ingameGUI.drawCenteredString(mc.fontRenderer, "ROUND " + SiegeData.roundNumber, (xPos / 2) - 1, yPos + 12, -1);
                 int start = 150;
                 for (SiegePlayer siegePlayer : SiegeData.teamA.getPlayers()) {
                     ResourceLocation loc = none;

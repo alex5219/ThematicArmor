@@ -307,7 +307,7 @@ public class SiegeHelper {
         Random random = new Random();
         ArrayList<Operator> attackers = new ArrayList<>();
         for(Operator operator:OperatorManager.operatorArrayList) {
-            if(operator.getTeam().equals(Operator.Team.ATTACKER)){
+            if (operator.getTeam().equals(Operator.Team.ATTACKER) && !operator.isHidden()) {
                 attackers.add(operator);
             }
         }
@@ -319,7 +319,7 @@ public class SiegeHelper {
         Random random = new Random();
         ArrayList<Operator> defenders = new ArrayList<>();
         for(Operator operator:OperatorManager.operatorArrayList) {
-            if(operator.getTeam().equals(Operator.Team.DEFENDER)){
+            if (operator.getTeam().equals(Operator.Team.DEFENDER) && !operator.isHidden()) {
                 defenders.add(operator);
             }
         }

@@ -51,7 +51,7 @@ public class Operator {
     }
 
     public boolean isHidden(){
-        return true;
+        return false;
     }
 
     public String getName() {

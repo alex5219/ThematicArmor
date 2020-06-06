@@ -6,5 +6,7 @@ public class OperatorThermite extends Operator {
     }
 
     @Override
-    public boolean isHidden() {return true; }
+    public boolean isHidden() {
+        return true;
+    }
 }

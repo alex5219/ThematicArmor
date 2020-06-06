@@ -7,6 +7,6 @@ public class OperatorCapitao extends Operator {
 
     @Override
     public boolean isHidden() {
-        return false;
+        return true;
     }
 }

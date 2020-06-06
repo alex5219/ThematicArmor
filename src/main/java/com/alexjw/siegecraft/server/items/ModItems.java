@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ModItems {
-    public static final List<Item> ITEMS = new ArrayList<Item>();
+    public static List<Item> ITEMS = new ArrayList<Item>();
     public static ItemBreachCharge itemBreachCharge = new ItemBreachCharge();
     public static final ItemBlowTorch itemBlowTorch = new ItemBlowTorch();
     public static ItemFuelCanister itemFuelCanister = new ItemFuelCanister();

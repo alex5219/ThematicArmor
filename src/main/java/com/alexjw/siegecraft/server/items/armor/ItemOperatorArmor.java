@@ -47,7 +47,7 @@ public class ItemOperatorArmor extends ItemArmor {
         this.operator = operator;
         this.setUnlocalizedName(operator.getUnlocalizedName() + "_" + compatibleEntityEquipmentSlot.toString().toLowerCase());
         this.setRegistryName(Siege.MODID, operator.getUnlocalizedName() + "_" + compatibleEntityEquipmentSlot.toString().toLowerCase());
-        if (operator.isHidden()) {
+        if (!operator.isHidden()) {
             this.setCreativeTab(SiegeTabs.tabOperatorsArmor);
         }
         ModItems.ITEMS.add(this);

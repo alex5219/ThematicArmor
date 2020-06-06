@@ -29,7 +29,7 @@ public class ItemOperatorItem extends Item {
         super();
         this.setUnlocalizedName(operator.getUnlocalizedName());
         this.setRegistryName(Siege.MODID, operator.getUnlocalizedName());
-        if (operator.isHidden()) {
+        if (!operator.isHidden()) {
             this.setCreativeTab(SiegeTabs.tabOperators);
         }
         this.operator = operator;

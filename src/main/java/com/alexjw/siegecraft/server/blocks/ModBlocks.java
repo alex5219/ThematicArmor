@@ -9,7 +9,7 @@ import java.util.List;
 
 @GameRegistry.ObjectHolder(Siege.MODID)
 public class ModBlocks {
-    public static final List<Block> BLOCKS = new ArrayList<>();
+    public static List<Block> BLOCKS = new ArrayList<>();
     public static final BlockCamera blockCamera = new BlockCamera();
     public static BlockRookArmor blockRookArmor = new BlockRookArmor();
 }
