@@ -18,6 +18,7 @@ item.drone_access.name=Drone Access
 OPERATOR ITEMS:
 item.operator_finka.name=Finka
 item.operator_bandit.name=Bandit
+item.operator_capitao.name=Capitao
 item.operator_maverick.name=Maverick
 item.operator_rook.name=Rook
 item.operator_valkyrie.name=Valkyrie
@@ -40,6 +41,7 @@ item.operator.name=%1$s's %2$s
 operator.recruit=Recruit
 operator.ash=Ash
 operator.bandit=Bandit
+operator.capitao=Capitao
 operator.doc=Doc
 operator.finka=Finka
 operator.kali=Kali

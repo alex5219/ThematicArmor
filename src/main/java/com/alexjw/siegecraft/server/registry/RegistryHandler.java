@@ -51,18 +51,23 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void entityRegistration(RegistryEvent.Register<EntityEntry> event) {
         event.getRegistry().register(EntityEntryBuilder.create().entity(EntityAsh.class)
-                .id(new ResourceLocation(Siege.MODID, "ash"), 13)
+                .id(new ResourceLocation(Siege.MODID, "ash"), 14)
                 .name("Ash")
                 .tracker(160, 2, false)
                 .build());
         event.getRegistry().register(EntityEntryBuilder.create().entity(EntityBandit.class)
-                .id(new ResourceLocation(Siege.MODID, "bandit"), 12)
+                .id(new ResourceLocation(Siege.MODID, "bandit"), 13)
                 .name("Bandit")
                 .tracker(160, 2, false)
                 .build());
         event.getRegistry().register(EntityEntryBuilder.create().entity(EntityDoc.class)
-                .id(new ResourceLocation(Siege.MODID, "doc"), 11)
+                .id(new ResourceLocation(Siege.MODID, "doc"), 12)
                 .name("Doc")
+                .tracker(160, 2, false)
+                .build());
+        event.getRegistry().register(EntityEntryBuilder.create().entity(EntityCapitao.class)
+                .id(new ResourceLocation(Siege.MODID, "capitao"), 11)
+                .name("Capitao")
                 .tracker(160, 2, false)
                 .build());
         event.getRegistry().register(EntityEntryBuilder.create().entity(EntityFinka.class)

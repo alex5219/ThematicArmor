@@ -11,6 +11,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer ash = new SiegeRenderer(OperatorManager.operatorAsh, new ModelOperatorAsh());
     public static SiegeRenderer bandit = new SiegeRenderer(OperatorManager.operatorBandit, new ModelOperatorBandit());
     public static SiegeRenderer doc = new SiegeRenderer(OperatorManager.operatorDoc, new ModelOperatorDoc());
+    public static SiegeRenderer capitao = new SiegeRenderer(OperatorManager.operatorCapitao, new ModelOperatorCapitao());
     public static SiegeRenderer finka = new SiegeRenderer(OperatorManager.operatorFinka, new ModelOperatorFinka());
     public static SiegeRenderer jackal = new SiegeRenderer(OperatorManager.operatorJackal, new ModelOperatorJackal());
     public static SiegeRenderer maverick = new SiegeRenderer(OperatorManager.operatorMaverick, new ModelOperatorMaverick());
