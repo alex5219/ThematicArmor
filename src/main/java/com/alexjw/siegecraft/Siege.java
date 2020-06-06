@@ -11,8 +11,6 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
 import java.io.File;
@@ -20,7 +18,6 @@ import java.nio.file.Paths;
 
 @Mod(modid = Siege.MODID, name = Siege.NAME, version = Siege.VERSION, acceptedMinecraftVersions = "1.12.2")
 public class Siege extends DummyModContainer {
-    public static final Logger LOGGER = LogManager.getLogger("Siege-Craft");
     public static final String MODID = "siegecraft";
     public static final String NAME = "Siege-Craft";
     public static final String VERSION = "1.0.2";

@@ -22,11 +22,5 @@ public class RenderHandler {
             SiegeRenderPlayer siegeRenderPlayer = new SiegeRenderPlayer(event.getRenderer().getRenderManager(), 0.045f);
             siegeRenderPlayer.doRender((AbstractClientPlayer) event.getEntityPlayer(), event.getX(), event.getY(), event.getZ(), 0, event.getPartialRenderTick());
         }
-        event.getRenderer().getMainModel().bipedRightLegwear.showModel = false;
-        event.getRenderer().getMainModel().bipedLeftLegwear.showModel = false;
-        event.getRenderer().getMainModel().bipedLeftArmwear.showModel = false;
-        event.getRenderer().getMainModel().bipedRightArmwear.showModel = false;
-        event.getRenderer().getMainModel().bipedBodyWear.showModel = false;
-        event.getRenderer().getMainModel().bipedHeadwear.showModel = false;
     }
 }

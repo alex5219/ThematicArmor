@@ -5,6 +5,7 @@ itemGroup.tabGadgets=Gadgets
 itemGroup.tabBlocks=Blocks
 
 GADGETS:
+item.erc_7.name=ERC-7
 item.breach_charge.name=Breach Charge
 item.blow_torch.name=Maverick's Blow Torch
 item.fuel_canister.name=Fuel Canister
