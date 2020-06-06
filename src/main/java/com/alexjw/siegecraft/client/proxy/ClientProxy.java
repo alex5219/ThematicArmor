@@ -36,11 +36,13 @@ public class ClientProxy extends ServerProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityDoc.class, RenderDoc::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityCapitao.class, RenderCapitao::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityFinka.class, RenderFinka::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityFrost.class, RenderFrost::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityJackal.class, RenderJackal::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityMaverick.class, RenderMaverick::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityRook.class, RenderRook::new);
         RenderingRegistry.registerEntityRenderingHandler(EntitySledge.class, RenderSledge::new);
         RenderingRegistry.registerEntityRenderingHandler(EntitySmoke.class, RenderSmoke::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityThermite.class, RenderThermite::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityVigil.class, RenderVigil::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityDrone.class, RenderDrone::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityCamera.class, RenderCamera::new);
