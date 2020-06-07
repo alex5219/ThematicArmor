@@ -3,14 +3,12 @@ package com.alexjw.siegecraft.client.proxy;
 import com.alexjw.siegecraft.client.event.ClientEventHandler;
 import com.alexjw.siegecraft.client.event.KeyBindHandler;
 import com.alexjw.siegecraft.client.event.RenderHandler;
-import com.alexjw.siegecraft.client.renderer.entity.RenderCamera;
-import com.alexjw.siegecraft.client.renderer.entity.RenderDrone;
-import com.alexjw.siegecraft.client.renderer.entity.RenderRope;
-import com.alexjw.siegecraft.client.renderer.entity.SiegeRendererManager;
+import com.alexjw.siegecraft.client.renderer.entity.*;
 import com.alexjw.siegecraft.client.renderer.entity.operators.*;
 import com.alexjw.siegecraft.client.settings.SiegeKeys;
 import com.alexjw.siegecraft.server.entity.EntityCamera;
 import com.alexjw.siegecraft.server.entity.EntityDrone;
+import com.alexjw.siegecraft.server.entity.EntityFootprint;
 import com.alexjw.siegecraft.server.entity.EntityRope;
 import com.alexjw.siegecraft.server.entity.operator.*;
 import com.alexjw.siegecraft.server.proxy.ServerProxy;
@@ -47,6 +45,7 @@ public class ClientProxy extends ServerProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityDrone.class, RenderDrone::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityCamera.class, RenderCamera::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityRope.class, RenderRope::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityFootprint.class, RenderFootprint::new);
 
         this.registerEventHandler(new ClientEventHandler());
         this.registerEventHandler(new KeyBindHandler());

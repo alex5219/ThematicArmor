@@ -4,6 +4,7 @@ import com.alexjw.siegecraft.Siege;
 import com.alexjw.siegecraft.server.blocks.ModBlocks;
 import com.alexjw.siegecraft.server.entity.EntityCamera;
 import com.alexjw.siegecraft.server.entity.EntityDrone;
+import com.alexjw.siegecraft.server.entity.EntityFootprint;
 import com.alexjw.siegecraft.server.entity.EntityRope;
 import com.alexjw.siegecraft.server.entity.operator.*;
 import com.alexjw.siegecraft.server.items.ModItems;
@@ -50,6 +51,11 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void entityRegistration(RegistryEvent.Register<EntityEntry> event) {
+        event.getRegistry().register(EntityEntryBuilder.create().entity(EntityFootprint.class)
+                .id(new ResourceLocation(Siege.MODID, "footprint"), 15)
+                .name("Footprint")
+                .tracker(160, 2, false)
+                .build());
         event.getRegistry().register(EntityEntryBuilder.create().entity(EntityAsh.class)
                 .id(new ResourceLocation(Siege.MODID, "ash"), 14)
                 .name("Ash")

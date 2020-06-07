@@ -6,6 +6,7 @@ import com.alexjw.siegecraft.network.SiegeNetworkHandler;
 import com.alexjw.siegecraft.server.blocks.ModBlocks;
 import com.alexjw.siegecraft.server.data.SiegeData;
 import com.alexjw.siegecraft.server.entity.EntityCamera;
+import com.alexjw.siegecraft.server.entity.EntityFootprint;
 import com.alexjw.siegecraft.server.entity.EntityRope;
 import com.alexjw.siegecraft.server.helper.SiegeHelper;
 import net.minecraft.block.BlockAir;
@@ -27,8 +28,43 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import java.util.HashMap;
+import java.util.Random;
+
 @Mod.EventBusSubscriber(modid = Siege.MODID)
 public class CommonEventHandler {
+    private static HashMap<EntityPlayer, Integer> timeSinceFootStep = new HashMap<>();
+    private static Random random = new Random();
+
+    @SubscribeEvent
+    public static void footPrint(TickEvent.PlayerTickEvent event) {
+        EntityPlayer entityPlayer = event.player;
+        if (timeSinceFootStep.get(entityPlayer) != null) {
+            timeSinceFootStep.put(entityPlayer, timeSinceFootStep.get(entityPlayer) + 1);
+        } else {
+            timeSinceFootStep.put(entityPlayer, 5);
+        }
+        if (timeSinceFootStep.get(entityPlayer) > 10 && random.nextInt(10) == 1 && SiegeHelper.getOperator(entityPlayer) != null) {
+            EntityFootprint entityFootprint = new EntityFootprint(entityPlayer.world);
+            switch (random.nextInt(4)) {
+                case 0:
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    break;
+                case 1:
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    break;
+                case 2:
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    break;
+                case 3:
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    break;
+            }
+            entityPlayer.world.spawnEntity(entityFootprint);
+            timeSinceFootStep.put(entityPlayer, 0);
+        }
+    }
+
     @SubscribeEvent
     public static void onRide(EntityMountEvent event) {
         if (event.isDismounting()) {
