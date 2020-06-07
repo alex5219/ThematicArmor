@@ -12,14 +12,11 @@ import com.alexjw.siegecraft.server.helper.SiegeHelper;
 import net.minecraft.block.BlockAir;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EntitySelectors;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.EntityMountEvent;
-import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -48,16 +45,16 @@ public class CommonEventHandler {
             EntityFootprint entityFootprint = new EntityFootprint(entityPlayer.world);
             switch (random.nextInt(4)) {
                 case 0:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
                     break;
                 case 1:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
                     break;
                 case 2:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
                     break;
                 case 3:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                    entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
                     break;
             }
             entityPlayer.world.spawnEntity(entityFootprint);
@@ -75,12 +72,6 @@ public class CommonEventHandler {
                 }
             }
         }
-    }
-
-    @SubscribeEvent
-    public static void onCollide(ProjectileImpactEvent event) {
-        for (EntityPlayer entityPlayer : event.getEntity().getEntityWorld().getEntities(EntityPlayer.class, EntitySelectors.IS_ALIVE))
-            entityPlayer.sendMessage(new TextComponentString("Entity: " + event.getRayTraceResult().getBlockPos()));
     }
 
     @SubscribeEvent
