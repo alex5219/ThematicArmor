@@ -5,6 +5,7 @@ itemGroup.tabGadgets=Gadgets
 itemGroup.tabBlocks=Blocks
 
 GADGETS:
+item.eyenox_model_iii.name=Eyenox Model III
 item.erc_7.name=ERC-7
 item.breach_charge.name=Breach Charge
 item.blow_torch.name=Maverick's Blow Torch

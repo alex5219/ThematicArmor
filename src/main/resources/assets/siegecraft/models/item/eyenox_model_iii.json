@@ -1,0 +1,88 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "siegecraft:items/eyenox_model_iii"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        69,
+        -180,
+        -2
+      ],
+      "translation": [
+        3.5,
+        23.75,
+        26.5
+      ],
+      "scale": [
+        0,
+        0,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        68,
+        -180,
+        0
+      ],
+      "translation": [
+        -3.75,
+        24,
+        25.75
+      ],
+      "scale": [
+        0,
+        0,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        9,
+        -176,
+        0
+      ],
+      "translation": [
+        -7.25,
+        15.4,
+        8.25
+      ],
+      "scale": [
+        0,
+        0,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        11,
+        -180,
+        -5
+      ],
+      "translation": [
+        -9.5,
+        15.4,
+        8.5
+      ],
+      "scale": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ground": {
+      "translation": [
+        -4.25,
+        29,
+        9
+      ],
+      "scale": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

@@ -9,6 +9,7 @@ import com.alexjw.siegecraft.server.entity.EntityCamera;
 import com.alexjw.siegecraft.server.entity.EntityFootprint;
 import com.alexjw.siegecraft.server.entity.EntityRope;
 import com.alexjw.siegecraft.server.helper.SiegeHelper;
+import com.alexjw.siegecraft.server.operators.Operator;
 import net.minecraft.block.BlockAir;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
@@ -36,29 +37,33 @@ public class CommonEventHandler {
     @SubscribeEvent
     public static void footPrint(TickEvent.PlayerTickEvent event) {
         EntityPlayer entityPlayer = event.player;
-        if (timeSinceFootStep.get(entityPlayer) != null) {
-            timeSinceFootStep.put(entityPlayer, timeSinceFootStep.get(entityPlayer) + 1);
-        } else {
-            timeSinceFootStep.put(entityPlayer, 5);
-        }
-        if (timeSinceFootStep.get(entityPlayer) > 10 && random.nextInt(10) == 1 && SiegeHelper.getOperator(entityPlayer) != null) {
-            EntityFootprint entityFootprint = new EntityFootprint(entityPlayer.world);
-            switch (random.nextInt(4)) {
-                case 0:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
-                    break;
-                case 1:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
-                    break;
-                case 2:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
-                    break;
-                case 3:
-                    entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
-                    break;
+        if (SiegeHelper.getOperator(entityPlayer) != null) {
+            if (SiegeHelper.getOperator(entityPlayer).getEnumTeam().equals(Operator.Team.DEFENDER)) {
+                if (timeSinceFootStep.get(entityPlayer) != null) {
+                    timeSinceFootStep.put(entityPlayer, timeSinceFootStep.get(entityPlayer) + 1);
+                } else {
+                    timeSinceFootStep.put(entityPlayer, 0);
+                }
+                if (timeSinceFootStep.get(entityPlayer) > 13 && random.nextInt(12) == 1 && SiegeHelper.getOperator(entityPlayer) != null) {
+                    EntityFootprint entityFootprint = new EntityFootprint(entityPlayer.world);
+                    switch (random.nextInt(4)) {
+                        case 0:
+                            entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                            break;
+                        case 1:
+                            entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ + random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                            break;
+                        case 2:
+                            entityFootprint.setLocationAndAngles(entityPlayer.posX + random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                            break;
+                        case 3:
+                            entityFootprint.setLocationAndAngles(entityPlayer.posX - random.nextFloat() / 3, entityPlayer.posY, entityPlayer.posZ - random.nextFloat() / 3, entityPlayer.rotationYaw, entityPlayer.rotationPitch);
+                            break;
+                    }
+                    entityPlayer.world.spawnEntity(entityFootprint);
+                    timeSinceFootStep.put(entityPlayer, 0);
+                }
             }
-            entityPlayer.world.spawnEntity(entityFootprint);
-            timeSinceFootStep.put(entityPlayer, 0);
         }
     }
 

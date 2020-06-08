@@ -22,4 +22,5 @@ public class ModItems {
     public static final ItemCameraMonitor itemCameraMonitor = new ItemCameraMonitor();
     public static ItemCamera itemCamera = new ItemCamera();
     public static ItemERC7 itemERC7 = new ItemERC7();
+    public static ItemEyenox itemEyenox = new ItemEyenox();
 }

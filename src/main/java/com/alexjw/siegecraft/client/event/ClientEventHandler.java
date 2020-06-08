@@ -33,6 +33,7 @@ public class ClientEventHandler {
     public static boolean isLeaningLeft = false;
     public static boolean isLeaningRight = false;
     private static final ResourceLocation droneHudTexture = new ResourceLocation(Siege.MODID, "textures/gui/camera_hud.png");
+    private static final ResourceLocation jackalHudTexture = new ResourceLocation(Siege.MODID, "textures/gui/jackal_hud.png");
     private static final ResourceLocation hudTexture = new ResourceLocation(Siege.MODID, "textures/gui/rainbow_hud.png");
     private static final ResourceLocation none = new ResourceLocation(Siege.MODID, "textures/gui/icon/none.png");
     private static Framebuffer framebuffer = null;
@@ -73,34 +74,36 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void rappelShow(RenderGameOverlayEvent.Pre event) {
         EntityPlayer entityPlayer = Minecraft.getMinecraft().player;
-        if (entityPlayer != null) {
-            SiegePlayer siegePlayer = SiegeHelper.getSiegePlayerByEntity(entityPlayer);
-            if (siegePlayer != null) {
-                BlockPos blockPosInfront;
-                EnumFacing enumFacing = entityPlayer.getHorizontalFacing();
-                switch (enumFacing) {
-                    case EAST:
-                        blockPosInfront = new BlockPos(entityPlayer.getPosition().getX() + 0.75, entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ());
-                        break;
-                    case WEST:
-                        blockPosInfront = new BlockPos(entityPlayer.getPosition().getX() - 0.75, entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ());
-                        break;
-                    case NORTH:
-                        blockPosInfront = new BlockPos(entityPlayer.getPosition().getX(), entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ() - 0.75);
-                        break;
-                    case SOUTH:
-                        blockPosInfront = new BlockPos(entityPlayer.getPosition().getX(), entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ() + 0.75);
-                        break;
-                    default:
-                        blockPosInfront = entityPlayer.getPosition();
-                        break;
-                }
-                if (!(entityPlayer.world.getBlockState(blockPosInfront).getBlock() instanceof BlockAir)) {
-                    if (entityPlayer.world.canSeeSky(entityPlayer.getPosition()) && !siegePlayer.isRapelling()){
-                        ScaledResolution scaledResolution = new ScaledResolution(Minecraft.getMinecraft());
-                        int xPos = scaledResolution.getScaledWidth();
-                        int yPos = scaledResolution.getScaledHeight();
-                        Minecraft.getMinecraft().ingameGUI.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "Press 'F' to begin rappelling.", xPos / 2, (yPos / 2) + 90, -1);
+        if ((event.getType().equals(RenderGameOverlayEvent.ElementType.HOTBAR))) {
+            if (entityPlayer != null) {
+                SiegePlayer siegePlayer = SiegeHelper.getSiegePlayerByEntity(entityPlayer);
+                if (siegePlayer != null) {
+                    BlockPos blockPosInfront;
+                    EnumFacing enumFacing = entityPlayer.getHorizontalFacing();
+                    switch (enumFacing) {
+                        case EAST:
+                            blockPosInfront = new BlockPos(entityPlayer.getPosition().getX() + 0.75, entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ());
+                            break;
+                        case WEST:
+                            blockPosInfront = new BlockPos(entityPlayer.getPosition().getX() - 0.75, entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ());
+                            break;
+                        case NORTH:
+                            blockPosInfront = new BlockPos(entityPlayer.getPosition().getX(), entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ() - 0.75);
+                            break;
+                        case SOUTH:
+                            blockPosInfront = new BlockPos(entityPlayer.getPosition().getX(), entityPlayer.getPosition().getY(), entityPlayer.getPosition().getZ() + 0.75);
+                            break;
+                        default:
+                            blockPosInfront = entityPlayer.getPosition();
+                            break;
+                    }
+                    if (!(entityPlayer.world.getBlockState(blockPosInfront).getBlock() instanceof BlockAir)) {
+                        if (entityPlayer.world.canSeeSky(entityPlayer.getPosition()) && !siegePlayer.isRapelling()) {
+                            ScaledResolution scaledResolution = new ScaledResolution(Minecraft.getMinecraft());
+                            int xPos = scaledResolution.getScaledWidth();
+                            int yPos = scaledResolution.getScaledHeight();
+                            Minecraft.getMinecraft().ingameGUI.drawCenteredString(Minecraft.getMinecraft().fontRenderer, "Press 'F' to begin rappelling.", xPos / 2, (yPos / 2) + 90, -1);
+                        }
                     }
                 }
             }
@@ -152,7 +155,7 @@ public class ClientEventHandler {
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
-    public static void renderDroneHud(RenderGameOverlayEvent.Pre event) {
+    public static void renderArmorHud(RenderGameOverlayEvent.Pre event) {
         Minecraft mc = Minecraft.getMinecraft();
         if (SiegeHelper.isDroning(mc.player)) {
             if ((event.getType().equals(RenderGameOverlayEvent.ElementType.HOTBAR))) {
@@ -162,6 +165,18 @@ public class ClientEventHandler {
                 Minecraft.getMinecraft().getTextureManager().bindTexture(droneHudTexture);
                 drawTexturedQuadFit(0.0D, 0.0D, scaledResolution.getScaledWidth(), scaledResolution.getScaledHeight(), -100.0D);
                 GlStateManager.popMatrix();
+            }
+        }
+        if ((event.getType().equals(RenderGameOverlayEvent.ElementType.HOTBAR))) {
+            if (SiegeData.isEyenoxActive.get(mc.player) != null) {
+                if (SiegeData.isEyenoxActive.get(mc.player)) {
+                    ScaledResolution scaledResolution = new ScaledResolution(mc);
+                    GlStateManager.pushMatrix();
+                    GlStateManager.color(1.0F, 1.0F, 1.0F, 0.15F);
+                    Minecraft.getMinecraft().getTextureManager().bindTexture(jackalHudTexture);
+                    drawTexturedQuadFit(0.0D, 0.0D, scaledResolution.getScaledWidth(), scaledResolution.getScaledHeight(), -100.0D);
+                    GlStateManager.popMatrix();
+                }
             }
         }
     }

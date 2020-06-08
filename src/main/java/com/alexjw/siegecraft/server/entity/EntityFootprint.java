@@ -20,7 +20,7 @@ public class EntityFootprint extends EntityLiving {
         NBTTagCompound nbtTagCompound = getEntityData();
         nbtTagCompound.setInteger("timeAlive", nbtTagCompound.getInteger("timeAlive") + 1);
         writeEntityToNBT(nbtTagCompound);
-        if (nbtTagCompound.getInteger("timeAlive") > 600) {
+        if (nbtTagCompound.getInteger("timeAlive") > 750) {
             this.setDead();
         }
         super.onUpdate();
