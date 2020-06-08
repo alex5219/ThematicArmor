@@ -21,6 +21,7 @@ OPERATOR ITEMS:
 item.operator_finka.name=Finka
 item.operator_bandit.name=Bandit
 item.operator_capitao.name=Capitao
+item.operator_frost.name=Frost
 item.operator_maverick.name=Maverick
 item.operator_rook.name=Rook
 item.operator_valkyrie.name=Valkyrie
@@ -28,9 +29,11 @@ item.operator_sledge.name=Sledge
 item.operator_doc.name=Doc
 item.operator_smoke.name=Smoke
 item.operator_ash.name=Ash
+item.operator.thermite.name=Thermite
 item.operator_kali.name=Kali
 item.operator_jackal.name=Jackal
 item.operator_vigil.name=Vigil
+item.operator_vigilinvis.name=Vigil
 
 OPERATOR PIECES:
 piece.head=Helmet
@@ -46,11 +49,14 @@ operator.bandit=Bandit
 operator.capitao=Capitao
 operator.doc=Doc
 operator.finka=Finka
+operator.frost=Frost
 operator.kali=Kali
 operator.maverick=Maverick
 operator.rook=Rook
 operator.sledge=Sledge
+operator.thermite=Thermite
 operator.smoke=Smoke
 operator.valkyrie=Valkryie
 operator.jackal=Jackal
 operator.vigil=Vigil
+operator.vigilinvis=Vigil
