@@ -10,6 +10,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -47,12 +48,26 @@ public class ItemGun extends Item {
         list.add(TextFormatting.GRAY + "Recoil: " + TextFormatting.GRAY + gun.getGunRecoil() + TextFormatting.GRAY + "b");
         list.add(TextFormatting.GRAY + "Rate of Fire: " + TextFormatting.GRAY + gun.getShootCooldown() + TextFormatting.GRAY + "/100");
         StringBuilder fireRate = new StringBuilder();
-        for(Gun.FireMode fireMode : gun.getGunFireMode())
+        for (Gun.FireMode fireMode : gun.getGunFireMode())
             fireRate.append(fireMode.toString()).append(" ");
         list.add(TextFormatting.GRAY + "Fire Rate: " + TextFormatting.GRAY + fireRate);
         list.add(TextFormatting.GRAY + "Magazines: ");
-        for(Bullet magazine : gun.getGunBullets())
+        for (Bullet magazine : gun.getGunBullets())
             list.add(TextFormatting.GRAY + magazine.getItemBullet().getItemStackDisplayName(itemStack));
+    }
+
+    public static ItemBullet hasAmmo(EntityPlayer entityPlayer) {
+        ItemBullet hasAmmo = null;
+        for (int i = 0; i < entityPlayer.inventory.getSizeInventory(); i++) {
+            ItemStack stack = entityPlayer.inventory.getStackInSlot(i);
+            for (Bullet bullet : getGun().getGunBullets()) {
+                if (stack.isItemEqual(new ItemStack(bullet.getItemBullet()))) {
+                    hasAmmo = new ItemBullet(bullet);
+                    break;
+                }
+            }
+        }
+        return hasAmmo;
     }
 
     @Override
@@ -65,14 +80,34 @@ public class ItemGun extends Item {
         return true;
     }
 
+    /**
+     * Get the gun for outside use.
+     */
+    public static Gun getGun() {
+        return gun;
+    }
+
+    public EnumAction getItemUseAction(ItemStack itemStack) {
+        return EnumAction.BOW;
+    }
+
+    /**
+     * Check if the gun has ammo set.
+     *
+     * @param itemStack - ItemGun
+     */
+    public static Boolean hasAmmo(ItemStack itemStack) {
+        return (getAmmo(itemStack) > 0) && (getLoadedAmmo(itemStack) != null);
+    }
+
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         ItemStack heldItem = playerIn.getHeldItem(handIn);
-        if(worldIn.isRemote) {
+        if (worldIn.isRemote) {
             if (!hasAmmo(heldItem))
-                if(hasAmmo(playerIn)){
+                if (hasAmmo(playerIn) != null) {
                     ThematicNetworkHandler.wrapper.sendToServer(new MessageReload());
-                }else {
+                } else {
                     return new ActionResult<>(EnumActionResult.FAIL, heldItem);
                 }
             if (hasAmmo(heldItem) || playerIn.capabilities.isCreativeMode) {
@@ -87,35 +122,6 @@ public class ItemGun extends Item {
             }
         }
         return new ActionResult<>(EnumActionResult.FAIL, heldItem);
-    }
-
-    public Boolean hasAmmo(EntityPlayer entityPlayer) {
-        boolean hasAmmo = false;
-        for (int i = 0; i < entityPlayer.inventory.getSizeInventory(); i++) {
-            ItemStack stack = entityPlayer.inventory.getStackInSlot(i);
-            for(Bullet bullet: getGun().getGunBullets()){
-                if(stack.isItemEqual(new ItemStack(bullet.getItemBullet()))){
-                    hasAmmo = true;
-                    break;
-                }
-            }
-        }
-        return hasAmmo;
-    }
-
-    /**
-     * Check if the gun has ammo set.
-     * @param itemStack - ItemGun
-     */
-    public static Boolean hasAmmo(ItemStack itemStack){
-        return (getAmmo(itemStack) > 0) && (getLoadedAmmo(itemStack) != null);
-    }
-
-    /**
-     * Get the gun for outside use.
-     */
-    public Gun getGun() {
-        return gun;
     }
 
     /**

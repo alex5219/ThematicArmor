@@ -41,8 +41,8 @@ public class ItemBullet extends Item {
      *
      * @param itemStack - This itemstack
      */
-    public int getAmmo(ItemStack itemStack) {
-        NBTTagCompound nbtTagCompound = itemStack.getTagCompound();
+    public int getAmmo(ItemBullet itemStack) {
+        NBTTagCompound nbtTagCompound = new ItemStack(itemStack).getTagCompound();
         if (nbtTagCompound != null) {
             return nbtTagCompound.getInteger("ammo");
         } else {

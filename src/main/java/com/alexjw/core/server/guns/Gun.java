@@ -1,13 +1,12 @@
 package com.alexjw.core.server.guns;
 
 import com.alexjw.core.server.items.ItemGun;
-import net.minecraft.item.Item;
 
 import java.util.ArrayList;
 
 public class Gun {
-    protected final Item itemGun;
-    private float reloadTime = 0.0f;
+    protected final ItemGun itemGun;
+    private int reloadTime = 0;
     private int shootCooldown = 0;
     private float gunDamage = 0.0f;
     private float gunRecoil = 0.0f;
@@ -17,7 +16,7 @@ public class Gun {
     private ArrayList<FireMode> gunFireMode = new ArrayList<>();
     //TODO: add the attachments
 
-    public Gun(String modID, String gunName, int shootCooldown, float reloadTime, float gunDamage, float gunRecoil) {
+    public Gun(String modID, String gunName, int shootCooldown, int reloadTime, float gunDamage, float gunRecoil) {
         this.modID = modID;
         this.gunName = gunName;
         this.shootCooldown = shootCooldown;
@@ -46,15 +45,15 @@ public class Gun {
         this.gunRecoil = gunRecoil;
     }
 
-    public float getReloadTime() {
+    public int getReloadTime() {
         return reloadTime;
     }
 
-    public void setReloadTime(float reloadTime) {
+    public void setReloadTime(int reloadTime) {
         this.reloadTime = reloadTime;
     }
 
-    public Item getItemGun() {
+    public ItemGun getItemGun() {
         return itemGun;
     }
 
