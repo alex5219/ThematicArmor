@@ -28,6 +28,8 @@ public class SiegeRenderPlayer extends RenderLivingBase<AbstractClientPlayer> {
         this.addLayer(new LayerHeldItem(this));
         this.addLayer(new LayerCustomHead(this.getMainModel().bipedHead));
         this.invisValue = invisValue;
+        this.shadowOpaque = 0.0f;
+        this.shadowSize = 0.0f;
     }
 
     public ModelPlayer getMainModel() {
@@ -35,13 +37,11 @@ public class SiegeRenderPlayer extends RenderLivingBase<AbstractClientPlayer> {
     }
 
     public void doRender(AbstractClientPlayer abstractClientPlayer, double x, double y, double z, float entityYaw, float partialTicks) {
-        if (this.renderManager.renderViewEntity == abstractClientPlayer) {
-            GlStateManager.color(1, 1, 1, invisValue);
-            this.setModelVisibilities(abstractClientPlayer);
-            GlStateManager.enableBlendProfile(GlStateManager.Profile.PLAYER_SKIN);
-            super.doRender(abstractClientPlayer, x, y, z, entityYaw, partialTicks);
-            GlStateManager.disableBlendProfile(GlStateManager.Profile.PLAYER_SKIN);
-        }
+        GlStateManager.color(1, 1, 1, invisValue);
+        this.setModelVisibilities(abstractClientPlayer);
+        GlStateManager.enableBlendProfile(GlStateManager.Profile.PLAYER_SKIN);
+        super.doRender(abstractClientPlayer, x, y, z, entityYaw, partialTicks);
+        GlStateManager.disableBlendProfile(GlStateManager.Profile.PLAYER_SKIN);
     }
 
     private void setModelVisibilities(AbstractClientPlayer abstractClientPlayer) {

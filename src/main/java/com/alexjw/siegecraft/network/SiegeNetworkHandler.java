@@ -12,6 +12,7 @@ public class SiegeNetworkHandler extends ThematicNetworkHelper {
 
     public static void registerPackets() {
         wrapper = ThematicNetworkHelper.getWrapper(Siege.MODID);
+        registerMessage(MessageBlowtorch.class);
         registerMessage(MessagePlayerUpdate.class);
         registerMessage(MessageSwapDevice.class);
         registerMessage(MessageAttemptRappel.class);

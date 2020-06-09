@@ -16,16 +16,15 @@ import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = Siege.MODID)
 public class RenderHandler {
-
     @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
     public static void renderPlayer(RenderPlayerEvent.Pre event) {
-        if (SiegeHelper.getOperator(event.getEntityPlayer()) != null) {
+        if (SiegeHelper.getOperator(event.getEntityPlayer()) != null && !Objects.requireNonNull(event.getEntityPlayer().getHeldItemMainhand().getItem().getRegistryName()).getResourceDomain().equalsIgnoreCase("mw")) {
             if (SiegeHelper.getOperator(event.getEntityPlayer()) == OperatorManager.operatorVigilInvis) {
                 event.setCanceled(true);
                 SiegeRenderPlayer siegeRenderPlayer = new SiegeRenderPlayer(event.getRenderer().getRenderManager(), 0.045f);
                 siegeRenderPlayer.doRender((AbstractClientPlayer) event.getEntityPlayer(), event.getX(), event.getY(), event.getZ(), 0, event.getPartialRenderTick());
-            } else if (!Objects.requireNonNull(event.getEntityPlayer().getHeldItemMainhand().getItem().getRegistryName()).getResourceDomain().equalsIgnoreCase("mw")) {
+            } else {
                 event.setCanceled(true);
                 SiegeRenderPlayer siegeRenderPlayer = new SiegeRenderPlayer(event.getRenderer().getRenderManager(), 1f);
                 siegeRenderPlayer.doRender((AbstractClientPlayer) event.getEntityPlayer(), event.getX(), event.getY(), event.getZ(), 0, event.getPartialRenderTick());
