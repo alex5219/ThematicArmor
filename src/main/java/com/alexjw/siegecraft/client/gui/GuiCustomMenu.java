@@ -6,11 +6,7 @@ import com.alexjw.siegecraft.client.gui.buttons.GuiButtonCustom;
 import com.alexjw.siegecraft.client.gui.buttons.GuiButtonMultiplayer;
 import com.alexjw.siegecraft.client.gui.buttons.GuiButtonText;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.gui.GuiWorldSelection;
-import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.client.multiplayer.GuiConnecting;
+import net.minecraft.client.gui.*;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
@@ -40,8 +36,8 @@ public class GuiCustomMenu extends GuiScreen {
 
     protected void actionPerformed(GuiButton button) {
         if (button.id == 0) {
-            ServerData serverData = new ServerData("Official", "207.244.243.195:25565", false);
-            this.mc.displayGuiScreen(new GuiConnecting(this, this.mc, serverData));
+            ServerData serverData = new ServerData("Official", "207.244.243.195:25551", false);
+            this.mc.displayGuiScreen(new GuiMultiplayer(this));
         } else if (button.id == 1) {
             this.mc.displayGuiScreen(new GuiWorldSelection(this));
         } else if (button.id == 6) {
