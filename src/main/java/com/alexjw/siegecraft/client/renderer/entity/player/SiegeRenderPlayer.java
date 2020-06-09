@@ -6,8 +6,9 @@ import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.entity.layers.*;
-import net.minecraft.entity.player.EnumPlayerModelParts;
+import net.minecraft.client.renderer.entity.layers.LayerBipedArmor;
+import net.minecraft.client.renderer.entity.layers.LayerCustomHead;
+import net.minecraft.client.renderer.entity.layers.LayerHeldItem;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHandSide;
@@ -25,10 +26,7 @@ public class SiegeRenderPlayer extends RenderLivingBase<AbstractClientPlayer> {
         super(renderManager, new ModelPlayer(0.0F, false), 0.5f);
         this.addLayer(new LayerBipedArmor(this));
         this.addLayer(new LayerHeldItem(this));
-        this.addLayer(new LayerArrow(this));
         this.addLayer(new LayerCustomHead(this.getMainModel().bipedHead));
-        this.addLayer(new LayerElytra(this));
-        this.addLayer(new LayerEntityOnShoulder(renderManager));
         this.invisValue = invisValue;
     }
 
@@ -51,17 +49,17 @@ public class SiegeRenderPlayer extends RenderLivingBase<AbstractClientPlayer> {
         if (abstractClientPlayer.isSpectator()) {
             modelplayer.setVisible(false);
             modelplayer.bipedHead.showModel = true;
-            modelplayer.bipedHeadwear.showModel = true;
+            modelplayer.bipedHeadwear.showModel = false;
         } else {
             ItemStack itemstack = abstractClientPlayer.getHeldItemMainhand();
             ItemStack itemstack1 = abstractClientPlayer.getHeldItemOffhand();
             modelplayer.setVisible(true);
-            modelplayer.bipedHeadwear.showModel = abstractClientPlayer.isWearing(EnumPlayerModelParts.HAT);
-            modelplayer.bipedBodyWear.showModel = abstractClientPlayer.isWearing(EnumPlayerModelParts.JACKET);
-            modelplayer.bipedLeftLegwear.showModel = abstractClientPlayer.isWearing(EnumPlayerModelParts.LEFT_PANTS_LEG);
-            modelplayer.bipedRightLegwear.showModel = abstractClientPlayer.isWearing(EnumPlayerModelParts.RIGHT_PANTS_LEG);
-            modelplayer.bipedLeftArmwear.showModel = abstractClientPlayer.isWearing(EnumPlayerModelParts.LEFT_SLEEVE);
-            modelplayer.bipedRightArmwear.showModel = abstractClientPlayer.isWearing(EnumPlayerModelParts.RIGHT_SLEEVE);
+            modelplayer.bipedHeadwear.showModel = false;
+            modelplayer.bipedBodyWear.showModel = false;
+            modelplayer.bipedLeftLegwear.showModel = false;
+            modelplayer.bipedRightLegwear.showModel = false;
+            modelplayer.bipedLeftArmwear.showModel = false;
+            modelplayer.bipedRightArmwear.showModel = false;
             modelplayer.isSneak = abstractClientPlayer.isSneaking();
             ModelBiped.ArmPose modelbiped$armpose = ModelBiped.ArmPose.EMPTY;
             ModelBiped.ArmPose modelbiped$armpose1 = ModelBiped.ArmPose.EMPTY;
@@ -182,6 +180,5 @@ public class SiegeRenderPlayer extends RenderLivingBase<AbstractClientPlayer> {
         } else {
             super.applyRotations(p_applyRotations_1_, p_applyRotations_2_, p_applyRotations_3_, p_applyRotations_4_);
         }
-
     }
 }
