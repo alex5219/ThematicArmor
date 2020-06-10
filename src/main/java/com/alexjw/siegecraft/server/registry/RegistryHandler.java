@@ -2,10 +2,7 @@ package com.alexjw.siegecraft.server.registry;
 
 import com.alexjw.siegecraft.Siege;
 import com.alexjw.siegecraft.server.blocks.ModBlocks;
-import com.alexjw.siegecraft.server.entity.EntityCamera;
-import com.alexjw.siegecraft.server.entity.EntityDrone;
-import com.alexjw.siegecraft.server.entity.EntityFootprint;
-import com.alexjw.siegecraft.server.entity.EntityRope;
+import com.alexjw.siegecraft.server.entity.*;
 import com.alexjw.siegecraft.server.entity.operator.*;
 import com.alexjw.siegecraft.server.items.ModItems;
 import com.alexjw.siegecraft.server.tileentity.TileEntityCamera;
@@ -51,6 +48,11 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void entityRegistration(RegistryEvent.Register<EntityEntry> event) {
+        event.getRegistry().register(EntityEntryBuilder.create().entity(EntityStim.class)
+                .id(new ResourceLocation(Siege.MODID, "stim"), 16)
+                .name("Stim")
+                .tracker(160, 2, false)
+                .build());
         event.getRegistry().register(EntityEntryBuilder.create().entity(EntityFootprint.class)
                 .id(new ResourceLocation(Siege.MODID, "footprint"), 15)
                 .name("Footprint")

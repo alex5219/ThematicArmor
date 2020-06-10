@@ -1,12 +1,11 @@
 package com.alexjw.siegecraft.server.bullets;
 
 import com.alexjw.core.server.guns.Bullet;
-import com.alexjw.siegecraft.Siege;
 
 import java.lang.reflect.Field;
 
 public class SiegeBullets {
-    public static final Bullet stim = new Bullet(Siege.MODID, "stim", 1, 1.0f);
+    //public static final Bullet stim = new Bullet(Siege.MODID, "stim", 1, 1.0f);
 
     public static void init() {
         for (Field field : SiegeBullets.class.getFields()) {

@@ -1,6 +1,8 @@
 package com.alexjw.siegecraft.server.items;
 
+import com.alexjw.siegecraft.server.items.ammo.ItemStim;
 import com.alexjw.siegecraft.server.items.armor.ItemDroneArmor;
+import com.alexjw.siegecraft.server.items.guns.ItemStimPistol;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 
@@ -23,4 +25,6 @@ public class ModItems {
     public static ItemCamera itemCamera = new ItemCamera();
     public static ItemERC7 itemERC7 = new ItemERC7();
     public static ItemEyenox itemEyenox = new ItemEyenox();
+    public static ItemStim itemStim = new ItemStim();
+    public static ItemStimPistol itemStimPistol = new ItemStimPistol();
 }
