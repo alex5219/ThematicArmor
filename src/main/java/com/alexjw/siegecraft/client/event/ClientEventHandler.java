@@ -5,6 +5,8 @@ import com.alexjw.siegecraft.client.gui.GuiCustomMenu;
 import com.alexjw.siegecraft.server.data.SiegeData;
 import com.alexjw.siegecraft.server.data.SiegePlayer;
 import com.alexjw.siegecraft.server.helper.SiegeHelper;
+import com.alexjw.siegecraft.server.items.ModItems;
+import com.alexjw.siegecraft.server.items.guns.IGun;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
@@ -16,10 +18,13 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.shader.Framebuffer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.client.event.*;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -37,6 +42,28 @@ public class ClientEventHandler {
     private static final ResourceLocation hudTexture = new ResourceLocation(Siege.MODID, "textures/gui/rainbow_hud.png");
     private static final ResourceLocation none = new ResourceLocation(Siege.MODID, "textures/gui/icon/none.png");
     private static Framebuffer framebuffer = null;
+
+    @SubscribeEvent
+    public static void onLeftClick(PlayerInteractEvent.LeftClickEmpty event) {
+        if (event.getItemStack().getItem().equals(ModItems.itemStimPistol)) {
+            if (event.isCancelable())
+                event.setCanceled(true);
+            event.getEntityPlayer().sendMessage(new TextComponentString("Fired Left Click"));
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public void onMouseEvent(MouseEvent event) {
+        Minecraft.getMinecraft().player.getHeldItem(EnumHand.MAIN_HAND);
+        if (Minecraft.getMinecraft().player.getHeldItem(EnumHand.MAIN_HAND).getItem() instanceof IGun) {
+            if (event.getButton() == 0 && event.isButtonstate()) {
+                if (((IGun) Minecraft.getMinecraft().player.getHeldItem(EnumHand.MAIN_HAND).getItem()).onLeftClick(Minecraft.getMinecraft().player.getHeldItem(EnumHand.MAIN_HAND), Minecraft.getMinecraft().player)) {
+                    event.setCanceled(true);
+                }
+            }
+        }
+    }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent

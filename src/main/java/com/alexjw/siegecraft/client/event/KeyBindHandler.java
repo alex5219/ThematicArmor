@@ -32,5 +32,6 @@ public class KeyBindHandler {
             ClientEventHandler.isLeaningRight = !ClientEventHandler.isLeaningRight;
             SiegeNetworkHandler.wrapper.sendToServer(new MessageSwitchCamera(1));
         }
+
     }
 }

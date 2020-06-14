@@ -15,6 +15,7 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -24,6 +25,26 @@ import java.util.Objects;
 import java.util.Random;
 
 public class SiegeHelper {
+    public static boolean hasAmmo(EntityPlayer entityPlayer) {
+        return findAmmo(entityPlayer) != ItemStack.EMPTY || entityPlayer.capabilities.isCreativeMode;
+    }
+
+    public static ItemStack findAmmo(EntityPlayer entityPlayer) {
+        if (entityPlayer.getHeldItemOffhand().getItem().equals(ModItems.itemStim)) {
+            return entityPlayer.getHeldItem(EnumHand.OFF_HAND);
+        } else if (entityPlayer.getHeldItemMainhand().getItem().equals(ModItems.itemStim)) {
+            return entityPlayer.getHeldItem(EnumHand.MAIN_HAND);
+        } else {
+            for (int i = 0; i < entityPlayer.inventory.getSizeInventory(); ++i) {
+                ItemStack itemstack = entityPlayer.inventory.getStackInSlot(i);
+                if (itemstack.getItem().equals(ModItems.itemStim)) {
+                    return itemstack;
+                }
+            }
+            return ItemStack.EMPTY;
+        }
+    }
+
     public static Operator getOperator(EntityPlayer entityPlayer) {
         if (entityPlayer.getArmorInventoryList().iterator().next() != null) {
             return getOperatorFromArmor(entityPlayer.getArmorInventoryList());

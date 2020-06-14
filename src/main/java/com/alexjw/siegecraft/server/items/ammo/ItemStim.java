@@ -17,9 +17,8 @@ public class ItemStim extends Item {
         ModItems.ITEMS.add(this);
     }
 
-    public EntityStim createBullet(World world, ItemStack itemStack, EntityLivingBase entityLivingBase) {
-        EntityStim entityStim = new EntityStim(world, entityLivingBase);
-        return entityStim;
+    public EntityStim createStim(World world, ItemStack itemStack, EntityLivingBase entityLivingBase) {
+        return new EntityStim(world, entityLivingBase);
     }
 }
 
