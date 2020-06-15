@@ -21,17 +21,7 @@ public class ClientEventHandler {
             if(heldItem.getItem() instanceof ItemGun) {
                 ItemGun gunItem = (ItemGun) heldItem.getItem();
 
-                /*
-                if(this.isZooming(Minecraft.getInstance().player) && !SyncedPlayerData.instance().get(mc.player, ModSyncedDataKeys.RELOADING))
-                {
-                    Gun modifiedGun = gunItem.getModifiedGun(heldItem);
-                    if(modifiedGun.modules.zoom != null)
-                    {
-                        float newFov = modifiedGun.modules.zoom.fovModifier;
-                        Scope scope = Gun.getScope(heldItem);
-                        event.setNewfov(newFov + (1.0F - newFov) * (1.0F - (zoomProgress / (float) ZOOM_TICKS)));
-                    }
-                }*/
+
             }
         }
     }

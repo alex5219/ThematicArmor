@@ -6,10 +6,7 @@ import com.alexjw.siegecraft.client.event.RenderHandler;
 import com.alexjw.siegecraft.client.renderer.entity.*;
 import com.alexjw.siegecraft.client.renderer.entity.operators.*;
 import com.alexjw.siegecraft.client.settings.SiegeKeys;
-import com.alexjw.siegecraft.server.entity.EntityCamera;
-import com.alexjw.siegecraft.server.entity.EntityDrone;
-import com.alexjw.siegecraft.server.entity.EntityFootprint;
-import com.alexjw.siegecraft.server.entity.EntityRope;
+import com.alexjw.siegecraft.server.entity.*;
 import com.alexjw.siegecraft.server.entity.operator.*;
 import com.alexjw.siegecraft.server.proxy.ServerProxy;
 import com.alexjw.siegecraft.server.sounds.SiegeSounds;
@@ -46,6 +43,7 @@ public class ClientProxy extends ServerProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityCamera.class, RenderCamera::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityRope.class, RenderRope::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityFootprint.class, RenderFootprint::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityStim.class, RenderStim::new);
 
         this.registerEventHandler(new ClientEventHandler());
         this.registerEventHandler(new KeyBindHandler());

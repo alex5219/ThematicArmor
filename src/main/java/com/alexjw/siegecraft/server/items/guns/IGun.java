@@ -5,4 +5,6 @@ import net.minecraft.item.ItemStack;
 
 public interface IGun {
     boolean onLeftClick(ItemStack itemStack, EntityPlayer entityPlayer);
+
+    void onServerFire(ItemStack itemStack, EntityPlayer entityPlayer);
 }

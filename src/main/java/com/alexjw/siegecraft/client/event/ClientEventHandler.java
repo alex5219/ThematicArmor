@@ -7,6 +7,7 @@ import com.alexjw.siegecraft.server.data.SiegePlayer;
 import com.alexjw.siegecraft.server.helper.SiegeHelper;
 import com.alexjw.siegecraft.server.items.ModItems;
 import com.alexjw.siegecraft.server.items.guns.IGun;
+import com.alexjw.siegecraft.server.items.guns.ItemStimPistol;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
@@ -15,15 +16,12 @@ import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.client.shader.Framebuffer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.client.event.*;
-import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -41,14 +39,50 @@ public class ClientEventHandler {
     private static final ResourceLocation jackalHudTexture = new ResourceLocation(Siege.MODID, "textures/gui/jackal_hud.png");
     private static final ResourceLocation hudTexture = new ResourceLocation(Siege.MODID, "textures/gui/rainbow_hud.png");
     private static final ResourceLocation none = new ResourceLocation(Siege.MODID, "textures/gui/icon/none.png");
-    private static Framebuffer framebuffer = null;
+    public static boolean isZooming;
+    private static float lastFOV = 0;
 
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public static void onFOVUpdate(FOVUpdateEvent event) {
+        EntityPlayer entityPlayer = event.getEntity();
+
+        if (entityPlayer.getHeldItemMainhand().getItem().equals(ModItems.itemStimPistol)) {
+            ItemStimPistol itemStimPistol = (ItemStimPistol) entityPlayer.getHeldItemMainhand().getItem();
+            if (isZooming) {
+                lastFOV = event.getFov();
+                event.setNewfov(event.getFov() - itemStimPistol.getWeaponZoom());
+            } else if (lastFOV != 0) {
+                event.setNewfov(lastFOV);
+            }
+        } else if (isZooming && lastFOV != 0) {
+            isZooming = false;
+            event.setNewfov(lastFOV);
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public static void ammoRender(RenderGameOverlayEvent.Pre event) {
+        EntityPlayer entityPlayer = Minecraft.getMinecraft().player;
+
+        if ((event.getType().equals(RenderGameOverlayEvent.ElementType.HOTBAR))) {
+            if (entityPlayer.getHeldItemMainhand().getItem().equals(ModItems.itemStimPistol)) {
+                ItemStimPistol itemStimPistol = (ItemStimPistol) entityPlayer.getHeldItemMainhand().getItem();
+                ScaledResolution scaledResolution = new ScaledResolution(Minecraft.getMinecraft());
+                int xPos = scaledResolution.getScaledWidth();
+                int yPos = scaledResolution.getScaledHeight();
+                Minecraft.getMinecraft().ingameGUI.drawString(Minecraft.getMinecraft().fontRenderer, itemStimPistol.getAmmo(entityPlayer.getHeldItemMainhand()) + "/1", xPos - 24, (yPos) - 14, -1);
+            }
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void onLeftClick(PlayerInteractEvent.LeftClickEmpty event) {
         if (event.getItemStack().getItem().equals(ModItems.itemStimPistol)) {
             if (event.isCancelable())
                 event.setCanceled(true);
-            event.getEntityPlayer().sendMessage(new TextComponentString("Fired Left Click"));
         }
     }
 
@@ -71,12 +105,6 @@ public class ClientEventHandler {
         if (event.getGui() instanceof GuiMainMenu && Siege.isStandalone) {
             event.setGui(new GuiCustomMenu());
         }
-    }
-
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public static void fallEvent(LivingFallEvent event) {
-        //event.setCanceled(true);
     }
 
     @SideOnly(Side.CLIENT)

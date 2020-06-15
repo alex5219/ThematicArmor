@@ -10,18 +10,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.MoverType;
-import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Enchantments;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.network.play.server.SPacketChangeGameState;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntitySelectors;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
@@ -269,31 +264,15 @@ public class EntityStim extends Entity implements IProjectile {
             this.rotationPitch = this.prevRotationPitch + (this.rotationPitch - this.prevRotationPitch) * 0.2F;
             this.rotationYaw = this.prevRotationYaw + (this.rotationYaw - this.prevRotationYaw) * 0.2F;
             float f1 = 0.99F;
-            float f2 = 0.05F;
-            if (this.isInWater()) {
-                for (int i = 0; i < 4; ++i) {
-                    float f3 = 0.25F;
-                    this.world.spawnParticle(EnumParticleTypes.WATER_BUBBLE, this.posX - this.motionX * 0.25D, this.posY - this.motionY * 0.25D, this.posZ - this.motionZ * 0.25D, this.motionX, this.motionY, this.motionZ);
-                }
-
-                f1 = 0.6F;
-            }
-
-            if (this.isWet()) {
-                this.extinguish();
-            }
-
             this.motionX *= f1;
             this.motionY *= f1;
             this.motionZ *= f1;
             if (!this.hasNoGravity()) {
                 this.motionY -= 0.05000000074505806D;
             }
-
             this.setPosition(this.posX, this.posY, this.posZ);
             this.doBlockCollisions();
         }
-
     }
 
     protected void onHit(RayTraceResult p_onHit_1_) {
@@ -301,50 +280,9 @@ public class EntityStim extends Entity implements IProjectile {
         if (entity != null) {
             float f = MathHelper.sqrt(this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ);
             int i = MathHelper.ceil((double) f * this.damage);
-            if (this.getIsCritical()) {
-                i += this.rand.nextInt(i / 2 + 2);
-            }
 
-            DamageSource damagesource = null;
-            if (this.shootingEntity == null) {
-                damagesource = DamageSource.causePlayerDamage((EntityPlayer) this.shootingEntity);
-            } else {
-                damagesource = DamageSource.causePlayerDamage((EntityPlayer) this.shootingEntity);
-            }
-
-            if (this.isBurning() && !(entity instanceof EntityEnderman)) {
-                entity.setFire(5);
-            }
-
-            if (entity.attackEntityFrom(damagesource, (float) i)) {
-                if (entity instanceof EntityLivingBase) {
-                    EntityLivingBase entitylivingbase = (EntityLivingBase) entity;
-                    if (!this.world.isRemote) {
-                        entitylivingbase.setArrowCountInEntity(entitylivingbase.getArrowCountInEntity() + 1);
-                    }
-
-                    if (this.knockbackStrength > 0) {
-                        float f1 = MathHelper.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);
-                        if (f1 > 0.0F) {
-                            entitylivingbase.addVelocity(this.motionX * (double) this.knockbackStrength * 0.6000000238418579D / (double) f1, 0.1D, this.motionZ * (double) this.knockbackStrength * 0.6000000238418579D / (double) f1);
-                        }
-                    }
-
-                    if (this.shootingEntity instanceof EntityLivingBase) {
-                        EnchantmentHelper.applyThornEnchantments(entitylivingbase, this.shootingEntity);
-                        EnchantmentHelper.applyArthropodEnchantments((EntityLivingBase) this.shootingEntity, entitylivingbase);
-                    }
-
-                    this.arrowHit(entitylivingbase);
-                    if (this.shootingEntity != null && entitylivingbase != this.shootingEntity && entitylivingbase instanceof EntityPlayer && this.shootingEntity instanceof EntityPlayerMP) {
-                        ((EntityPlayerMP) this.shootingEntity).connection.sendPacket(new SPacketChangeGameState(6, 0.0F));
-                    }
-                }
-
-                this.playSound(SoundEvents.ENTITY_ARROW_HIT, 1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
-                if (!(entity instanceof EntityEnderman)) {
-                    this.setDead();
-                }
+            if (entity instanceof EntityPlayer) {
+                ((EntityPlayer) entity).heal((float) this.damage);
             } else {
                 this.motionX *= -0.10000000149011612D;
                 this.motionY *= -0.10000000149011612D;
@@ -356,30 +294,7 @@ public class EntityStim extends Entity implements IProjectile {
                     this.setDead();
                 }
             }
-        } else {
-            BlockPos blockpos = p_onHit_1_.getBlockPos();
-            this.xTile = blockpos.getX();
-            this.yTile = blockpos.getY();
-            this.zTile = blockpos.getZ();
-            IBlockState iblockstate = this.world.getBlockState(blockpos);
-            this.inTile = iblockstate.getBlock();
-            this.inData = this.inTile.getMetaFromState(iblockstate);
-            this.motionX = (float) (p_onHit_1_.hitVec.x - this.posX);
-            this.motionY = (float) (p_onHit_1_.hitVec.y - this.posY);
-            this.motionZ = (float) (p_onHit_1_.hitVec.z - this.posZ);
-            float f2 = MathHelper.sqrt(this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ);
-            this.posX -= this.motionX / (double) f2 * 0.05000000074505806D;
-            this.posY -= this.motionY / (double) f2 * 0.05000000074505806D;
-            this.posZ -= this.motionZ / (double) f2 * 0.05000000074505806D;
-            this.playSound(SoundEvents.ENTITY_ARROW_HIT, 1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
-            this.inGround = true;
-            this.arrowShake = 7;
-            this.setIsCritical(false);
-            if (iblockstate.getMaterial() != Material.AIR) {
-                this.inTile.onEntityCollidedWithBlock(this.world, blockpos, iblockstate, this);
-            }
         }
-
     }
 
     public void move(MoverType p_move_1_, double p_move_2_, double p_move_4_, double p_move_6_) {
