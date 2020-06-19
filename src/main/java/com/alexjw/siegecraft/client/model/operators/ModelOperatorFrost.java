@@ -2,6 +2,7 @@ package com.alexjw.siegecraft.client.model.operators;// Made with Blockbench 3.5
 // Exported for Minecraft version 1.12
 // Paste this class into your mod and generate all required imports
 
+//Z-Fighting, ASK BBOVARD TO FIX
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
@@ -13,6 +14,11 @@ public class ModelOperatorFrost extends ModelBiped {
 		super(0.1f, 0.0f, 128, 128);
 		textureWidth = 128;
 		textureHeight = 128;
+		this.bipedLeftArm.mirror = false;
+		this.bipedLeftArm = new ModelRenderer(this);
+		this.bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
+		this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		this.bipedLeftArm.mirror = false;
 
 		ModelRenderer bipedHeadFace = new ModelRenderer(this);
 		bipedHeadFace.setRotationPoint(0.0F, 24.0F, 0.0F);
@@ -40,6 +46,7 @@ public class ModelOperatorFrost extends ModelBiped {
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 84, 8, -3.75F, -28.5F, -4.5F, 3, 1, 1, -0.3F, false));
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 8, 3, -3.5F, -29.0F, -4.5F, 3, 1, 1, -0.3F, false));
 
+
 		ModelRenderer bipedHeadHat = new ModelRenderer(this);
 		bipedHeadHat.setRotationPoint(0.0F, 25.5F, -13.0F);
 		bipedHead.addChild(bipedHeadHat);
@@ -47,12 +54,14 @@ public class ModelOperatorFrost extends ModelBiped {
 		bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 77, 20, -4.0F, -34.7585F, 0.0647F, 8, 3, 9, 0.2F, false));
 
 		ModelRenderer bipedHeadHat2 = new ModelRenderer(this);
+		bipedHeadHat2 = new ModelRenderer(this);
 		bipedHeadHat2.setRotationPoint(0.0F, 30.25F, -5.75F);
 		bipedHead.addChild(bipedHeadHat2);
 		setRotationAngle(bipedHeadHat2, -0.0873F, 0.0F, 0.0F);
 		bipedHeadHat2.cubeList.add(new ModelBox(bipedHeadHat2, 86, 20, -4.0F, -39.1052F, -1.1F, 8, 3, 8, 0.025F, false));
 
 		ModelRenderer bipedBodyVest = new ModelRenderer(this);
+		bipedBodyVest = new ModelRenderer(this);
 		bipedBodyVest.setRotationPoint(0.0F, 24.0F, 0.0F);
 		bipedBody.addChild(bipedBodyVest);
 		bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 97, 16, -4.0F, -22.0F, -2.5F, 8, 8, 1, 0.0F, false));
@@ -139,6 +148,7 @@ public class ModelOperatorFrost extends ModelBiped {
 		setRotationAngle(bipedBodyVestWire, 0.0F, 0.0F, -0.6981F);
 		bipedBodyVestWire.cubeList.add(new ModelBox(bipedBodyVestWire, 84, 58, -2.6415F, 0.3755F, -0.25F, 1, 3, 1, -0.4F, false));
 
+
 		ModelRenderer bipedLeftArmSleeve = new ModelRenderer(this);
 		bipedLeftArmSleeve.setRotationPoint(-5.0F, 22.0F, 0.0F);
 		bipedLeftArm.addChild(bipedLeftArmSleeve);
@@ -148,6 +158,7 @@ public class ModelOperatorFrost extends ModelBiped {
 		bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 99, 31, 5.0F, -20.0F, 1.25F, 2, 3, 1, 0.0F, false));
 
 		ModelRenderer bipedRightLegHolster = new ModelRenderer(this);
+		bipedRightLegHolster = new ModelRenderer(this);
 		bipedRightLegHolster.setRotationPoint(1.9F, 12.0F, 0.0F);
 		bipedRightLeg.addChild(bipedRightLegHolster);
 		bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 98, 98, -4.175F, -10.5F, -2.5F, 4, 1, 5, -0.175F, false));
@@ -161,6 +172,7 @@ public class ModelOperatorFrost extends ModelBiped {
 		bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 98, 98, -3.725F, -6.6F, -2.5F, 4, 1, 5, -0.125F, false));
 		bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 98, 98, -3.725F, -9.35F, -2.25F, 4, 1, 4, -0.125F, false));
 		bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 93, 99, -3.0F, -7.25F, -2.5F, 2, 2, 1, 0.0F, false));
+
 
 		ModelRenderer bipedLeftLegStrap = new ModelRenderer(this);
 		bipedLeftLegStrap.setRotationPoint(-1.9F, 12.0F, 0.0F);
@@ -180,7 +192,6 @@ public class ModelOperatorFrost extends ModelBiped {
 		bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 9, 73, -8.5F, -23.25F, -2.0F, 1, 3, 4, -0.8F, false));
 		bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 101, 29, -8.275F, -22.8F, -1.525F, 1, 2, 3, -0.1F, false));
 	}
-
 
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		super.render(entity, f, f1, f2, f3, f4, f5);

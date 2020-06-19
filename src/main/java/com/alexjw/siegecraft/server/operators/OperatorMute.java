@@ -5,13 +5,12 @@ import com.alexjw.siegecraft.server.gadgets.GadgetBlowTorch;
 
 import java.util.ArrayList;
 
-public class OperatorMaverick extends Operator {
-    public OperatorMaverick() {
-        super(Team.ATTACKER, 3, 1, 2);
+public class OperatorMute extends Operator {
+    public OperatorMute() {
+        super(Team.DEFENDER, 2, 2, 1);
     }
-
     @Override
-    public boolean isHidden() {return true;}
+    public boolean isHidden(){return true;}
 
     public ArrayList<Gadget> getGadgets() {
         ArrayList<Gadget> gadgets = new ArrayList<>();

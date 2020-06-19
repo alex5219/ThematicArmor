@@ -28,15 +28,19 @@ public class ClientProxy extends ServerProxy {
         SiegeRendererManager.register();
         RenderingRegistry.registerEntityRenderingHandler(EntityAsh.class, RenderAsh::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityBandit.class, RenderBandit::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityDoc.class, RenderDoc::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityCapitao.class, RenderCapitao::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityDoc.class, RenderDoc::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityEcho.class, RenderEcho::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityEla.class, RenderEla::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityFinka.class, RenderFinka::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityFrost.class, RenderFrost::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityJackal.class, RenderJackal::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityMaverick.class, RenderMaverick::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityMute.class, RenderMute::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityRook.class, RenderRook::new);
         RenderingRegistry.registerEntityRenderingHandler(EntitySledge.class, RenderSledge::new);
         RenderingRegistry.registerEntityRenderingHandler(EntitySmoke.class, RenderSmoke::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityThatcher.class, RenderThatcher::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityThermite.class, RenderThermite::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityVigil.class, RenderVigil::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityDrone.class, RenderDrone::new);
@@ -44,6 +48,7 @@ public class ClientProxy extends ServerProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityRope.class, RenderRope::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityFootprint.class, RenderFootprint::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityStim.class, RenderStim::new);
+
 
         this.registerEventHandler(new ClientEventHandler());
         this.registerEventHandler(new KeyBindHandler());
