@@ -3,7 +3,6 @@ package com.alexjw.siegecraft.client.model.operators;// Made with Blockbench 3.5
 // Paste this class into your mod and generate all required imports
 
 
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
@@ -20,7 +19,6 @@ public class ModelOperatorThatcher extends ModelBiped {
 		this.bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
 		this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
 		this.bipedLeftArm.mirror = false;
-
 
 		ModelRenderer bipedHeadStrap2 = new ModelRenderer(this);
 		bipedHeadStrap2.setRotationPoint(4.2F, -6.0F, -1.0F);
