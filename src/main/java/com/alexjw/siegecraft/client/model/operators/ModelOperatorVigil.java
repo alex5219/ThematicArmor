@@ -127,10 +127,6 @@ public class ModelOperatorVigil extends ModelBiped {
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 105, 84, -8.25F, -23.25F, 1.25F, 2, 2, 1, 0.0F, false));
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 105, 84, -6.5F, -23.25F, 1.25F, 1, 2, 1, 0.0F, false));
 
-        bipedLeftArm = new ModelRenderer(this);
-        bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-        bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
-
         ModelRenderer bipedLeftArmSleeve = new ModelRenderer(this);
         bipedLeftArmSleeve.setRotationPoint(-5.0F, 22.0F, 0.0F);
         bipedLeftArm.addChild(bipedLeftArmSleeve);

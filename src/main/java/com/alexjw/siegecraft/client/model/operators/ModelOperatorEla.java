@@ -20,10 +20,6 @@ public class ModelOperatorEla extends ModelBiped {
 		this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
 		this.bipedLeftArm.mirror = false;
 
-		bipedHead = new ModelRenderer(this);
-		bipedHead.setRotationPoint(0.0F, 0.0F, 0.0F);
-		bipedHead.cubeList.add(new ModelBox(bipedHead, 0, 0, -4.0F, -8.0F, -4.0F, 8, 8, 8, 0.0F, false));
-
 		ModelRenderer bipedHeadHat = new ModelRenderer(this);
 		bipedHeadHat.setRotationPoint(0.0F, 24.0F, 0.0F);
 		bipedHead.addChild(bipedHeadHat);
