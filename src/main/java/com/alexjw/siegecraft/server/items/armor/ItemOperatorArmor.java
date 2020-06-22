@@ -40,7 +40,7 @@ public class ItemOperatorArmor extends ItemArmor {
             UUID.fromString("D8499B04-0E66-4726-AB29-64469D734E0D"), UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"),
             UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150")};
     private final Operator operator;
-    private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("operator", "operatorArmor", 99, new int[]{2, 3, 3, 2}, 0, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0);
+    private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("operator", "operatorArmor", 16384, new int[]{5, 6, 6, 5}, 0, SoundEvents.ENTITY_ENDERDRAGON_GROWL, 0);
 
     public ItemOperatorArmor(EntityEquipmentSlot compatibleEntityEquipmentSlot, Operator operator) {
         super(armorMaterial, 0, compatibleEntityEquipmentSlot);
@@ -150,7 +150,6 @@ public class ItemOperatorArmor extends ItemArmor {
 
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
         Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
-
         if (equipmentSlot == this.armorType) {
             float speed = 0, armor = 0;
             switch (operator.getSpeed()) {
@@ -166,17 +165,17 @@ public class ItemOperatorArmor extends ItemArmor {
             }
             switch (operator.getArmor()) {
                 case 1:
-                    armor = 0f;
+                    armor = -0.075f;
                     break;
                 case 2:
-                    armor = 0.25f;
+                    armor = -0.050f;
                     break;
                 case 3:
-                    armor = 1.25f;
+                    armor = -0.025f;
                     break;
             }
             multimap.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor speed", speed, 1));
-            multimap.put(SharedMonsterAttributes.MAX_HEALTH.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor health", -1.25 + armor, 0));
+            multimap.put(SharedMonsterAttributes.MAX_HEALTH.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor health", armor, 1));
         }
 
         return multimap;
