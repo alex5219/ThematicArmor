@@ -3,6 +3,7 @@ package com.alexjw.thematicarmor.client.renderer;
 import com.alexjw.thematicarmor.client.model.operators.*;
 import com.alexjw.thematicarmor.client.model.supes.ModelBatman;
 import com.alexjw.thematicarmor.client.model.theboys.ModelBillyButcher;
+import com.alexjw.thematicarmor.client.model.walkingdead.ModelRickGrimes;
 import com.alexjw.thematicarmor.server.armors.ArmorManager;
 
 import java.lang.reflect.Field;
@@ -32,6 +33,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer thatcher = new SiegeRenderer(ArmorManager.operatorThatcher, new ModelOperatorThatcher());
     public static SiegeRenderer thermite = new SiegeRenderer(ArmorManager.operatorThermite, new ModelOperatorThermite());
     public static SiegeRenderer vigil = new SiegeRenderer(ArmorManager.operatorVigil, new ModelOperatorVigil());
+    public static SiegeRenderer rick = new SiegeRenderer(ArmorManager.wdRickGrimes, new ModelRickGrimes());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
