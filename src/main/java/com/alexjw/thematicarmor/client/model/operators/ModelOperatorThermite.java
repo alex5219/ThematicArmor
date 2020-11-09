@@ -34,22 +34,10 @@ public class ModelOperatorThermite extends ModelBiped {
         this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
         this.bipedLeftArm.mirror = false;
 
-        bipedHeadHelmetStrap1 = new ModelRenderer(this);
-        bipedHeadHelmetStrap1.setRotationPoint(-2.5F, -1.0F, -4.5F);
-        bipedHead.addChild(bipedHeadHelmetStrap1);
-        setRotationAngle(bipedHeadHelmetStrap1, 0.0F, 0.0F, -0.3491F);
-        bipedHeadHelmetStrap1.cubeList.add(new ModelBox(bipedHeadHelmetStrap1, 92, 78, 2.7651F, 1.4145F, 0.0F, 4, 1, 1, -0.2F, false));
-
-        bipedHeadHelmetStrap2 = new ModelRenderer(this);
-        bipedHeadHelmetStrap2.setRotationPoint(-3.75F, -2.25F, -4.5F);
-        bipedHead.addChild(bipedHeadHelmetStrap2);
-        setRotationAngle(bipedHeadHelmetStrap2, 0.0F, 0.0F, 0.3491F);
-        bipedHeadHelmetStrap2.cubeList.add(new ModelBox(bipedHeadHelmetStrap2, 92, 78, -0.3492F, 0.4739F, 0.0F, 4, 1, 1, -0.2F, false));
-
         bipedHeadHelmet = new ModelRenderer(this);
         bipedHeadHelmet.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedHead.addChild(bipedHeadHelmet);
-        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 44, 77, -2.75F, -29.0F, -4.5F, 2, 2, 1, -0.3F, false));
+        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 45, 77, -2.75F, -29.0F, -4.5F, 2, 2, 1, -0.3F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 55, 82, 0.75F, -29.0F, -4.5F, 2, 2, 1, -0.3F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 95, 18, 0.75F, -29.0F, -4.25F, 2, 2, 1, -0.1F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 95, 18, 2.0F, -29.0F, -4.75F, 1, 2, 1, -0.3F, false));
@@ -71,13 +59,13 @@ public class ModelOperatorThermite extends ModelBiped {
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 95, 18, -4.0F, -28.0F, -4.0F, 0, 0, 1, 0.2F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 95, 18, 4.0F, -28.0F, -4.0F, 0, 0, 1, 0.2F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 95, 22, -2.75F, -29.0F, -4.25F, 2, 2, 1, -0.1F, false));
-        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 109, 61, -4.5F, -32.25F, -4.5F, 9, 3, 9, -0.2F, false));
-        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 97, 22, -4.5F, -30.0F, -4.5F, 9, 1, 2, -0.1F, false));
+        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 88, 69, -4.525F, -32.25F, -4.5F, 9, 3, 9, -0.1F, false));
+        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 97, 22, -4.5F, -30.0F, -4.5F, 9, 1, 2, -0.05F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 97, 22, -4.5F, -29.5F, -4.0F, 9, 2, 1, -0.175F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 97, 22, -4.5F, -28.25F, -3.5F, 9, 2, 1, -0.175F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 97, 22, -4.5F, -27.25F, -3.0F, 9, 2, 1, -0.175F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 97, 22, -4.5F, -26.25F, -2.5F, 9, 1, 7, -0.175F, false));
-        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 96, 63, -4.5F, -29.75F, -2.5F, 9, 4, 7, -0.2F, false));
+        bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 96, 63, -4.5F, -29.75F, -2.5F, 9, 4, 7, -0.175F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 98, 68, -4.5F, -29.75F, -3.0F, 9, 3, 1, -0.2F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 88, 69, -4.5F, -29.75F, -3.5F, 9, 2, 1, -0.2F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 101, 71, -4.5F, -25.75F, -4.25F, 1, 1, 2, -0.2F, false));
@@ -85,17 +73,19 @@ public class ModelOperatorThermite extends ModelBiped {
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 101, 71, 3.5F, -26.0F, -3.25F, 1, 1, 2, -0.2F, false));
         bipedHeadHelmet.cubeList.add(new ModelBox(bipedHeadHelmet, 101, 71, -4.5F, -26.0F, -3.25F, 1, 1, 2, -0.2F, false));
 
-        bipedBodyVestBag = new ModelRenderer(this);
-        bipedBodyVestBag.setRotationPoint(1.75F, 3.5F, -3.0F);
-        bipedBody.addChild(bipedBodyVestBag);
-        setRotationAngle(bipedBodyVestBag, 0.0F, 0.0F, 0.6981F);
-        bipedBodyVestBag.cubeList.add(new ModelBox(bipedBodyVestBag, 37, 96, -5.25F, 1.5F, 5.0F, 6, 4, 1, -0.2F, false));
+        bipedHeadHelmetStrap1 = new ModelRenderer(this);
+        bipedHeadHelmetStrap1.setRotationPoint(-2.5F, -25.0F, -4.5F);
+        bipedHeadHelmet.addChild(bipedHeadHelmetStrap1);
+        setRotationAngle(bipedHeadHelmetStrap1, 0.0F, 0.0F, -0.3491F);
+        bipedHeadHelmetStrap1.cubeList.add(new ModelBox(bipedHeadHelmetStrap1, 92, 78, 2.7651F, 1.4145F, 0.0F, 4, 1, 1, -0.2F, false));
 
-        bipedBodyVestBag2 = new ModelRenderer(this);
-        bipedBodyVestBag2.setRotationPoint(1.75F, 3.5F, -2.75F);
-        bipedBody.addChild(bipedBodyVestBag2);
-        setRotationAngle(bipedBodyVestBag2, 0.0F, 0.0F, 0.6981F);
-        bipedBodyVestBag2.cubeList.add(new ModelBox(bipedBodyVestBag2, 49, 94, -5.2192F, 1.1478F, 4.25F, 6, 3, 2, -0.3F, false));
+        bipedHeadHelmetStrap2 = new ModelRenderer(this);
+        bipedHeadHelmetStrap2.setRotationPoint(-3.75F, -26.25F, -4.5F);
+        bipedHeadHelmet.addChild(bipedHeadHelmetStrap2);
+        setRotationAngle(bipedHeadHelmetStrap2, 0.0F, 0.0F, 0.3491F);
+        bipedHeadHelmetStrap2.cubeList.add(new ModelBox(bipedHeadHelmetStrap2, 92, 78, -0.3492F, 0.4739F, 0.0F, 4, 1, 1, -0.2F, false));
+
+
 
         bipedBodyVest = new ModelRenderer(this);
         bipedBodyVest.setRotationPoint(0.0F, 24.0F, 0.0F);
@@ -165,17 +155,21 @@ public class ModelOperatorThermite extends ModelBiped {
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 72, 55, -4.0F, -24.25F, -2.0F, 2, 1, 4, 0.1F, false));
         bipedBodyVest.cubeList.add(new ModelBox(bipedBodyVest, 72, 55, 2.0F, -24.25F, -2.0F, 2, 1, 4, 0.1F, false));
 
-        bipedRightArmSleeveBandage1 = new ModelRenderer(this);
-        bipedRightArmSleeveBandage1.setRotationPoint(2.75F, 5.75F, 3.0F);
-        bipedRightArm.addChild(bipedRightArmSleeveBandage1);
-        setRotationAngle(bipedRightArmSleeveBandage1, 0.0F, 0.0F, 1.1345F);
-        bipedRightArmSleeveBandage1.cubeList.add(new ModelBox(bipedRightArmSleeveBandage1, 75, 118, -0.0314F, 2.7961F, -5.5F, 1, 4, 5, -0.15F, false));
+        bipedBodyVestBag = new ModelRenderer(this);
+        bipedBodyVestBag.setRotationPoint(1.75F, -20.5F, -3.0F);
+        bipedBodyVest.addChild(bipedBodyVestBag);
+        setRotationAngle(bipedBodyVestBag, 0.0F, 0.0F, 0.6981F);
+        bipedBodyVestBag.cubeList.add(new ModelBox(bipedBodyVestBag, 37, 96, -5.25F, 1.5F, 5.0F, 6, 4, 1, -0.2F, false));
 
-        bipedRightArmSleeveBandage2 = new ModelRenderer(this);
-        bipedRightArmSleeveBandage2.setRotationPoint(3.5F, 9.75F, 3.0F);
-        bipedRightArm.addChild(bipedRightArmSleeveBandage2);
-        setRotationAngle(bipedRightArmSleeveBandage2, 0.0F, 0.0F, 1.9199F);
-        bipedRightArmSleeveBandage2.cubeList.add(new ModelBox(bipedRightArmSleeveBandage2, 71, 119, 0.3681F, 2.7588F, -5.5F, 1, 4, 5, -0.175F, false));
+        bipedBodyVestBag2 = new ModelRenderer(this);
+        bipedBodyVestBag2.setRotationPoint(1.75F, -20.5F, -2.75F);
+        bipedBodyVest.addChild(bipedBodyVestBag2);
+        setRotationAngle(bipedBodyVestBag2, 0.0F, 0.0F, 0.6981F);
+        bipedBodyVestBag2.cubeList.add(new ModelBox(bipedBodyVestBag2, 49, 94, -5.2192F, 1.1478F, 4.25F, 6, 3, 2, -0.3F, false));
+
+        bipedRightArm = new ModelRenderer(this);
+        bipedRightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
+        bipedRightArm.cubeList.add(new ModelBox(bipedRightArm, 40, 16, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
 
         bipedRightArmSleeve = new ModelRenderer(this);
         bipedRightArmSleeve.setRotationPoint(5.0F, 22.0F, 0.0F);
@@ -193,17 +187,18 @@ public class ModelOperatorThermite extends ModelBiped {
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 70, 120, -7.75F, -12.75F, -2.0F, 2, 0, 4, 0.3F, false));
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 6, 79, -7.75F, -24.0F, -2.5F, 1, 4, 5, -1.4F, false));
 
-        bipedLeftArmSleeveBandage2 = new ModelRenderer(this);
-        bipedLeftArmSleeveBandage2.setRotationPoint(-6.5F, 9.75F, 3.0F);
-        bipedLeftArm.addChild(bipedLeftArmSleeveBandage2);
-        setRotationAngle(bipedLeftArmSleeveBandage2, 0.0F, 0.0F, 1.9199F);
-        bipedLeftArmSleeveBandage2.cubeList.add(new ModelBox(bipedLeftArmSleeveBandage2, 71, 119, -4.6119F, -8.7309F, -5.5F, 1, 4, 5, -0.15F, false));
+        bipedRightArmSleeveBandage1 = new ModelRenderer(this);
+        bipedRightArmSleeveBandage1.setRotationPoint(-2.25F, -16.25F, 3.0F);
+        bipedRightArmSleeve.addChild(bipedRightArmSleeveBandage1);
+        setRotationAngle(bipedRightArmSleeveBandage1, 0.0F, 0.0F, 1.1345F);
+        bipedRightArmSleeveBandage1.cubeList.add(new ModelBox(bipedRightArmSleeveBandage1, 75, 118, -0.0314F, 2.7961F, -5.5F, 1, 4, 5, -0.15F, false));
 
-        bipedLeftArmSleeveBandage1 = new ModelRenderer(this);
-        bipedLeftArmSleeveBandage1.setRotationPoint(4.75F, 6.25F, 3.0F);
-        bipedLeftArm.addChild(bipedLeftArmSleeveBandage1);
-        setRotationAngle(bipedLeftArmSleeveBandage1, 0.0F, 0.0F, 1.1345F);
-        bipedLeftArmSleeveBandage1.cubeList.add(new ModelBox(bipedLeftArmSleeveBandage1, 75, 118, 0.1952F, 2.9017F, -5.5F, 1, 4, 5, -0.175F, false));
+        bipedRightArmSleeveBandage2 = new ModelRenderer(this);
+        bipedRightArmSleeveBandage2.setRotationPoint(-1.5F, -12.25F, 3.0F);
+        bipedRightArmSleeve.addChild(bipedRightArmSleeveBandage2);
+        setRotationAngle(bipedRightArmSleeveBandage2, 0.0F, 0.0F, 1.9199F);
+        bipedRightArmSleeveBandage2.cubeList.add(new ModelBox(bipedRightArmSleeveBandage2, 71, 119, 0.3681F, 2.7588F, -5.5F, 1, 4, 5, -0.175F, false));
+
 
         bipedLeftArmSleeve = new ModelRenderer(this);
         bipedLeftArmSleeve.setRotationPoint(7.25F, 22.0F, 0.0F);
@@ -221,6 +216,20 @@ public class ModelOperatorThermite extends ModelBiped {
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 70, 120, -6.5F, -13.0F, -2.0F, 2, 0, 4, 0.3F, false));
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 70, 120, -6.5F, -12.5F, -2.0F, 2, 0, 4, 0.275F, false));
 
+        bipedLeftArmSleeveBandage2 = new ModelRenderer(this);
+        bipedLeftArmSleeveBandage2.setRotationPoint(-13.75F, -12.25F, 3.0F);
+        bipedLeftArmSleeve.addChild(bipedLeftArmSleeveBandage2);
+        setRotationAngle(bipedLeftArmSleeveBandage2, 0.0F, 0.0F, 1.9199F);
+        bipedLeftArmSleeveBandage2.cubeList.add(new ModelBox(bipedLeftArmSleeveBandage2, 71, 119, -4.6119F, -8.7309F, -5.5F, 1, 4, 5, -0.15F, false));
+
+        bipedLeftArmSleeveBandage1 = new ModelRenderer(this);
+        bipedLeftArmSleeveBandage1.setRotationPoint(-2.5F, -15.75F, 3.0F);
+        bipedLeftArmSleeve.addChild(bipedLeftArmSleeveBandage1);
+        setRotationAngle(bipedLeftArmSleeveBandage1, 0.0F, 0.0F, 1.1345F);
+        bipedLeftArmSleeveBandage1.cubeList.add(new ModelBox(bipedLeftArmSleeveBandage1, 75, 118, 0.1952F, 2.9017F, -5.5F, 1, 4, 5, -0.175F, false));
+
+
+
         bipedRightLegHolster = new ModelRenderer(this);
         bipedRightLegHolster.setRotationPoint(1.9F, 11.75F, 0.0F);
         bipedRightLeg.addChild(bipedRightLegHolster);
@@ -234,6 +243,7 @@ public class ModelOperatorThermite extends ModelBiped {
         bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 71, 68, -0.75F, -8.75F, -2.5F, 1, 1, 5, -0.1F, false));
         bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 71, 68, -0.75F, -10.25F, -2.5F, 1, 1, 5, -0.1F, false));
         bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 45, 75, -3.0F, -7.0F, -2.75F, 2, 3, 2, -0.3F, false));
+
 
         bipedLeftLegStrap = new ModelRenderer(this);
         bipedLeftLegStrap.setRotationPoint(-1.9F, 12.0F, 0.0F);
