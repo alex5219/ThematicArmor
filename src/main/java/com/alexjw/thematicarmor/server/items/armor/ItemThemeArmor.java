@@ -140,13 +140,13 @@ public class ItemThemeArmor extends ItemArmor {
             float speed = 0, armor = 0;
             switch (this.armor.getSpeed()) {
                 case 1:
-                    speed = -0.025f;
+                    speed = -0.015f;
                     break;
                 case 2:
                     speed = 0.0f;
                     break;
                 case 3:
-                    speed = 0.025f;
+                    speed = 0.015f;
                     break;
             }
             switch (this.armor.getArmor()) {
