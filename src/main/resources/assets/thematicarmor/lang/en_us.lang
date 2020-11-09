@@ -28,11 +28,5 @@ armor.jackal=Jackal
 armor.vigil=Vigil
 armor.rickgrimes=Rick Grimes
 
-OPERATOR PIECES:
-piece.head=Helmet
-piece.chest=Chestpiece
-piece.legs=Leggings
-piece.feet=Boots
-
 ENCHANTMENTS:
 enchantment.thematiccore.soulbound=Soulbound

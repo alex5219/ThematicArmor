@@ -60,9 +60,7 @@ public class ItemThemeArmor extends ItemArmor {
 
     @SideOnly(Side.CLIENT)
     public String getItemStackDisplayName(ItemStack itemstack) {
-        String part = "piece." + this.armorType.toString().toLowerCase();
-
-        return I18n.format(ThematicHelper.getThemeFromArmor(itemstack).getUnlocalizedName().replace('_', '.')) + "'s " + I18n.format(part);
+        return I18n.format(ThematicHelper.getThemeFromArmor(itemstack).getUnlocalizedName().replace('_', '.'));
     }
 
     @SideOnly(Side.CLIENT)
