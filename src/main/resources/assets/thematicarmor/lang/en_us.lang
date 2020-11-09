@@ -4,7 +4,12 @@ itemGroup.tabThematicArmors=Armors
 OPERATOR ITEMS:
 item.armor_finka.name=Finka
 item.armor_bandit.name=Bandit
+item.armor_batman.name=Batman
+item.armor_billybutcher.name=Billy Butcher
+item.armor_buck.name=Buck
 item.armor_capitao.name=Capitao
+item.armor_echo.name=Echo
+item.armor_ela.name=Ela
 item.armor_frost.name=Frost
 item.armor_maverick.name=Maverick
 item.armor_rook.name=Rook
@@ -14,10 +19,13 @@ item.armor_doc.name=Doc
 item.armor_smoke.name=Smoke
 item.armor_ash.name=Ash
 item.operator.thermite.name=Thermite
+item.operator.tachanka.name=Tachanka
+item.operator.thatcher.name=Thatcher
+item.operator.mozzie.name=Mozzie
+item.operator.mute.name=Mute
 item.armor_kali.name=Kali
 item.armor_jackal.name=Jackal
 item.armor_vigil.name=Vigil
-item.armor_vigilinvis.name=Vigil
 
 OPERATOR PIECES:
 piece.head=Helmet
