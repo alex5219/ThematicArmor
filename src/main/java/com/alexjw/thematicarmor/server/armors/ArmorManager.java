@@ -26,7 +26,7 @@ public class ArmorManager {
     public static ArmorThatcher operatorThatcher = new ArmorThatcher();
     public static ArmorThermite operatorThermite = new ArmorThermite();
     public static ArmorVigil operatorVigil = new ArmorVigil();
-
+    public static ArmorRickGrimes wdRickGrimes = new ArmorRickGrimes();
 
     public static void init() {
         for (Armor armor : armorArrayList) armor.init();
