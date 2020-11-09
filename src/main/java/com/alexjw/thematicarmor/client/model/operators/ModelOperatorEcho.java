@@ -39,16 +39,16 @@ public class ModelOperatorEcho extends ModelBiped {
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 4, 92, -4.25F, -3.25F, -4.5F, 2, 1, 1, -0.2F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 2, 93, -3.75F, -2.75F, -4.5F, 3, 1, 1, -0.2F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 8, 92, -1.5F, -3.25F, -4.5F, 3, 1, 1, -0.2F, false));
-        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 9, 10, -0.5F, -3.0F, -4.25F, 1, 1, 1, -0.2F, false));
-        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, -4.5F, -7.25F, -4.5F, 9, 2, 1, -0.4F, false));
-        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, -4.5F, -7.25F, 3.5F, 9, 2, 1, -0.4F, false));
-        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, 3.5F, -7.25F, -4.5F, 1, 2, 9, -0.4F, false));
+        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 9, 10, -0.5F, -3.0F, -4.25F, 1, 1, 1, -0.075F, false));
+        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, -4.5F, -7.25F, -4.5F, 9, 2, 1, -0.325F, false));
+        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, -4.5F, -7.25F, 3.5F, 9, 2, 1, -0.325F, false));
+        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, 3.5F, -7.25F, -4.5F, 1, 2, 9, -0.325F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, 3.5F, -6.75F, -1.5F, 1, 3, 4, -0.2F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 107, 16, 3.75F, -6.25F, -1.0F, 1, 2, 3, -0.2F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 104, 20, 3.5F, -2.75F, -4.75F, 1, 1, 3, -0.1F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 104, 14, 2.5F, -2.0F, -4.75F, 2, 1, 1, -0.1F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 60, 102, 2.25F, -2.0F, -4.75F, 1, 1, 1, -0.2F, false));
-        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, -4.5F, -7.25F, -4.5F, 1, 2, 9, -0.4F, false));
+        bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 100, 97, -4.5F, -7.25F, -4.5F, 1, 2, 9, -0.325F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 8, 3, -0.25F, -8.5F, -4.5F, 3, 3, 2, -0.3F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 24, 11, -3.75F, -8.0F, -4.5F, 3, 3, 1, -0.1F, false));
         bipedHeadGear.cubeList.add(new ModelBox(bipedHeadGear, 24, 9, -2.25F, -8.25F, -4.5F, 3, 3, 2, -0.2F, false));
@@ -60,7 +60,9 @@ public class ModelOperatorEcho extends ModelBiped {
         setRotationAngle(bipedHeadGearMic, 0.7854F, 0.0F, 0.0F);
         bipedHeadGearMic.cubeList.add(new ModelBox(bipedHeadGearMic, 90, 2, -6.0F, 0.0F, -2.0F, 1, 1, 5, -0.1F, false));
 
-        ModelRenderer bipedBodyHarness = new ModelRenderer(this);
+
+
+        ModelRenderer  bipedBodyHarness = new ModelRenderer(this);
         bipedBodyHarness.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedBody.addChild(bipedBodyHarness);
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 89, 59, -3.0F, -20.75F, -2.5F, 6, 6, 1, 0.0F, false));
@@ -134,7 +136,7 @@ public class ModelOperatorEcho extends ModelBiped {
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 95, 40, -0.5F, -14.0F, 1.75F, 1, 1, 1, -0.1F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 95, 40, 0.75F, -21.25F, 2.0F, 1, 1, 1, -0.1F, false));
 
-        ModelRenderer BipedBodyHarnessStrap1 = new ModelRenderer(this);
+        ModelRenderer  BipedBodyHarnessStrap1 = new ModelRenderer(this);
         BipedBodyHarnessStrap1.setRotationPoint(9.0F, -18.75F, 1.0F);
         bipedBodyHarness.addChild(BipedBodyHarnessStrap1);
         setRotationAngle(BipedBodyHarnessStrap1, 0.0F, 0.0F, 0.3491F);
@@ -147,7 +149,7 @@ public class ModelOperatorEcho extends ModelBiped {
         BipedBodyHarnessStrap1.cubeList.add(new ModelBox(BipedBodyHarnessStrap1, 32, 25, -9.1161F, -2.9083F, -2.0F, 1, 3, 3, -0.2F, false));
         BipedBodyHarnessStrap1.cubeList.add(new ModelBox(BipedBodyHarnessStrap1, 83, 89, -8.4122F, -3.091F, -2.5F, 1, 1, 4, 0.0F, false));
 
-        ModelRenderer BipedBodyHarnessStrap2 = new ModelRenderer(this);
+        ModelRenderer  BipedBodyHarnessStrap2 = new ModelRenderer(this);
         BipedBodyHarnessStrap2.setRotationPoint(9.75F, -20.0F, 0.5F);
         bipedBodyHarness.addChild(BipedBodyHarnessStrap2);
         setRotationAngle(BipedBodyHarnessStrap2, 0.0F, 0.0F, -0.3491F);
@@ -159,13 +161,17 @@ public class ModelOperatorEcho extends ModelBiped {
         BipedBodyHarnessStrap2.cubeList.add(new ModelBox(BipedBodyHarnessStrap2, 83, 93, -10.7588F, -8.5426F, -2.0F, 1, 1, 4, 0.0F, false));
         BipedBodyHarnessStrap2.cubeList.add(new ModelBox(BipedBodyHarnessStrap2, 98, 42, -10.8668F, -4.5912F, -3.5F, 1, 1, 1, -0.2F, false));
 
+
+
         ModelRenderer bipedRightArmPouch = new ModelRenderer(this);
         bipedRightArmPouch.setRotationPoint(5.0F, 22.0F, 0.0F);
         bipedRightArm.addChild(bipedRightArmPouch);
         bipedRightArmPouch.cubeList.add(new ModelBox(bipedRightArmPouch, 64, 92, -8.5F, -23.25F, -1.0F, 1, 3, 2, -0.2F, false));
         bipedRightArmPouch.cubeList.add(new ModelBox(bipedRightArmPouch, 121, 51, -8.75F, -23.0F, -1.0F, 1, 2, 2, -0.4F, false));
 
-        ModelRenderer bipedLeftArmSleeve = new ModelRenderer(this);
+
+
+        ModelRenderer  bipedLeftArmSleeve = new ModelRenderer(this);
         bipedLeftArmSleeve.setRotationPoint(-5.0F, 22.0F, 0.0F);
         bipedLeftArm.addChild(bipedLeftArmSleeve);
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 64, 60, 3.5F, -21.75F, -2.5F, 5, 4, 5, -0.4F, false));
@@ -174,11 +180,13 @@ public class ModelOperatorEcho extends ModelBiped {
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 104, 10, 3.25F, -17.75F, -2.5F, 2, 3, 5, -0.6F, false));
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 54, 90, 4.25F, -16.25F, -2.5F, 4, 1, 5, -0.1F, false));
 
-        ModelRenderer bipedRightLegKneePad = new ModelRenderer(this);
+
+
+        ModelRenderer  bipedRightLegKneePad = new ModelRenderer(this);
         bipedRightLegKneePad.setRotationPoint(1.9F, 12.0F, 0.0F);
         bipedRightLeg.addChild(bipedRightLegKneePad);
         bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 64, 91, -3.5F, -8.0F, -2.75F, 3, 3, 1, -0.7F, false));
-        bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 46, 98, -5.0F, -8.0F, -3.0F, 6, 3, 6, -0.9F, false));
+        bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 46, 98, -5.0F, -8.0F, -3.0F, 6, 3, 6, -0.775F, false));
         bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 46, 98, -4.75F, -11.0F, -3.0F, 5, 2, 6, -0.6F, false));
         bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 46, 98, -5.25F, -11.5F, -1.5F, 2, 4, 3, -0.7F, false));
         bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 46, 98, -5.0F, -12.0F, -2.0F, 2, 4, 3, -0.8F, false));
@@ -188,13 +196,15 @@ public class ModelOperatorEcho extends ModelBiped {
         bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 92, 102, -3.5F, -8.5F, -2.75F, 3, 4, 2, -0.5F, false));
         bipedRightLegKneePad.cubeList.add(new ModelBox(bipedRightLegKneePad, 46, 98, -2.0F, -13.5F, -3.25F, 2, 4, 2, -0.7F, false));
 
-        ModelRenderer bipedLeftLegKneePad = new ModelRenderer(this);
+
+
+        ModelRenderer  bipedLeftLegKneePad = new ModelRenderer(this);
         bipedLeftLegKneePad.setRotationPoint(-1.9F, 12.0F, 0.0F);
         bipedLeftLeg.addChild(bipedLeftLegKneePad);
         bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 92, 102, 0.5F, -8.5F, -2.75F, 3, 4, 2, -0.5F, false));
         bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 104, 36, -0.25F, -11.5F, -3.0F, 2, 2, 6, -0.7F, false));
         bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 64, 91, 0.5F, -8.0F, -2.75F, 3, 3, 1, -0.7F, false));
-        bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 46, 98, -1.0F, -8.0F, -3.0F, 6, 3, 6, -0.9F, false));
+        bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 46, 98, -1.0F, -8.0F, -3.0F, 6, 3, 6, -0.775F, false));
         bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 46, 98, -0.25F, -11.0F, -3.0F, 5, 2, 6, -0.6F, false));
         bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 46, 98, -0.5F, -10.75F, -3.0F, 2, 2, 6, -0.7F, false));
         bipedLeftLegKneePad.cubeList.add(new ModelBox(bipedLeftLegKneePad, 46, 98, 0.0F, -13.5F, -3.25F, 2, 4, 2, -0.7F, false));
