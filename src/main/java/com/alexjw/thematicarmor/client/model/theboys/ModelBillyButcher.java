@@ -22,8 +22,8 @@ public class ModelBillyButcher extends ModelBiped {
 
 	public ModelBillyButcher() {
 		super(0.1f, 0.0f, 128, 128);
-		textureWidth = 120;
-		textureHeight = 120;
+		textureWidth = 128;
+		textureHeight = 128;
 		this.bipedLeftArm.mirror = false;
 		this.bipedLeftArm = new ModelRenderer(this);
 		this.bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
@@ -33,51 +33,52 @@ public class ModelBillyButcher extends ModelBiped {
 		bipedHeadHair = new ModelRenderer(this);
 		bipedHeadHair.setRotationPoint(0.0F, 24.0F, 0.0F);
 		bipedHead.addChild(bipedHeadHair);
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.05F, -32.375F, -4.675F, 8, 2, 9, 0.1F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 105, -4.05F, -32.375F, -4.675F, 8, 2, 9, 0.1F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 2.275F, -31.425F, -4.925F, 2, 2, 4, -0.075F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.3F, -31.425F, -4.925F, 1, 2, 6, -0.075F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.55F, -30.425F, -1.675F, 9, 2, 6, -0.1F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.575F, -28.825F, -1.5F, 9, 2, 6, -0.2F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.575F, -27.3F, -1.5F, 9, 1, 6, -0.175F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.575F, -26.9F, -0.5F, 9, 2, 5, -0.2F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -3.575F, -25.9F, -0.5F, 7, 2, 5, -0.25F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 0.95F, -31.175F, -4.925F, 1, 2, 6, -0.075F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -2.975F, -28.875F, -4.275F, 2, 1, 6, -0.05F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 0.975F, -28.9F, -4.25F, 2, 1, 6, -0.05F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 3.25F, -29.675F, -3.175F, 1, 2, 1, -0.075F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.3F, -29.675F, -3.175F, 1, 2, 1, -0.075F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.3F, -27.925F, -3.375F, 1, 2, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 3.2F, -27.925F, -3.375F, 1, 2, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.3F, -26.925F, -4.1F, 1, 2, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 3.2F, -26.925F, -4.1F, 1, 2, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -4.225F, -25.95F, -4.3F, 3, 2, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, 1.125F, -25.95F, -4.3F, 3, 2, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -1.55F, -24.7F, -4.3F, 3, 1, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -1.55F, -26.7F, -4.3F, 3, 1, 1, 0.0F, false));
-		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 102, 105, -0.55F, -31.675F, -4.925F, 1, 2, 6, -0.075F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.05F, -32.375F, -4.675F, 8, 2, 9, 0.1F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.05F, -32.375F, -4.675F, 8, 2, 9, 0.1F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 2.275F, -31.425F, -4.925F, 2, 2, 4, -0.075F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.3F, -31.425F, -4.925F, 1, 2, 6, -0.075F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.55F, -30.425F, -1.675F, 9, 2, 6, -0.1F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.575F, -28.825F, -1.5F, 9, 2, 6, -0.2F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.575F, -27.3F, -1.5F, 9, 1, 6, -0.175F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.575F, -26.9F, -0.5F, 9, 2, 5, -0.2F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -3.575F, -25.9F, -0.5F, 7, 2, 5, -0.25F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 0.95F, -31.175F, -4.925F, 1, 2, 6, -0.075F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -2.975F, -28.875F, -4.275F, 2, 1, 6, -0.05F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 0.975F, -28.9F, -4.25F, 2, 1, 6, -0.05F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 3.25F, -29.675F, -3.175F, 1, 2, 1, -0.075F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.3F, -29.675F, -3.175F, 1, 2, 1, -0.075F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.3F, -27.925F, -3.375F, 1, 2, 1, 0.0F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 3.2F, -27.925F, -3.375F, 1, 2, 1, 0.0F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.3F, -26.925F, -4.1F, 1, 2, 1, 0.025F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 3.2F, -26.925F, -4.1F, 1, 2, 1, 0.025F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -4.225F, -25.95F, -4.3F, 3, 2, 1, 0.0F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, 1.125F, -25.95F, -4.3F, 3, 2, 1, 0.0F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -1.55F, -24.7F, -4.3F, 3, 1, 1, 0.0F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -1.55F, -26.7F, -4.3F, 3, 1, 1, 0.0F, false));
+		bipedHeadHair.cubeList.add(new ModelBox(bipedHeadHair, 83, 102, -0.55F, -31.675F, -4.925F, 1, 2, 6, -0.075F, false));
+
 
 		bipedBodyCoat = new ModelRenderer(this);
 		bipedBodyCoat.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bipedBody.addChild(bipedBodyCoat);
-		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 57, 71, -4.25F, 0.0F, -2.0F, 3, 16, 4, 0.25F, false));
-		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 57, 71, 1.25F, 0.0F, -2.0F, 3, 16, 4, 0.25F, false));
-		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 79, 62, -4.0F, 3.3F, -2.175F, 8, 8, 4, 0.025F, false));
+		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 57, 71, -4.25F, 0.0F, -2.0F, 3, 16, 4, 0.3F, false));
+		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 57, 71, 1.25F, 0.0F, -2.0F, 3, 16, 4, 0.3F, false));
+		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 79, 62, -4.0F, 3.3F, -2.2F, 8, 8, 4, 0.025F, false));
 		bipedBodyCoat.cubeList.add(new ModelBox(bipedBodyCoat, 60, 75, -1.5F, -0.15F, 1.1F, 3, 16, 1, 0.225F, false));
 
 		bipedBosyShirt = new ModelRenderer(this);
 		bipedBosyShirt.setRotationPoint(1.725F, 0.95F, 2.4F);
 		bipedBodyCoat.addChild(bipedBosyShirt);
 		setRotationAngle(bipedBosyShirt, 0.0F, 0.0F, 0.2443F);
-		bipedBosyShirt.cubeList.add(new ModelBox(bipedBosyShirt, 88, 78, -0.9282F, -1.1392F, -4.5F, 2, 5, 1, 0.0F, false));
-		bipedBosyShirt.cubeList.add(new ModelBox(bipedBosyShirt, 87, 81, -1.3514F, 10.464F, -4.55F, 2, 1, 1, 0.05F, false));
+		bipedBosyShirt.cubeList.add(new ModelBox(bipedBosyShirt, 88, 78, -0.9282F, -1.1392F, -4.6F, 2, 5, 1, 0.0F, false));
+		bipedBosyShirt.cubeList.add(new ModelBox(bipedBosyShirt, 87, 81, -1.3514F, 10.464F, -4.6F, 2, 1, 1, 0.05F, false));
 
 		bipedBosyShirt2 = new ModelRenderer(this);
 		bipedBosyShirt2.setRotationPoint(-0.375F, 0.05F, 2.4F);
 		bipedBodyCoat.addChild(bipedBosyShirt2);
 		setRotationAngle(bipedBosyShirt2, 0.0F, 0.0F, -0.1789F);
-		bipedBosyShirt2.cubeList.add(new ModelBox(bipedBosyShirt2, 89, 80, -1.4858F, -0.6897F, -4.5F, 1, 5, 1, 0.0F, false));
-		bipedBosyShirt2.cubeList.add(new ModelBox(bipedBosyShirt2, 89, 83, -1.2972F, 11.1185F, -4.5F, 1, 1, 1, 0.025F, false));
+		bipedBosyShirt2.cubeList.add(new ModelBox(bipedBosyShirt2, 89, 80, -1.4858F, -0.6897F, -4.625F, 1, 5, 1, 0.0F, false));
+		bipedBosyShirt2.cubeList.add(new ModelBox(bipedBosyShirt2, 89, 83, -1.2972F, 11.1185F, -4.6F, 1, 1, 1, 0.025F, false));
 
 		bipedBodyCoatFlap1 = new ModelRenderer(this);
 		bipedBodyCoatFlap1.setRotationPoint(2.775F, 3.25F, 1.4F);
@@ -121,7 +122,8 @@ public class ModelBillyButcher extends ModelBiped {
 		bipedLeftArm.addChild(bipedLeftArmSleeve);
 		bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 63, 74, -1.0F, -2.0F, -2.0F, 4, 10, 4, 0.1F, false));
 		bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 63, 74, -1.0F, -2.0F, -2.0F, 4, 10, 4, 0.1F, false));
-	}
+
+		}
 
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		this.bipedHead.showModel = true;
