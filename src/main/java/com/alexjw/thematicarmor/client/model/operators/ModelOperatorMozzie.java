@@ -25,6 +25,7 @@ public class ModelOperatorMozzie extends ModelBiped {
 	private final ModelRenderer bipedLeftLegStraps;
 	private final ModelRenderer bipedLeftLegStraps2;
 
+
 	public ModelOperatorMozzie() {
 		super(0.1f, 0.0f, 128, 128);
 		textureWidth = 128;
@@ -69,8 +70,8 @@ public class ModelOperatorMozzie extends ModelBiped {
 		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 109, 34, -6.175F, -3.7F, 0.0F, 2, 1, 2, -0.325F, false));
 		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 112, 45, -1.425F, -3.775F, 0.25F, 2, 1, 2, -0.1F, false));
 		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 112, 45, -4.425F, -3.775F, 0.25F, 2, 1, 2, -0.1F, false));
-		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 112, 45, -1.425F, -3.275F, 0.25F, 2, 1, 2, -0.2F, false));
-		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 112, 45, -4.575F, -3.275F, 0.25F, 2, 1, 2, -0.2F, false));
+		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 112, 45, -1.425F, -3.275F, 0.25F, 2, 1, 2, -0.125F, false));
+		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 112, 45, -4.575F, -3.275F, 0.25F, 2, 1, 2, -0.125F, false));
 		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 109, 34, -4.825F, -2.825F, 0.0F, 2, 1, 2, -0.325F, false));
 		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 109, 34, -1.075F, -2.825F, 0.0F, 2, 1, 2, -0.325F, false));
 		bipedHeadHelmetSunglasses.cubeList.add(new ModelBox(bipedHeadHelmetSunglasses, 109, 34, -2.025F, -3.85F, 0.0F, 1, 1, 2, -0.3F, false));
@@ -116,6 +117,7 @@ public class ModelOperatorMozzie extends ModelBiped {
 		bipedHeadHelmetVisor.cubeList.add(new ModelBox(bipedHeadHelmetVisor, 75, 46, -2.0F, -2.4821F, -0.5745F, 5, 3, 3, -0.75F, false));
 		bipedHeadHelmetVisor.cubeList.add(new ModelBox(bipedHeadHelmetVisor, 106, 48, -4.5F, 2.4871F, 4.1558F, 3, 2, 2, -0.75F, false));
 		bipedHeadHelmetVisor.cubeList.add(new ModelBox(bipedHeadHelmetVisor, 106, 48, -3.25F, 2.4871F, 4.1558F, 2, 2, 2, -0.65F, false));
+
 
 		bipedBodyVest = new ModelRenderer(this);
 		bipedBodyVest.setRotationPoint(0.0F, 24.0F, 0.0F);
@@ -201,6 +203,7 @@ public class ModelOperatorMozzie extends ModelBiped {
 		bipedBodyVest.addChild(bipedBodyVestGPS);
 		setRotationAngle(bipedBodyVestGPS, 0.0F, 0.0F, 0.1745F);
 
+
 		bipedBodyVestGPS2 = new ModelRenderer(this);
 		bipedBodyVestGPS2.setRotationPoint(-2.125F, -26.65F, -2.8F);
 		bipedBodyVest.addChild(bipedBodyVestGPS2);
@@ -212,6 +215,7 @@ public class ModelOperatorMozzie extends ModelBiped {
 		bipedBodyVestGPS2.cubeList.add(new ModelBox(bipedBodyVestGPS2, 83, 47, 5.1216F, 1.8295F, -0.325F, 1, 1, 1, -0.2F, false));
 		bipedBodyVestGPS2.cubeList.add(new ModelBox(bipedBodyVestGPS2, 115, 44, 5.5083F, 1.8628F, -0.375F, 1, 2, 2, -0.4F, false));
 		bipedBodyVestGPS2.cubeList.add(new ModelBox(bipedBodyVestGPS2, 115, 44, 4.6988F, 1.8787F, -0.375F, 1, 2, 2, -0.4F, false));
+
 
 		bipedRightArmDetail = new ModelRenderer(this);
 		bipedRightArmDetail.setRotationPoint(5.0F, 22.0F, 0.0F);
@@ -227,12 +231,14 @@ public class ModelOperatorMozzie extends ModelBiped {
 		bipedRightArmDetail.cubeList.add(new ModelBox(bipedRightArmDetail, 109, 62, -8.675F, -23.0F, -1.1F, 1, 1, 1, -0.325F, false));
 		bipedRightArmDetail.cubeList.add(new ModelBox(bipedRightArmDetail, 109, 62, -8.725F, -23.0F, 0.075F, 1, 1, 1, -0.325F, false));
 
+
 		bipedLeftArmDetail = new ModelRenderer(this);
 		bipedLeftArmDetail.setRotationPoint(-5.0F, 22.0F, 0.0F);
 		bipedLeftArm.addChild(bipedLeftArmDetail);
 		bipedLeftArmDetail.cubeList.add(new ModelBox(bipedLeftArmDetail, 77, 33, 4.0F, -16.5F, -2.0F, 4, 1, 4, 0.2F, false));
 		bipedLeftArmDetail.cubeList.add(new ModelBox(bipedLeftArmDetail, 79, 34, 5.0F, -18.25F, 0.0F, 2, 1, 2, 0.275F, false));
 		bipedLeftArmDetail.cubeList.add(new ModelBox(bipedLeftArmDetail, 72, 27, 4.0F, -17.75F, -2.0F, 4, 0, 4, 0.325F, false));
+
 
 		bipedRightLegHolster = new ModelRenderer(this);
 		bipedRightLegHolster.setRotationPoint(1.9F, 12.0F, 0.0F);
