@@ -1,0 +1,23 @@
+{
+  "breachCharge": {
+    "category": "players",
+    "sounds": [
+      "thematicarmor:breach_charge"
+    ],
+    "subtitle": "subtitle.thematicarmor.breach_charge"
+  },
+  "thermite": {
+    "category": "players",
+    "sounds": [
+      "thematicarmor:thermite"
+    ],
+    "subtitle": "subtitle.thematicarmor.thermite"
+  },
+  "menu_music": {
+    "category": "music",
+    "sounds": [
+      "thematicarmor:menu_music"
+    ],
+    "subtitle": "subtitle.thematicarmor.menu_music"
+  }
+}

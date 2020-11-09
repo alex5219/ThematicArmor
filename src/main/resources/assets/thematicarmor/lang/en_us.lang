@@ -1,0 +1,46 @@
+CREATIVE TABS:
+itemGroup.tabThematicArmors=Armors
+
+OPERATOR ITEMS:
+item.armor_finka.name=Finka
+item.armor_bandit.name=Bandit
+item.armor_capitao.name=Capitao
+item.armor_frost.name=Frost
+item.armor_maverick.name=Maverick
+item.armor_rook.name=Rook
+item.armor_valkyrie.name=Valkyrie
+item.armor_sledge.name=Sledge
+item.armor_doc.name=Doc
+item.armor_smoke.name=Smoke
+item.armor_ash.name=Ash
+item.operator.thermite.name=Thermite
+item.armor_kali.name=Kali
+item.armor_jackal.name=Jackal
+item.armor_vigil.name=Vigil
+item.armor_vigilinvis.name=Vigil
+
+OPERATOR PIECES:
+piece.head=Helmet
+piece.chest=Chestpiece
+piece.legs=Leggings
+piece.feet=Boots
+
+OPERATOR NAMES:
+item.operator.name=%1$s's %2$s
+armor.recruit=Recruit
+armor.ash=Ash
+armor.bandit=Bandit
+armor.capitao=Capitao
+armor.doc=Doc
+armor.finka=Finka
+armor.frost=Frost
+armor.kali=Kali
+armor.maverick=Maverick
+armor.rook=Rook
+armor.sledge=Sledge
+armor.thermite=Thermite
+armor.smoke=Smoke
+armor.valkyrie=Valkryie
+armor.jackal=Jackal
+armor.vigil=Vigil
+armor.vigilinvis=Vigil
