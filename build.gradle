@@ -28,7 +28,6 @@ minecraft {
     mappings = "snapshot_20171003"
 }
 
-
 processResources {
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
