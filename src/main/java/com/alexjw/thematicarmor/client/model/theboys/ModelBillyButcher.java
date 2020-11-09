@@ -112,15 +112,17 @@ public class ModelBillyButcher extends ModelBiped {
 		bipedBodyCoatFlap4.cubeList.add(new ModelBox(bipedBodyCoatFlap4, 73, 85, -10.5211F, -0.4505F, -3.95F, 1, 1, 1, -0.1F, false));
 		bipedBodyCoatFlap4.cubeList.add(new ModelBox(bipedBodyCoatFlap4, 72, 86, 0.3201F, 0.6802F, -4.0F, 1, 2, 2, 0.0F, false));
 
+
 		bipedRightArmSleeve = new ModelRenderer(this);
 		bipedRightArmSleeve.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bipedRightArm.addChild(bipedRightArmSleeve);
-		bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 59, 75, -3.0F, -2.0F, -2.0F, 4, 10, 4, 0.1F, false));
+		bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 59, 75, -3.0F, -2.0F, -2.0F, 4, 10, 4, 0.15F, false));
+
 
 		bipedLeftArmSleeve = new ModelRenderer(this);
 		bipedLeftArmSleeve.setRotationPoint(0.0F, 0.0F, 0.0F);
 		bipedLeftArm.addChild(bipedLeftArmSleeve);
-		bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 63, 74, -1.0F, -2.0F, -2.0F, 4, 10, 4, 0.1F, false));
+		bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 63, 74, -1.0F, -2.0F, -2.0F, 4, 10, 4, 0.15F, false));
 		bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 63, 74, -1.0F, -2.0F, -2.0F, 4, 10, 4, 0.1F, false));
 
 		}
