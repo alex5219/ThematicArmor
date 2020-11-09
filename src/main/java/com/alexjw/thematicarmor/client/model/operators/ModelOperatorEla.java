@@ -23,7 +23,7 @@ public class ModelOperatorEla extends ModelBiped {
         ModelRenderer bipedHeadHat = new ModelRenderer(this);
         bipedHeadHat.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedHead.addChild(bipedHeadHat);
-        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 74, 9, -4.0F, -31.75F, -4.175F, 8, 2, 8, 0.275F, false));
+        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 74, 9, -4.0F, -31.75F, -4.175F, 8, 2, 8, 0.325F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 93, 8, -2.5F, -29.65F, -6.75F, 5, 0, 6, 0.225F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 93, 8, 2.575F, -29.45F, -6.75F, 1, 0, 6, 0.2F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 93, 8, -3.525F, -29.4F, -6.75F, 1, 0, 6, 0.2F, false));
@@ -37,7 +37,7 @@ public class ModelOperatorEla extends ModelBiped {
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 20, 11, -3.675F, -30.025F, -4.5F, 1, 3, 1, -0.3F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 26, 12, 2.575F, -30.025F, -4.5F, 1, 3, 1, -0.3F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 25, 10, 3.3F, -30.275F, -4.5F, 1, 5, 1, -0.2F, false));
-        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 25, 10, 3.425F, -29.625F, -4.0F, 1, 5, 1, -0.1F, false));
+        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 25, 10, 3.425F, -29.625F, -4.0F, 1, 5, 1, -0.125F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 25, 10, 3.425F, -29.775F, -2.75F, 1, 5, 1, -0.175F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 25, 10, -4.325F, -29.775F, -2.75F, 1, 5, 1, -0.175F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 25, 10, 3.425F, -30.175F, -2.075F, 1, 5, 1, -0.175F, false));
@@ -83,8 +83,8 @@ public class ModelOperatorEla extends ModelBiped {
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 88, 76, 3.825F, -28.25F, -0.9F, 1, 2, 2, 0.0F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 100, 83, -4.8F, -28.25F, -0.9F, 1, 2, 2, 0.0F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 79, 72, 3.9F, -29.225F, -0.9F, 1, 2, 2, -0.3F, false));
-        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 17, 22, -4.5F, -32.25F, -0.875F, 9, 5, 2, -0.125F, false));
-        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 78, 72, -4.5F, -31.175F, -4.625F, 9, 1, 9, -0.15F, false));
+        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 17, 22, -4.5F, -32.25F, -0.875F, 9, 5, 2, -0.075F, false));
+        bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 78, 72, -4.5F, -31.175F, -4.625F, 9, 1, 9, -0.1F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 83, 70, -4.875F, -29.225F, -0.9F, 1, 2, 2, -0.3F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 83, 70, 2.5F, -26.075F, -5.2F, 2, 1, 1, -0.3F, false));
         bipedHeadHat.cubeList.add(new ModelBox(bipedHeadHat, 96, 32, 2.925F, -26.075F, -5.2F, 2, 1, 1, -0.2F, false));
@@ -95,10 +95,12 @@ public class ModelOperatorEla extends ModelBiped {
         setRotationAngle(bipedHeadHatMic, 0.3491F, 0.0F, 0.0F);
         bipedHeadHatMic.cubeList.add(new ModelBox(bipedHeadHatMic, 80, 12, 9.6F, -1.0F, -4.0F, 1, 1, 5, -0.2F, false));
 
+
+
         ModelRenderer bipedBodyHarness = new ModelRenderer(this);
         bipedBodyHarness.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedBody.addChild(bipedBodyHarness);
-        bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, -3.5F, -24.25F, -2.0F, 1, 2, 4, 0.1F, false));
+        bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, -3.5F, -24.25F, -2.0F, 1, 2, 4, 0.15F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, -3.75F, -22.525F, -2.0F, 1, 2, 4, 0.125F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 76, 71, -3.6F, -23.025F, -2.5F, 1, 2, 1, -0.175F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 74, 98, -3.6F, -23.025F, -2.7F, 1, 2, 1, -0.3F, false));
@@ -136,14 +138,14 @@ public class ModelOperatorEla extends ModelBiped {
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, 2.675F, -22.525F, -2.0F, 1, 2, 4, 0.125F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, 2.425F, -20.525F, 1.25F, 1, 3, 1, 0.125F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, -3.5F, -20.525F, 1.25F, 1, 3, 1, 0.125F, false));
-        bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, 2.5F, -24.25F, -2.0F, 1, 2, 4, 0.1F, false));
+        bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 83, 21, 2.5F, -24.25F, -2.0F, 1, 2, 4, 0.15F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 21, 24, -2.5F, -21.3F, -2.7F, 5, 2, 2, -0.25F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 88, 105, -3.275F, -15.95F, -2.5F, 2, 3, 2, -0.25F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 71, 96, -3.325F, -16.05F, -2.725F, 2, 2, 2, -0.3F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 74, 95, 1.375F, -15.95F, -2.725F, 2, 2, 2, -0.3F, false));
         bipedBodyHarness.cubeList.add(new ModelBox(bipedBodyHarness, 86, 102, 1.4F, -15.8F, -2.5F, 2, 3, 2, -0.25F, false));
 
-        ModelRenderer bipedBodyBelt = new ModelRenderer(this);
+        ModelRenderer  bipedBodyBelt = new ModelRenderer(this);
         bipedBodyBelt.setRotationPoint(5.9F, -14.3F, -2.5F);
         bipedBodyHarness.addChild(bipedBodyBelt);
         setRotationAngle(bipedBodyBelt, 0.0F, 0.0F, -0.1745F);
@@ -161,13 +163,15 @@ public class ModelOperatorEla extends ModelBiped {
         bipedBodyHarnessTits.cubeList.add(new ModelBox(bipedBodyHarnessTits, 21, 24, -5.25F, 1.7969F, 0.1577F, 5, 2, 2, -0.075F, false));
         bipedBodyHarnessTits.cubeList.add(new ModelBox(bipedBodyHarnessTits, 0, 23, -5.25F, 1.6536F, 0.6425F, 5, 2, 2, -0.3F, false));
 
+
         ModelRenderer bipedRightArmSleeve = new ModelRenderer(this);
         bipedRightArmSleeve.setRotationPoint(5.0F, 22.0F, 0.0F);
         bipedRightArm.addChild(bipedRightArmSleeve);
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 88, 32, -4.75F, -20.9F, -2.25F, 1, 5, 3, -0.1F, false));
         bipedRightArmSleeve.cubeList.add(new ModelBox(bipedRightArmSleeve, 88, 27, -7.0F, -20.4F, -0.75F, 2, 3, 3, -0.1F, false));
 
-        ModelRenderer bipedLeftArmSleeve = new ModelRenderer(this);
+
+        ModelRenderer  bipedLeftArmSleeve = new ModelRenderer(this);
         bipedLeftArmSleeve.setRotationPoint(-5.0F, 22.0F, 0.0F);
         bipedLeftArm.addChild(bipedLeftArmSleeve);
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 88, 32, 3.75F, -20.9F, -2.25F, 1, 5, 3, -0.1F, false));
@@ -189,6 +193,7 @@ public class ModelOperatorEla extends ModelBiped {
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 88, 100, 6.6F, -21.675F, -0.175F, 2, 1, 1, -0.4F, false));
         bipedLeftArmSleeve.cubeList.add(new ModelBox(bipedLeftArmSleeve, 88, 100, 6.625F, -21.9F, -1.0F, 2, 1, 1, -0.4F, false));
 
+
         ModelRenderer bipedRightLegHolster = new ModelRenderer(this);
         bipedRightLegHolster.setRotationPoint(1.9F, 12.0F, 0.0F);
         bipedRightLeg.addChild(bipedRightLegHolster);
@@ -198,7 +203,9 @@ public class ModelOperatorEla extends ModelBiped {
         bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 82, 19, -4.7F, -9.75F, -2.5F, 5, 1, 5, -0.3F, false));
         bipedRightLegHolster.cubeList.add(new ModelBox(bipedRightLegHolster, 82, 19, -4.7F, -9.475F, -2.5F, 5, 1, 5, -0.325F, false));
 
-        ModelRenderer bipedLeftLegHolder = new ModelRenderer(this);
+
+
+        ModelRenderer  bipedLeftLegHolder = new ModelRenderer(this);
         bipedLeftLegHolder.setRotationPoint(-1.9F, 12.0F, 0.0F);
         bipedLeftLeg.addChild(bipedLeftLegHolder);
         bipedLeftLegHolder.cubeList.add(new ModelBox(bipedLeftLegHolder, 82, 19, -0.45F, -8.475F, -2.5F, 5, 1, 5, -0.325F, false));
