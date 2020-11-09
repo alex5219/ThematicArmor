@@ -7,7 +7,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class ThematicHelper {
-
     public static Armor getTheme(EntityPlayer entityPlayer) {
         if (entityPlayer.getArmorInventoryList().iterator().next() != null) {
             return getThemeFromArmor(entityPlayer.getArmorInventoryList());

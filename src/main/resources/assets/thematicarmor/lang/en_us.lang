@@ -2,53 +2,33 @@ CREATIVE TABS:
 itemGroup.tabThematicArmors=Armors
 
 OPERATOR ITEMS:
-item.armor_finka.name=Finka
-item.armor_bandit.name=Bandit
-item.armor_batman.name=Batman
-item.armor_billybutcher.name=Billy Butcher
-item.armor_buck.name=Buck
-item.armor_capitao.name=Capitao
-item.armor_echo.name=Echo
-item.armor_ela.name=Ela
-item.armor_frost.name=Frost
-item.armor_maverick.name=Maverick
-item.armor_rook.name=Rook
-item.armor_valkyrie.name=Valkyrie
-item.armor_sledge.name=Sledge
-item.armor_doc.name=Doc
-item.armor_smoke.name=Smoke
-item.armor_ash.name=Ash
-item.armor_thermite.name=Thermite
-item.armor_tachanka.name=Tachanka
-item.armor_thatcher.name=Thatcher
-item.armor_mozzie.name=Mozzie
-item.armor_mute.name=Mute
-item.armor_kali.name=Kali
-item.armor_jackal.name=Jackal
-item.armor_vigil.name=Vigil
+armor.finka=Finka
+armor.bandit=Bandit
+armor.batman=Batman
+armor.billybutcher=Billy Butcher
+armor.buck=Buck
+armor.capitao=Capitao
+armor.echo=Echo
+armor.ela=Ela
+armor.frost=Frost
+armor.maverick=Maverick
+armor.rook=Rook
+armor.valkyrie=Valkyrie
+armor.sledge=Sledge
+armor.doc=Doc
+armor.smoke=Smoke
+armor.ash=Ash
+armor.thermite=Thermite
+armor.tachanka=Tachanka
+armor.thatcher=Thatcher
+armor.mozzie=Mozzie
+armor.mute=Mute
+armor.kali=Kali
+armor.jackal=Jackal
+armor.vigil=Vigil
 
 OPERATOR PIECES:
 piece.head=Helmet
 piece.chest=Chestpiece
 piece.legs=Leggings
 piece.feet=Boots
-
-OPERATOR NAMES:
-item.operator.name=%1$s's %2$s
-armor.recruit=Recruit
-armor.ash=Ash
-armor.bandit=Bandit
-armor.capitao=Capitao
-armor.doc=Doc
-armor.finka=Finka
-armor.frost=Frost
-armor.kali=Kali
-armor.maverick=Maverick
-armor.rook=Rook
-armor.sledge=Sledge
-armor.thermite=Thermite
-armor.smoke=Smoke
-armor.valkyrie=Valkryie
-armor.jackal=Jackal
-armor.vigil=Vigil
-armor.vigilinvis=Vigil

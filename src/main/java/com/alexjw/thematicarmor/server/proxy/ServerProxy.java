@@ -1,5 +1,6 @@
 package com.alexjw.thematicarmor.server.proxy;
 
+import com.alexjw.thematicarmor.server.enchantment.ModEnchantments;
 import com.alexjw.thematicarmor.server.event.CommonEventHandler;
 import com.alexjw.thematicarmor.server.armors.ArmorManager;
 import net.minecraft.entity.EntityLivingBase;

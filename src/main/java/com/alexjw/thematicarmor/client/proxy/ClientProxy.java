@@ -1,5 +1,6 @@
 package com.alexjw.thematicarmor.client.proxy;
 
+import com.alexjw.thematicarmor.client.event.RenderHandler;
 import com.alexjw.thematicarmor.client.renderer.SiegeRendererManager;
 import com.alexjw.thematicarmor.server.proxy.ServerProxy;
 import net.minecraft.client.Minecraft;
@@ -17,6 +18,7 @@ public class ClientProxy extends ServerProxy {
     public void preInit() {
         super.preInit();
         SiegeRendererManager.register();
+        this.registerEventHandler(new RenderHandler());
     }
 
     public void init() {
