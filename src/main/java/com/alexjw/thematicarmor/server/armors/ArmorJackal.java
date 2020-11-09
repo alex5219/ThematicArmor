@@ -2,6 +2,14 @@ package com.alexjw.thematicarmor.server.armors;
 
 public class ArmorJackal extends Armor {
     public ArmorJackal() {
-        super(2, 2, 3);
+        super(true);
+    }
+
+    public int getSpeed() {
+        return 2;
+    }
+
+    public int getArmor() {
+        return 2;
     }
 }

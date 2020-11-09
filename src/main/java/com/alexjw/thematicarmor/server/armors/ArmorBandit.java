@@ -2,6 +2,14 @@ package com.alexjw.thematicarmor.server.armors;
 
 public class ArmorBandit extends Armor {
     public ArmorBandit() {
-        super(3, 1, 1);
+        super(true);
+    }
+
+    public int getSpeed() {
+        return 3;
+    }
+
+    public int getArmor() {
+        return 1;
     }
 }

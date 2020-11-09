@@ -39,13 +39,15 @@ public class ItemThemeArmor extends ItemArmor {
             UUID.fromString("D8499B04-0E66-4726-AB29-64469D734E0D"), UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"),
             UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150")};
     private final Armor armor;
-    private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("armor", "operatorArmor", 16384, new int[]{5, 6, 6, 5}, 0, SoundEvents.ENTITY_ENDERDRAGON_GROWL, 0);
+    private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("armor", "thematicArmor", 16384, new int[]{0, 12, 0, 0}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+    private boolean isOperator;
 
-    public ItemThemeArmor(EntityEquipmentSlot compatibleEntityEquipmentSlot, Armor armor) {
-        super(armorMaterial, 0, compatibleEntityEquipmentSlot);
+    public ItemThemeArmor(Armor armor, boolean isOperator) {
+        super(armorMaterial, 0, EntityEquipmentSlot.CHEST);
         this.armor = armor;
-        this.setUnlocalizedName(armor.getUnlocalizedName() + "_" + compatibleEntityEquipmentSlot.toString().toLowerCase());
-        this.setRegistryName(ThematicArmor.MODID, armor.getUnlocalizedName() + "_" + compatibleEntityEquipmentSlot.toString().toLowerCase());
+        this.isOperator = isOperator;
+        this.setUnlocalizedName(armor.getUnlocalizedName() + "_" + EntityEquipmentSlot.CHEST.toString().toLowerCase());
+        this.setRegistryName(ThematicArmor.MODID, armor.getUnlocalizedName() + "_" + EntityEquipmentSlot.CHEST.toString().toLowerCase());
         if (!armor.isHidden()) {
             this.setCreativeTab(ThematicTabs.tabArmors);
         }
@@ -65,19 +67,21 @@ public class ItemThemeArmor extends ItemArmor {
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack itemstack, World world, List list, ITooltipFlag iTooltipFlag) {
-        switch (armor.getSpeed()) {
-            case 1:
-                list.add("Armor: " + TextFormatting.WHITE + "***");
-                list.add("Speed: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
-                break;
-            case 2:
-                list.add("Armor: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
-                list.add("Speed: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
-                break;
-            case 3:
-                list.add("Armor: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
-                list.add("Speed: " + TextFormatting.WHITE + "***");
-                break;
+        if(isOperator) {
+            switch (armor.getSpeed()) {
+                case 1:
+                    list.add("Armor: " + TextFormatting.WHITE + "***");
+                    list.add("Speed: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
+                    break;
+                case 2:
+                    list.add("Armor: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
+                    list.add("Speed: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
+                    break;
+                case 3:
+                    list.add("Armor: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
+                    list.add("Speed: " + TextFormatting.WHITE + "***");
+                    break;
+            }
         }
     }
 

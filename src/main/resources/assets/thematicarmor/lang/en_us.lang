@@ -32,3 +32,6 @@ piece.head=Helmet
 piece.chest=Chestpiece
 piece.legs=Leggings
 piece.feet=Boots
+
+ENCHANTMENT:
+enchantment.thematiccore.soulbound=Soulbound

@@ -3,7 +3,6 @@ package com.alexjw.thematicarmor.server.armors;
 import com.alexjw.thematicarmor.ThematicArmor;
 import com.alexjw.thematicarmor.server.items.armor.ItemThemeArmor;
 import net.minecraft.entity.Entity;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -15,15 +14,15 @@ import java.util.ArrayList;
 
 public class Armor {
     protected final Item chestplate;
-    private int armor = 0, speed = 0, difficulty = 0;
+    private int armor = 0;
+    private int speed = 0;
     private final ArrayList<Item> loadoutItems = new ArrayList<Item>();
+    private boolean isOperator;
 
-    public Armor(int speed, int armor, int difficulty) {
+    public Armor(boolean isOperator) {
         ArmorManager.armorArrayList.add(this);
-        this.chestplate = new ItemThemeArmor(EntityEquipmentSlot.CHEST, this);
-        this.armor = armor;
-        this.speed = speed;
-        this.difficulty = difficulty;
+        this.chestplate = new ItemThemeArmor(this, isOperator);
+        this.isOperator = isOperator;
     }
 
     public void init() {

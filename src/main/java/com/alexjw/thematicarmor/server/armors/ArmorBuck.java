@@ -2,6 +2,14 @@ package com.alexjw.thematicarmor.server.armors;
 
 public class ArmorBuck extends Armor {
     public ArmorBuck() {
-        super(3, 1, 1);
+        super(true);
+    }
+
+    public int getSpeed() {
+        return 2;
+    }
+
+    public int getArmor() {
+        return 2;
     }
 }
