@@ -26,6 +26,7 @@ armor.mute=Mute
 armor.kali=Kali
 armor.jackal=Jackal
 armor.vigil=Vigil
+armor.rickgrimes=Rick Grimes
 
 OPERATOR PIECES:
 piece.head=Helmet
@@ -33,5 +34,5 @@ piece.chest=Chestpiece
 piece.legs=Leggings
 piece.feet=Boots
 
-ENCHANTMENT:
+ENCHANTMENTS:
 enchantment.thematiccore.soulbound=Soulbound

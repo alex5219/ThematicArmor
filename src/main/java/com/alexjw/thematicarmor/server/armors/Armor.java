@@ -10,13 +10,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.ArrayList;
-
 public class Armor {
     protected final Item chestplate;
     private int armor = 0;
     private int speed = 0;
-    private final ArrayList<Item> loadoutItems = new ArrayList<Item>();
     private boolean isOperator;
 
     public Armor(boolean isOperator) {
