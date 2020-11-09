@@ -40,7 +40,7 @@ public class ModelOperatorBuck extends ModelBiped {
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 17, 24, -4.5F, -26.0F, 2.5F, 9, 2, 2, 0.0F, false));
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 16, 20, -4.5F, -25.75F, -2.0F, 9, 2, 6, 0.0F, false));
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 19, 9, -2.0304F, -26.8027F, -4.5F, 4, 1, 1, -0.2F, false));
-		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 21, 10, -2.0304F, -24.8277F, -4.025F, 4, 1, 1, 0.075F, false));
+		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 21, 10, -2.0304F, -24.8277F, -4.025F, 4, 1, 1, 0.125F, false));
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 19, 9, 1.2196F, -26.0027F, -4.1F, 2, 1, 1, 0.1F, false));
 		bipedHeadFace.cubeList.add(new ModelBox(bipedHeadFace, 24, 9, -3.2804F, -26.0027F, -4.1F, 2, 1, 1, 0.1F, false));
 
