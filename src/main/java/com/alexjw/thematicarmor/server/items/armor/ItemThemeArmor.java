@@ -81,6 +81,10 @@ public class ItemThemeArmor extends ItemArmor {
                     break;
             }
         }
+        if(armor.getSpecialistSkill() != null) {
+            list.add("" + armor.getSpecialistSkill().getName());
+            list.add("" + armor.getSpecialistSkill().getLore());
+        }
     }
 
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {

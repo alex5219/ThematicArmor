@@ -2,7 +2,9 @@ package com.alexjw.thematicarmor.server.armors;
 
 import com.alexjw.thematicarmor.ThematicArmor;
 import com.alexjw.thematicarmor.server.items.armor.ItemThemeArmor;
+import com.alexjw.thematicarmor.server.specialists.SpecialistSkill;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -15,11 +17,18 @@ public class Armor {
     private int armor = 0;
     private int speed = 0;
     private boolean isOperator;
+    private SpecialistSkill specialistSkill;
 
     public Armor(boolean isOperator) {
         ArmorManager.armorArrayList.add(this);
         this.chestplate = new ItemThemeArmor(this, isOperator);
         this.isOperator = isOperator;
+    }
+    public Armor(boolean isOperator, SpecialistSkill specialistSkill) {
+        ArmorManager.armorArrayList.add(this);
+        this.chestplate = new ItemThemeArmor(this, isOperator);
+        this.isOperator = isOperator;
+        this.specialistSkill = specialistSkill;
     }
 
     public void init() {
@@ -27,6 +36,9 @@ public class Armor {
     }
 
     public void onUpdate(ItemStack itemStack, World world, Entity entity) {
+        if(specialistSkill != null) {
+            specialistSkill.onUpdate((EntityPlayer) entity, itemStack);
+        }
     }
 
     public boolean isHidden(){
@@ -45,6 +57,10 @@ public class Armor {
     public ResourceLocation getIcon() {
         String name = this.getClass().getSimpleName().toLowerCase().replaceAll("armor", "");
         return new ResourceLocation(ThematicArmor.MODID, "textures/gui/icon/" + name + ".png");
+    }
+
+    public SpecialistSkill getSpecialistSkill() {
+        return specialistSkill;
     }
 
     public Item getChestplate() {
