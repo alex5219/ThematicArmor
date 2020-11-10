@@ -1,6 +1,7 @@
 package com.alexjw.thematicarmor.client.renderer;
 
 import com.alexjw.thematicarmor.client.model.operators.*;
+import com.alexjw.thematicarmor.client.model.southpark.ModelRandy;
 import com.alexjw.thematicarmor.client.model.supes.ModelBatman;
 import com.alexjw.thematicarmor.client.model.theboys.ModelBillyButcher;
 import com.alexjw.thematicarmor.client.model.walkingdead.ModelRickGrimes;
@@ -34,7 +35,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer thermite = new SiegeRenderer(ArmorManager.operatorThermite, new ModelOperatorThermite());
     public static SiegeRenderer vigil = new SiegeRenderer(ArmorManager.operatorVigil, new ModelOperatorVigil());
     public static SiegeRenderer rick = new SiegeRenderer(ArmorManager.wdRickGrimes, new ModelRickGrimes());
-
+    public static SiegeRenderer randy = new SiegeRenderer(ArmorManager.spRandy, new ModelRandy());
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
 
