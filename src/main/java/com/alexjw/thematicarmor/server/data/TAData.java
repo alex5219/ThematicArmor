@@ -7,19 +7,19 @@ import java.util.HashMap;
 
 public class TAData<V> extends HashMap<EntityPlayer, V> {
     public int getInteger(EntityPlayer entityPlayer) {
-        return (int) get(entityPlayer);
+        return (Integer) get(entityPlayer);
     }
 
     public float getFloat(EntityPlayer entityPlayer) {
-        return (float) get(entityPlayer);
+        return (Float) get(entityPlayer);
     }
 
     public double getDouble(EntityPlayer entityPlayer) {
-        return (double) get(entityPlayer);
+        return (Double) get(entityPlayer);
     }
 
     public boolean getBoolean(EntityPlayer entityPlayer) {
-        return (boolean) get(entityPlayer);
+        return (Boolean) get(entityPlayer);
     }
 
     public String getString(EntityPlayer entityPlayer) {
