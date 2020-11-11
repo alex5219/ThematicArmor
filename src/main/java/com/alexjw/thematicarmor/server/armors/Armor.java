@@ -12,23 +12,28 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Armor {
     protected final Item chestplate;
     private int armor = 0;
     private int speed = 0;
     private boolean isOperator;
-    private SpecialistSkill specialistSkill;
+    private List<SpecialistSkill> specialistSkill = new ArrayList<>();
 
     public Armor(boolean isOperator) {
         ArmorManager.armorArrayList.add(this);
         this.chestplate = new ItemThemeArmor(this, isOperator);
         this.isOperator = isOperator;
     }
-    public Armor(boolean isOperator, SpecialistSkill specialistSkill) {
+
+    public Armor(boolean isOperator, SpecialistSkill... specialistSkill) {
         ArmorManager.armorArrayList.add(this);
         this.chestplate = new ItemThemeArmor(this, isOperator);
         this.isOperator = isOperator;
-        this.specialistSkill = specialistSkill;
+        this.specialistSkill = Arrays.asList(specialistSkill);
     }
 
     public void init() {
@@ -36,9 +41,8 @@ public class Armor {
     }
 
     public void onUpdate(ItemStack itemStack, World world, Entity entity) {
-        if(specialistSkill != null) {
-            specialistSkill.onUpdate((EntityPlayer) entity, itemStack);
-        }
+        for(SpecialistSkill specialistSkill1:specialistSkill)
+            specialistSkill1.onUpdate((EntityPlayer) entity, itemStack);
     }
 
     public boolean isHidden(){
@@ -59,7 +63,7 @@ public class Armor {
         return new ResourceLocation(ThematicArmor.MODID, "textures/gui/icon/" + name + ".png");
     }
 
-    public SpecialistSkill getSpecialistSkill() {
+    public List<SpecialistSkill> getSpecialistSkill() {
         return specialistSkill;
     }
 

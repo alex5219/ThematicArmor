@@ -8,6 +8,7 @@ import com.alexjw.thematicarmor.server.armors.Armor;
 import com.alexjw.thematicarmor.server.helper.ThematicHelper;
 import com.alexjw.thematicarmor.server.items.ModItems;
 import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
+import com.alexjw.thematicarmor.server.specialists.SpecialistSkill;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
@@ -83,8 +84,10 @@ public class ItemThemeArmor extends ItemArmor {
             }
         }
         if(armor.getSpecialistSkill() != null) {
-            list.add("" + armor.getSpecialistSkill().getName());
-            list.add("" + armor.getSpecialistSkill().getLore());
+            for (SpecialistSkill specialistSkill : armor.getSpecialistSkill()) {
+                list.add("" + specialistSkill.getName());
+                list.add("" + specialistSkill.getLore());
+            }
         }
     }
 
@@ -164,11 +167,11 @@ public class ItemThemeArmor extends ItemArmor {
                     break;
             }
             if(this.getArmor().getSpecialistSkill() != null) {
-                if (this.getArmor().getSpecialistSkill().equals(SpecialistManager.specialistLightfooted))
+                if (this.getArmor().getSpecialistSkill().contains(SpecialistManager.specialistLightfooted))
                     speed = speed + 0.025f;
             }
             if(this.getArmor().getSpecialistSkill() != null) {
-                if (this.getArmor().getSpecialistSkill().equals(SpecialistManager.specialistTank))
+                if (this.getArmor().getSpecialistSkill().contains(SpecialistManager.specialistTank))
                     armor = armor + 1.0f;
             }
             multimap.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor speed", speed, 1));
