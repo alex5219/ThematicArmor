@@ -5,11 +5,11 @@ import net.minecraft.item.ItemStack;
 
 import java.util.HashMap;
 
-public class TAData<K, V> extends HashMap<K, V> {
-    public static TAData<EntityPlayer, Integer> TIME_DEAD = new TAData<>();
-    public static TAData<EntityPlayer, Boolean> HAS_DIED = new TAData<>();
-    public static TAData<EntityPlayer, Integer> LAST_HEAL = new TAData<>();
-    public static TAData<EntityPlayer, Boolean> TENACITY = new TAData<>();
+public class TAData<V> extends HashMap<EntityPlayer, V> {
+    public static TAData<Integer> TIME_DEAD = new TAData<>();
+    public static TAData<Boolean> HAS_DIED = new TAData<>();
+    public static TAData<Integer> LAST_HEAL = new TAData<>();
+    public static TAData<Boolean> TENACITY = new TAData<>();
 
     public int getInteger(EntityPlayer entityPlayer) {
         return (int) get(entityPlayer);
