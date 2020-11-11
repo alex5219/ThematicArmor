@@ -36,6 +36,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer vigil = new SiegeRenderer(ArmorManager.operatorVigil, new ModelOperatorVigil());
     public static SiegeRenderer rick = new SiegeRenderer(ArmorManager.wdRickGrimes, new ModelRickGrimes());
     public static SiegeRenderer randy = new SiegeRenderer(ArmorManager.spRandy, new ModelRandy());
+    public static SiegeRenderer smokeelite = new SiegeRenderer(ArmorManager.operatorSmokeElite, new ModelOperatorSmokeElite());
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
 

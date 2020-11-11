@@ -28,6 +28,7 @@ public class ArmorManager {
     public static ArmorVigil operatorVigil = new ArmorVigil();
     public static ArmorRickGrimes wdRickGrimes = new ArmorRickGrimes();
     public static ArmorRandy spRandy = new ArmorRandy();
+    public static ArmorSmokeElite operatorSmokeElite = new ArmorSmokeElite();
 
     public static void init() {
         for (Armor armor : armorArrayList) armor.init();
