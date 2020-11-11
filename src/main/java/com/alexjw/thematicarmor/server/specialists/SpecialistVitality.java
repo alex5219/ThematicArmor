@@ -1,20 +1,28 @@
 package com.alexjw.thematicarmor.server.specialists;
 
-import com.alexjw.thematicarmor.server.data.ThematicData;
+import com.alexjw.thematicarmor.server.data.TAData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
+import java.util.Random;
+
 public class SpecialistVitality extends SpecialistSkill {
+    Random random = new Random();
+
     public SpecialistVitality() {
         super("Vitality", "Regenerate faster after getting out of combat.");
     }
 
     public void onUpdate(EntityPlayer entityPlayer, ItemStack itemStack) {
-        ThematicData.LAST_HEAL.incr(entityPlayer, "last_heal");
+        TAData.incr(entityPlayer, TAData.LAST_HEAL);
 
-        if (entityPlayer.getHealth() < entityPlayer.getMaxHealth() && ThematicData.LAST_HEAL.getInteger(entityPlayer, "last_heal") > 50)
+        int chance = random.nextInt(20);
+
+        if (entityPlayer.getHealth() < entityPlayer.getMaxHealth() && TAData.LAST_HEAL.getInteger(entityPlayer) > 120)
         {
-            entityPlayer.heal(0.5F);
+            if(chance == 1) {
+                entityPlayer.heal(1.0F);
+            }
         }
     }
 }

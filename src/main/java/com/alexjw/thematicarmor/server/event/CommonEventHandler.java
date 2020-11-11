@@ -1,16 +1,18 @@
 package com.alexjw.thematicarmor.server.event;
 
 import com.alexjw.thematicarmor.ThematicArmor;
-import com.alexjw.thematicarmor.server.data.ThematicData;
+import com.alexjw.thematicarmor.server.data.TAData;
 import com.alexjw.thematicarmor.server.enchantment.ModEnchantments;
+import com.alexjw.thematicarmor.server.helper.ThematicHelper;
+import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
@@ -18,7 +20,6 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.ListIterator;
 import java.util.Random;
@@ -30,10 +31,31 @@ public class CommonEventHandler {
     private static Random random = new Random();
 
     @SubscribeEvent (priority = EventPriority.HIGH)
-    public void onPlayerTick(LivingDamageEvent event) {
+    public void onRespawn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent event) {
+        if (TAData.TENACITY.getBoolean(event.player)) {
+            TAData.TENACITY.put(event.player, false);
+        }
+    }
+
+    @SubscribeEvent (priority = EventPriority.HIGH)
+    public void onPlayerDamage(LivingDamageEvent event) {
         if(event.getEntityLiving() instanceof EntityPlayer) {
             EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
-            ThematicData.LAST_HEAL.set(entityPlayer, "last_heal",  "0");
+            TAData.LAST_HEAL.put(entityPlayer, 0);
+
+            if(event.getAmount() >= entityPlayer.getHealth()) {
+                if (ThematicHelper.getTheme(entityPlayer) != null) {
+                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
+                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().equals(SpecialistManager.specialistTenacity)) {
+                            if (!TAData.TENACITY.getBoolean(entityPlayer)) {
+                                event.setCanceled(true);
+                                entityPlayer.setHealth(entityPlayer.getMaxHealth() * 0.3f);
+                                TAData.TENACITY.put(entityPlayer, true);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
