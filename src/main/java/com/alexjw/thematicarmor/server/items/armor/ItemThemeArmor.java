@@ -7,6 +7,7 @@ import com.alexjw.thematicarmor.client.renderer.SiegeRendererManager;
 import com.alexjw.thematicarmor.server.armors.Armor;
 import com.alexjw.thematicarmor.server.helper.ThematicHelper;
 import com.alexjw.thematicarmor.server.items.ModItems;
+import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
@@ -161,6 +162,14 @@ public class ItemThemeArmor extends ItemArmor {
                 case 3:
                     armor = -0.025f;
                     break;
+            }
+            if(this.getArmor().getSpecialistSkill() != null) {
+                if (this.getArmor().getSpecialistSkill().equals(SpecialistManager.specialistLightfooted))
+                    speed = speed + 0.025f;
+            }
+            if(this.getArmor().getSpecialistSkill() != null) {
+                if (this.getArmor().getSpecialistSkill().equals(SpecialistManager.specialistTank))
+                    armor = armor + 1.0f;
             }
             multimap.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor speed", speed, 1));
             multimap.put(SharedMonsterAttributes.MAX_HEALTH.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor health", armor, 1));

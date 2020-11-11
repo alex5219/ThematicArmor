@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import java.util.Random;
 
 public class SpecialistOutlast extends SpecialistSkill {
-
     public SpecialistOutlast() {
         super("Outlast", "When this specialist is defeated, their death is delayed for 3 seconds, in which they can still attack and fight back");
     }
@@ -19,7 +18,7 @@ public class SpecialistOutlast extends SpecialistSkill {
         if(TAData.HAS_DIED.getBoolean(entityPlayer)) {
             TAData.incr(entityPlayer, TAData.TIME_DEAD);
 
-            if(TAData.TIME_DEAD.getInteger(entityPlayer) > 100) {
+            if(TAData.TIME_DEAD.getInteger(entityPlayer) > 120) {
                 TAData.HAS_DIED.replace(entityPlayer, false);
                 entityPlayer.setHealth(0);
             }
