@@ -1,9 +1,8 @@
 package com.alexjw.thematicarmor.server.specialists;
 
-import com.alexjw.thematicarmor.server.data.TAData;
+import com.alexjw.thematicarmor.server.data.TADataManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextComponentString;
 
 public class SpecialistTenacity extends SpecialistSkill {
     public SpecialistTenacity() {
@@ -12,6 +11,6 @@ public class SpecialistTenacity extends SpecialistSkill {
 
     @Override
     public void onUpdate(EntityPlayer entityPlayer, ItemStack itemStack) {
-        TAData.TENACITY.putIfAbsent(entityPlayer, false);
+        TADataManager.TENACITY.putIfAbsent(entityPlayer, false);
     }
 }

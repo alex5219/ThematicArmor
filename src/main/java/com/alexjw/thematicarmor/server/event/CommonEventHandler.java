@@ -1,7 +1,7 @@
 package com.alexjw.thematicarmor.server.event;
 
 import com.alexjw.thematicarmor.ThematicArmor;
-import com.alexjw.thematicarmor.server.data.TAData;
+import com.alexjw.thematicarmor.server.data.TADataManager;
 import com.alexjw.thematicarmor.server.enchantment.ModEnchantments;
 import com.alexjw.thematicarmor.server.helper.ThematicHelper;
 import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
@@ -287,8 +287,8 @@ public class CommonEventHandler {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onRespawn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent event) {
-        if (TAData.TENACITY.getBoolean(event.player)) {
-            TAData.TENACITY.put(event.player, false);
+        if (TADataManager.TENACITY.getBoolean(event.player)) {
+            TADataManager.TENACITY.put(event.player, false);
         }
     }
 
@@ -301,11 +301,11 @@ public class CommonEventHandler {
                 if (ThematicHelper.getTheme(entityPlayer) != null) {
                     if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
                         if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistOutlast)) {
-                            if (!TAData.HAS_DIED.getBoolean(entityPlayer)) {
+                            if (!TADataManager.HAS_DIED.getBoolean(entityPlayer)) {
                                 event.setCanceled(true);
                                 entityPlayer.setHealth(entityPlayer.getMaxHealth());
-                                TAData.HAS_DIED.put(entityPlayer, true);
-                                TAData.TIME_DEAD.put(entityPlayer, 0);
+                                TADataManager.HAS_DIED.put(entityPlayer, true);
+                                TADataManager.TIME_DEAD.put(entityPlayer, 0);
                             }
                         }
                     }
@@ -318,7 +318,7 @@ public class CommonEventHandler {
     public void vitalityLastDamage(LivingDamageEvent event) {
         if (event.getEntityLiving() instanceof EntityPlayer) {
             EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
-            TAData.LAST_HEAL.put(entityPlayer, 0);
+            TADataManager.LAST_HEAL.put(entityPlayer, 0);
         }
     }
 
@@ -331,10 +331,10 @@ public class CommonEventHandler {
                 if (ThematicHelper.getTheme(entityPlayer) != null) {
                     if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
                         if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistTenacity)) {
-                            if (!TAData.TENACITY.getBoolean(entityPlayer)) {
+                            if (!TADataManager.TENACITY.getBoolean(entityPlayer)) {
                                 event.setCanceled(true);
                                 entityPlayer.setHealth(entityPlayer.getMaxHealth() * 0.3f);
-                                TAData.TENACITY.put(entityPlayer, true);
+                                TADataManager.TENACITY.put(entityPlayer, true);
                             }
                         }
                     }
