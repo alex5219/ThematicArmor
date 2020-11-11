@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorAsh extends Armor {
     public ArmorAsh() {
-        super(true, SpecialistManager.specialistVitality);
+        super(true, SpecialistManager.specialistLightfooted);
     }
 
     public int getSpeed() {

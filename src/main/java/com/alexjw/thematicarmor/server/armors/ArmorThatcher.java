@@ -1,8 +1,10 @@
 package com.alexjw.thematicarmor.server.armors;
 
+import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
+
 public class ArmorThatcher extends Armor {
     public ArmorThatcher() {
-        super(true);
+        super(true, SpecialistManager.specialistNeutralize, SpecialistManager.specialistOutlast);
     }
 
     public int getSpeed() {

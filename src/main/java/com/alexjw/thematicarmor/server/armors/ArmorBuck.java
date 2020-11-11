@@ -1,8 +1,10 @@
 package com.alexjw.thematicarmor.server.armors;
 
+import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
+
 public class ArmorBuck extends Armor {
     public ArmorBuck() {
-        super(true);
+        super(true, SpecialistManager.specialistExecution, SpecialistManager.specialistPartingShot);
     }
 
     public int getSpeed() {

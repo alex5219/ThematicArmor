@@ -1,8 +1,10 @@
 package com.alexjw.thematicarmor.server.armors;
 
+import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
+
 public class ArmorCapitao extends Armor {
     public ArmorCapitao() {
-        super(true);
+        super(true, SpecialistManager.specialistFireStarter, SpecialistManager.specialistLightfooted);
     }
 
     public int getSpeed() {

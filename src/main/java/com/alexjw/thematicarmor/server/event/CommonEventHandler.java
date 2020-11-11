@@ -52,6 +52,25 @@ public class CommonEventHandler {
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
+    public void confuseEvent(LivingDamageEvent event) {
+        if (event.getSource().getImmediateSource() != null) {
+            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
+                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
+                if (ThematicHelper.getTheme(attacker) != null) {
+                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
+                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistFireStarter)) {
+                            if (random.nextInt(20) == 1) {
+                                event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(9), 30, 0));
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGH)
     public void executionEvent(LivingDamageEvent event) {
         if (event.getSource().getImmediateSource() != null) {
             if (event.getSource().getImmediateSource() instanceof EntityPlayer) {

@@ -4,6 +4,6 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorBatman extends Armor {
     public ArmorBatman() {
-        super(false, SpecialistManager.specialistOutlast);
+        super(false, SpecialistManager.specialistBuff, SpecialistManager.specialistDisarm, SpecialistManager.specialistAbsoluteDefense, SpecialistManager.specialistLightfooted, SpecialistManager.specialistSpider);
     }
 }

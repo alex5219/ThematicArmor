@@ -4,6 +4,7 @@ public class SpecialistManager {
     public static SpecialistAbsoluteDefense specialistAbsoluteDefense = new SpecialistAbsoluteDefense();
     public static SpecialistBuff specialistBuff = new SpecialistBuff();
     public static SpecialistDisarm specialistDisarm = new SpecialistDisarm();
+    public static SpecialistConfuse specialistConfuse = new SpecialistConfuse();
     public static SpecialistExecution specialistExecution = new SpecialistExecution();
     public static SpecialistFireStarter specialistFireStarter = new SpecialistFireStarter();
     public static SpecialistGuardian specialistGuardian = new SpecialistGuardian();

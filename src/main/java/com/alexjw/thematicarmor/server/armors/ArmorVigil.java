@@ -1,8 +1,10 @@
 package com.alexjw.thematicarmor.server.armors;
 
+import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
+
 public class ArmorVigil extends Armor {
     public ArmorVigil() {
-        super(true);
+        super(true, SpecialistManager.specialistLightfooted, SpecialistManager.specialistDisarm, SpecialistManager.specialistConfuse);
     }
 
     public int getSpeed() {
