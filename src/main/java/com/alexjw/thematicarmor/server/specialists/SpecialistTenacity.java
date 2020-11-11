@@ -13,6 +13,5 @@ public class SpecialistTenacity extends SpecialistSkill {
     @Override
     public void onUpdate(EntityPlayer entityPlayer, ItemStack itemStack) {
         TAData.TENACITY.putIfAbsent(entityPlayer, false);
-        entityPlayer.sendMessage(new TextComponentString("" + TAData.TENACITY.getBoolean(entityPlayer)));
     }
 }

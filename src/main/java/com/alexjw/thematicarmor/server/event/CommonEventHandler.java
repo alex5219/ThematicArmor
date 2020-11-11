@@ -12,9 +12,9 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -30,20 +30,49 @@ import static net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel;
 public class CommonEventHandler {
     private static Random random = new Random();
 
-    @SubscribeEvent (priority = EventPriority.HIGH)
+    @SubscribeEvent(priority = EventPriority.HIGH)
     public void onRespawn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent event) {
         if (TAData.TENACITY.getBoolean(event.player)) {
             TAData.TENACITY.put(event.player, false);
         }
     }
 
-    @SubscribeEvent (priority = EventPriority.HIGH)
-    public void onPlayerDamage(LivingDamageEvent event) {
-        if(event.getEntityLiving() instanceof EntityPlayer) {
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public void preventDeathOutlast(LivingDamageEvent event) {
+        if (event.getEntity() instanceof EntityPlayer) {
+            EntityPlayer entityPlayer = (EntityPlayer) event.getEntity();
+            if (event.getAmount() >= entityPlayer.getHealth()) {
+
+                if (ThematicHelper.getTheme(entityPlayer) != null) {
+                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
+                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().equals(SpecialistManager.specialistOutlast)) {
+                            if (!TAData.HAS_DIED.getBoolean(entityPlayer)) {
+                                event.setCanceled(true);
+                                entityPlayer.setHealth(entityPlayer.getMaxHealth());
+                                TAData.HAS_DIED.put(entityPlayer, true);
+                                TAData.TIME_DEAD.put(entityPlayer, 0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public void vitalityLastDamage(LivingDamageEvent event) {
+        if (event.getEntityLiving() instanceof EntityPlayer) {
             EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
             TAData.LAST_HEAL.put(entityPlayer, 0);
+        }
+    }
 
-            if(event.getAmount() >= entityPlayer.getHealth()) {
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public void extraHealthTenacity(LivingDamageEvent event) {
+        if (event.getEntityLiving() instanceof EntityPlayer) {
+            EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
+
+            if (event.getAmount() >= entityPlayer.getHealth()) {
                 if (ThematicHelper.getTheme(entityPlayer) != null) {
                     if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
                         if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().equals(SpecialistManager.specialistTenacity)) {
