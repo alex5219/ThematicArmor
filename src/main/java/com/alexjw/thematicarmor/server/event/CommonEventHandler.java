@@ -1,10 +1,12 @@
 package com.alexjw.thematicarmor.server.event;
 
 import com.alexjw.thematicarmor.ThematicArmor;
+import com.alexjw.thematicarmor.server.armors.Armor;
 import com.alexjw.thematicarmor.server.data.TADataManager;
 import com.alexjw.thematicarmor.server.enchantment.ModEnchantments;
 import com.alexjw.thematicarmor.server.helper.ThematicHelper;
 import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
+import com.alexjw.thematicarmor.server.specialists.SpecialistSkill;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,6 +26,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 
@@ -34,224 +37,137 @@ public class CommonEventHandler {
     private static Random random = new Random();
 
     @SubscribeEvent(priority = EventPriority.HIGH)
-    public void fireStarterEvent(LivingDamageEvent event) {
+    public void livingDamageEvent(LivingDamageEvent event) {
+        List<SpecialistSkill> attackerSkills = null;
+        Armor attackerArmor = null;
+        EntityPlayer attacker = null;
+        EntityPlayer victim = null;
+        Armor victimArmor = null;
+        List<SpecialistSkill> victimSkills = null;
         if (event.getSource().getImmediateSource() != null) {
             if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistFireStarter)) {
-                            if (random.nextInt(20) == 1) {
-                                event.getEntityLiving().setFire(2);
-                            }
-                        }
-                    }
-                }
+                attacker = (EntityPlayer) event.getSource().getImmediateSource();
+                attackerArmor = ThematicHelper.getTheme(attacker);
+                if (attackerArmor != null)
+                    attackerSkills = attackerArmor.getSpecialistSkill();
             }
         }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void confuseEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistFireStarter)) {
-                            if (random.nextInt(20) == 1) {
-                                event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(9), 30, 0));
-
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void executionEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistExecution)) {
-                            if (event.getEntityLiving().getHealth() <= event.getEntityLiving().getMaxHealth() * 0.8f) {
-                                if (random.nextBoolean()) {
-                                    event.setAmount(event.getEntityLiving().getHealth());
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void disarmEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistDisarm)) {
-                            if (event.getEntity() instanceof EntityPlayer) {
-                                if (random.nextInt(10) == 1) {
-                                    EntityPlayer victim = (EntityPlayer) event.getEntity();
-                                    ItemStack heldItem = victim.getHeldItemMainhand();
-                                    int slotToSwap = random.nextInt(26);
-                                    ItemStack slotItem = victim.inventory.getStackInSlot(slotToSwap);
-                                    victim.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, slotItem);
-                                    victim.inventory.setInventorySlotContents(slotToSwap, heldItem);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void buffEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer entityPlayer = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(entityPlayer) != null) {
-                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistBuff)) {
-                            event.setAmount(event.getAmount() * 0.1f);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void guardianDamageEvent(LivingDamageEvent event) {
         if (event.getEntity() instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
-            if (event.getSource().isExplosion()) {
-                if (ThematicHelper.getTheme(entityPlayer) != null) {
-                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistGuardian)) {
-                            if (random.nextBoolean()) {
-                                event.setCanceled(true);
-                            }
-                        }
-                    }
+            victim = (EntityPlayer) event.getEntity();
+            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
+                victimArmor = ThematicHelper.getTheme(victim);
+                if (victimArmor != null) {
+                    victimSkills = victimArmor.getSpecialistSkill();
                 }
             }
         }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void absoluteDefenseDamageEvent(LivingDamageEvent event) {
-        if (event.getEntity() instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
-            if (ThematicHelper.getTheme(entityPlayer) != null) {
-                if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistAbsoluteDefense)) {
-                        if (random.nextInt(20) == 1) {
+        if (attacker != null && victim != null) {
+            if (attackerSkills != null) {
+                /* Specialist Firestarter */
+                if (attackerSkills.contains(SpecialistManager.specialistFireStarter)) {
+                    if (random.nextInt(20) == 1) {
+                        victim.setFire(50);
+                    }
+                }
+                /* Specialist Infection */
+                if (attackerSkills.contains(SpecialistManager.specialistInfection)) {
+                    if (random.nextInt(20) == 1) {
+                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(9), 30, 0));
+                    }
+                }
+                /* Specialist Execution */
+                if (attackerSkills.contains(SpecialistManager.specialistExecution)) {
+                    if (event.getEntityLiving().getHealth() <= event.getEntityLiving().getMaxHealth() * 0.8f) {
+                        if (random.nextBoolean()) {
+                            event.setAmount(event.getEntityLiving().getHealth());
+                        }
+                    }
+                }
+                /* Specialist Disarm */
+                if (attackerSkills.contains(SpecialistManager.specialistDisarm)) {
+                    if (random.nextInt(10) == 1) {
+                        ItemStack heldItem = victim.getHeldItemMainhand();
+                        int slotToSwap = random.nextInt(26);
+                        ItemStack slotItem = victim.inventory.getStackInSlot(slotToSwap);
+                        victim.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, slotItem);
+                        victim.inventory.setInventorySlotContents(slotToSwap, heldItem);
+                    }
+                }
+                /* Specialist Buff */
+                if (attackerSkills.contains(SpecialistManager.specialistBuff)) {
+                    event.setAmount(event.getAmount() * 0.1f);
+                }
+            }
+            if (victimSkills != null) {
+                /* Specialist Guardian */
+                if (victimSkills.contains(SpecialistManager.specialistGuardian)) {
+                    if (event.getSource().isExplosion()) {
+                        if (random.nextBoolean()) {
                             event.setCanceled(true);
                         }
                     }
                 }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void infectionDamageEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistInfection)) {
-                            if (random.nextInt(20) == 1) {
-                                event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(19), 30, 0));
-                            }
+                /* Specialist Absolute Defense */
+                if (victimSkills.contains(SpecialistManager.specialistAbsoluteDefense)) {
+                    if (random.nextInt(20) == 1) {
+                        event.setCanceled(true);
+                    }
+                }
+                /* Specialist Infection */
+                if (victimSkills.contains(SpecialistManager.specialistInfection)) {
+                    if (random.nextInt(20) == 1) {
+                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(19), 30, 0));
+                    }
+                }
+                /* Specialist Neutralize */
+                if (victimSkills.contains(SpecialistManager.specialistNeutralize)) {
+                    if (random.nextInt(25) == 1) {
+                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(4), 30, 2));
+                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(2), 30, 2));
+                    }
+                }
+                /* Specialist Lifesteal */
+                if (victimSkills.contains(SpecialistManager.specialistLifesteal)) {
+                    if (random.nextBoolean()) {
+                        attacker.setHealth(attacker.getHealth() + (event.getAmount() * 0.1f));
+                    }
+                }
+                /* Specialist Parting Shot */
+                if (victimSkills.contains(SpecialistManager.specialistPartingShot)) {
+                    if (event.getAmount() >= victim.getHealth()) {
+                        attacker.setHealth(attacker.getHealth() - event.getAmount() * 3.0f);
+                    }
+                }
+                /* Specialist Payback */
+                if (victimSkills.contains(SpecialistManager.specialistPayback)) {
+                    if (event.getAmount() > 3.0f) {
+                        if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
+                            attacker.setHealth(attacker.getHealth() - event.getAmount() * 0.05f);
                         }
                     }
                 }
             }
         }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void neutralizeDamageEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistNeutralize)) {
-                            if (random.nextInt(25) == 1) {
-                                event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(4), 30, 2));
-                                event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(2), 30, 2));
-                            }
+        if (victim != null) {
+            if (victimSkills != null) {
+                /* Specialist Tenacity */
+                if (victimSkills.contains(SpecialistManager.specialistTenacity)) {
+                    if (event.getAmount() >= victim.getHealth()) {
+                        if (!TADataManager.TENACITY.getBoolean(victim)) {
+                            event.setCanceled(true);
+                            victim.setHealth(victim.getMaxHealth() * 0.3f);
+                            TADataManager.TENACITY.put(victim, true);
                         }
                     }
                 }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void lifeStealDamageEvent(LivingDamageEvent event) {
-        if (event.getSource().getImmediateSource() != null) {
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (ThematicHelper.getTheme(attacker) != null) {
-                    if (ThematicHelper.getTheme(attacker).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(attacker).getSpecialistSkill().contains(SpecialistManager.specialistLifesteal)) {
-                            if (random.nextBoolean()) {
-                                attacker.setHealth(attacker.getHealth() + (event.getAmount() * 0.1f));
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void partingShotDamageEvent(LivingDamageEvent event) {
-        if (event.getEntity() instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer) event.getEntity();
-            if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                if (event.getAmount() >= entityPlayer.getHealth()) {
-                    if (ThematicHelper.getTheme(entityPlayer) != null) {
-                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                            if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistPartingShot)) {
-                                attacker.setHealth(attacker.getHealth() - event.getAmount() * 3.0f);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void paybackDamageEvent(LivingDamageEvent event) {
-        if (event.getEntity() instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer) event.getEntity();
-
-            if (ThematicHelper.getTheme(entityPlayer) != null) {
-                if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistPayback)) {
-                        if(event.getAmount() > 3.0f) {
-                            if(event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                                EntityPlayer attacker = (EntityPlayer) event.getSource().getImmediateSource();
-                                attacker.setHealth(attacker.getHealth() - event.getAmount() * 0.05f);
-                            }
+                /* Specialist Outlast */
+                if (victimSkills.contains(SpecialistManager.specialistOutlast)) {
+                    if (event.getAmount() >= victim.getHealth()) {
+                        if (!TADataManager.HAS_DIED.getBoolean(victim)) {
+                            event.setCanceled(true);
+                            victim.setHealth(victim.getMaxHealth());
+                            TADataManager.HAS_DIED.put(victim, true);
+                            TADataManager.TIME_DEAD.put(victim, 0);
                         }
                     }
                 }
@@ -293,53 +209,10 @@ public class CommonEventHandler {
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
-    public void preventDeathOutlast(LivingDamageEvent event) {
-        if (event.getEntity() instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer) event.getEntity();
-            if (event.getAmount() >= entityPlayer.getHealth()) {
-
-                if (ThematicHelper.getTheme(entityPlayer) != null) {
-                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistOutlast)) {
-                            if (!TADataManager.HAS_DIED.getBoolean(entityPlayer)) {
-                                event.setCanceled(true);
-                                entityPlayer.setHealth(entityPlayer.getMaxHealth());
-                                TADataManager.HAS_DIED.put(entityPlayer, true);
-                                TADataManager.TIME_DEAD.put(entityPlayer, 0);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void vitalityLastDamage(LivingDamageEvent event) {
+    public void lastDamage(LivingDamageEvent event) {
         if (event.getEntityLiving() instanceof EntityPlayer) {
             EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
             TADataManager.LAST_HEAL.put(entityPlayer, 0);
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void extraHealthTenacity(LivingDamageEvent event) {
-        if (event.getEntityLiving() instanceof EntityPlayer) {
-            EntityPlayer entityPlayer = (EntityPlayer) event.getEntityLiving();
-
-            if (event.getAmount() >= entityPlayer.getHealth()) {
-                if (ThematicHelper.getTheme(entityPlayer) != null) {
-                    if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
-                        if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistTenacity)) {
-                            if (!TADataManager.TENACITY.getBoolean(entityPlayer)) {
-                                event.setCanceled(true);
-                                entityPlayer.setHealth(entityPlayer.getMaxHealth() * 0.3f);
-                                TADataManager.TENACITY.put(entityPlayer, true);
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 
