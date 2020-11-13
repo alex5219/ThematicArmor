@@ -95,7 +95,7 @@ public class CommonEventHandler {
                 }
                 /* Specialist Buff */
                 if (attackerSkills.contains(SpecialistManager.specialistBuff)) {
-                    event.setAmount(event.getAmount() * 0.1f);
+                    event.setAmount(event.getAmount() * 1.1f);
                 }
             }
             if (victimSkills != null) {
