@@ -41,7 +41,7 @@ public class ItemThemeArmor extends ItemArmor {
             UUID.fromString("D8499B04-0E66-4726-AB29-64469D734E0D"), UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"),
             UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150")};
     private final Armor armor;
-    private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("armor", "thematicArmor", 16384, new int[]{0, 12, 0, 0}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+    private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("armor", "thematicArmor", 16384, new int[]{15, 15, 15, 15}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
     private boolean isOperator;
 
     public ItemThemeArmor(Armor armor, boolean isOperator) {
@@ -82,11 +82,13 @@ public class ItemThemeArmor extends ItemArmor {
                     list.add("Speed: " + TextFormatting.WHITE + "***");
                     break;
             }
+            list.add("");
         }
         if(armor.getSpecialistSkill() != null) {
             for (SpecialistSkill specialistSkill : armor.getSpecialistSkill()) {
-                list.add("" + specialistSkill.getName());
+                list.add("" + TextFormatting.UNDERLINE + specialistSkill.getName());
                 list.add("" + specialistSkill.getLore());
+                list.add("");
             }
         }
     }
@@ -146,24 +148,24 @@ public class ItemThemeArmor extends ItemArmor {
             float speed = 0, armor = 0;
             switch (this.armor.getSpeed()) {
                 case 1:
-                    speed = -0.015f;
+                    speed = -0.060f;
                     break;
                 case 2:
                     speed = 0.0f;
                     break;
                 case 3:
-                    speed = 0.015f;
+                    speed = 0.060f;
                     break;
             }
             switch (this.armor.getArmor()) {
                 case 1:
-                    armor = -0.075f;
+                    armor = -0.25f;
                     break;
                 case 2:
-                    armor = -0.050f;
+                    armor = -0.2f;
                     break;
                 case 3:
-                    armor = -0.025f;
+                    armor = -0.15f;
                     break;
             }
             if(this.getArmor().getSpecialistSkill() != null) {

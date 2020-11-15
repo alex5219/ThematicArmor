@@ -1,6 +1,7 @@
 package com.alexjw.thematicarmor.server.specialists;
 
 import com.alexjw.thematicarmor.server.data.TADataManager;
+import com.alexjw.thematicarmor.server.helper.ThematicHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
@@ -10,15 +11,21 @@ public class SpecialistOutlast extends SpecialistSkill {
     }
 
     public void onUpdate(EntityPlayer entityPlayer, ItemStack itemStack) {
-        TADataManager.HAS_DIED.putIfAbsent(entityPlayer, false);
-        TADataManager.TIME_DEAD.putIfAbsent(entityPlayer, 0);
+        if (ThematicHelper.getTheme(entityPlayer) != null) {
+            if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill() != null) {
+                if (ThematicHelper.getTheme(entityPlayer).getSpecialistSkill().contains(SpecialistManager.specialistOutlast)) {
+                    TADataManager.HAS_DIED.putIfAbsent(entityPlayer, false);
+                    TADataManager.TIME_DEAD.putIfAbsent(entityPlayer, 0);
 
-        if(TADataManager.HAS_DIED.getBoolean(entityPlayer)) {
-            TADataManager.incr(entityPlayer, TADataManager.TIME_DEAD);
+                    if (TADataManager.HAS_DIED.getBoolean(entityPlayer)) {
+                        TADataManager.incr(entityPlayer, TADataManager.TIME_DEAD);
 
-            if(TADataManager.TIME_DEAD.getInteger(entityPlayer) > 120) {
-                TADataManager.HAS_DIED.replace(entityPlayer, false);
-                entityPlayer.setHealth(0);
+                        if (TADataManager.TIME_DEAD.getInteger(entityPlayer) > 120) {
+                            TADataManager.HAS_DIED.replace(entityPlayer, false);
+                            entityPlayer.setHealth(0);
+                        }
+                    }
+                }
             }
         }
     }
