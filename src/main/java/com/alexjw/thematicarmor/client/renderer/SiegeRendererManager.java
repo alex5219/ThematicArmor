@@ -4,6 +4,7 @@ import com.alexjw.thematicarmor.client.model.games.ModelMario;
 import com.alexjw.thematicarmor.client.model.operators.*;
 import com.alexjw.thematicarmor.client.model.southpark.ModelRandy;
 import com.alexjw.thematicarmor.client.model.supes.ModelBatman;
+import com.alexjw.thematicarmor.client.model.supes.ModelDeadpool;
 import com.alexjw.thematicarmor.client.model.theboys.ModelBillyButcher;
 import com.alexjw.thematicarmor.client.model.walkingdead.ModelRickGrimes;
 import com.alexjw.thematicarmor.server.armors.ArmorManager;
@@ -39,6 +40,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer randy = new SiegeRenderer(ArmorManager.spRandy, new ModelRandy());
     public static SiegeRenderer smokeelite = new SiegeRenderer(ArmorManager.operatorSmokeElite, new ModelOperatorSmokeElite());
     public static SiegeRenderer mario = new SiegeRenderer(ArmorManager.gameMario, new ModelMario());
+    public static SiegeRenderer deadpool = new SiegeRenderer(ArmorManager.armorDeadpool, new ModelDeadpool());
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
 

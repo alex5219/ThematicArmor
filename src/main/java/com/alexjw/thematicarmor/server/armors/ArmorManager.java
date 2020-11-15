@@ -30,6 +30,7 @@ public class ArmorManager {
     public static ArmorRandy spRandy = new ArmorRandy();
     public static ArmorSmokeElite operatorSmokeElite = new ArmorSmokeElite();
     public static ArmorMario gameMario = new ArmorMario();
+    public static ArmorDeadpool armorDeadpool = new ArmorDeadpool();
 
     public static void init() {
         for (Armor armor : armorArrayList) armor.init();
