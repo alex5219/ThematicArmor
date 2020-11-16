@@ -108,10 +108,6 @@ public class ThematicRenderPlayer extends RenderLivingBase<AbstractClientPlayer>
         GlStateManager.scale(0.9375F, 0.9375F, 0.9375F);
     }
 
-    protected void renderEntityName(AbstractClientPlayer p_renderEntityName_1_, double p_renderEntityName_2_, double p_renderEntityName_4_, double p_renderEntityName_6_, String p_renderEntityName_8_, double p_renderEntityName_9_) {
-        //super.renderEntityName(p_renderEntityName_1_, p_renderEntityName_2_, p_renderEntityName_4_, p_renderEntityName_6_, p_renderEntityName_8_, p_renderEntityName_9_);
-    }
-
     public void renderRightArm(AbstractClientPlayer p_renderRightArm_1_) {
         float f = 1.0F;
         GlStateManager.color(1.0F, 1.0F, 1.0F);
