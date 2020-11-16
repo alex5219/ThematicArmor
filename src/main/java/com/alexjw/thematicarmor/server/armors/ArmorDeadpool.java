@@ -4,6 +4,6 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorDeadpool extends Armor {
     public ArmorDeadpool() {
-        super(false, SpecialistManager.specialistLightfooted, SpecialistManager.specialistDisarm, SpecialistManager.specialistTenacity, SpecialistManager.specialistHealingFactor, SpecialistManager.specialistLifesteal, SpecialistManager.specialistHealingFactor, SpecialistManager.specialistVitality);
+        super(false, SpecialistManager.specialistLightfooted, SpecialistManager.specialistDisarm, SpecialistManager.specialistTenacity, SpecialistManager.specialistHealingFactor, SpecialistManager.specialistLifesteal, SpecialistManager.specialistExecution, SpecialistManager.specialistVitality, SpecialistManager.specialistBuff);
     }
 }
