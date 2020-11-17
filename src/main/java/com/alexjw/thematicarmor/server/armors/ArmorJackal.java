@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorJackal extends Armor {
     public ArmorJackal() {
-        super(true, SpecialistManager.specialistNeutralize, SpecialistManager.specialistDisarm, SpecialistManager.specialistPayback);
+        super(SpecialistManager.specialistNeutralize, SpecialistManager.specialistDisarm, SpecialistManager.specialistPayback);
     }
 
     public int getSpeed() {

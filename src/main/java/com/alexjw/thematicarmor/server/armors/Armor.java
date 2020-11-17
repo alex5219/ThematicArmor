@@ -1,12 +1,15 @@
 package com.alexjw.thematicarmor.server.armors;
 
 import com.alexjw.thematicarmor.ThematicArmor;
+import com.alexjw.thematicarmor.server.entity.IAttributeContainer;
 import com.alexjw.thematicarmor.server.items.armor.ItemThemeArmor;
 import com.alexjw.thematicarmor.server.specialists.SpecialistSkill;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -20,19 +23,16 @@ public class Armor {
     protected final Item chestplate;
     private int armor = 0;
     private int speed = 0;
-    private boolean isOperator;
     private List<SpecialistSkill> specialistSkill = new ArrayList<>();
 
-    public Armor(boolean isOperator) {
+    public Armor() {
         ArmorManager.armorArrayList.add(this);
-        this.chestplate = new ItemThemeArmor(this, isOperator);
-        this.isOperator = isOperator;
+        this.chestplate = new ItemThemeArmor(this);
     }
 
-    public Armor(boolean isOperator, SpecialistSkill... specialistSkill) {
+    public Armor(SpecialistSkill... specialistSkill) {
         ArmorManager.armorArrayList.add(this);
-        this.chestplate = new ItemThemeArmor(this, isOperator);
-        this.isOperator = isOperator;
+        this.chestplate = new ItemThemeArmor(this);
         this.specialistSkill = Arrays.asList(specialistSkill);
     }
 
@@ -77,5 +77,9 @@ public class Armor {
 
     public int getArmor() {
         return armor;
+    }
+
+    public void getAttributeModifiers(EntityPlayer entity, IAttributeContainer attributes)
+    {
     }
 }

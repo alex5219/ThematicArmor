@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorBuck extends Armor {
     public ArmorBuck() {
-        super(true, SpecialistManager.specialistExecution, SpecialistManager.specialistPartingShot);
+        super(SpecialistManager.specialistExecution, SpecialistManager.specialistPartingShot);
     }
 
     public int getSpeed() {

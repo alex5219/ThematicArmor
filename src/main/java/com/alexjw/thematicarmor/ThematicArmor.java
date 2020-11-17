@@ -21,6 +21,7 @@ public class ThematicArmor extends DummyModContainer {
     @SidedProxy(clientSide = "com.alexjw.thematicarmor.client.proxy.ClientProxy", serverSide = "com.alexjw.thematicarmor.server.proxy.ServerProxy")
     public static ServerProxy proxy;
     public Configuration configFile;
+    public static boolean isTGLoaded = false;
 
     public ThematicArmor() {
         super(new ModMetadata());
@@ -34,6 +35,7 @@ public class ThematicArmor extends DummyModContainer {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit();
+        isTGLoaded = Loader.isModLoaded("techguns");
     }
 
     @EventHandler

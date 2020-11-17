@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorRook extends Armor {
     public ArmorRook() {
-        super(true, SpecialistManager.specialistTank, SpecialistManager.specialistOutlast, SpecialistManager.specialistAbsoluteDefense);
+        super(SpecialistManager.specialistTank, SpecialistManager.specialistOutlast, SpecialistManager.specialistAbsoluteDefense);
     }
 
     public int getSpeed() {

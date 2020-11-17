@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorFinka extends Armor {
     public ArmorFinka() {
-        super(true, SpecialistManager.specialistOverheal, SpecialistManager.specialistVitality);
+        super(SpecialistManager.specialistOverheal, SpecialistManager.specialistVitality);
     }
 
     public int getSpeed() {

@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorMozzie extends Armor {
     public ArmorMozzie() {
-        super(true, SpecialistManager.specialistBuff, SpecialistManager.specialistNeutralize);
+        super(SpecialistManager.specialistBuff, SpecialistManager.specialistNeutralize);
     }
 
     public int getSpeed() {

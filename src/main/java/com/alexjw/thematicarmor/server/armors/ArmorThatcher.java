@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorThatcher extends Armor {
     public ArmorThatcher() {
-        super(true, SpecialistManager.specialistNeutralize, SpecialistManager.specialistOutlast);
+        super(SpecialistManager.specialistNeutralize, SpecialistManager.specialistOutlast);
     }
 
     public int getSpeed() {

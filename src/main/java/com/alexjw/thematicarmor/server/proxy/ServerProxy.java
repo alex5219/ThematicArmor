@@ -1,6 +1,7 @@
 package com.alexjw.thematicarmor.server.proxy;
 
 import com.alexjw.thematicarmor.server.armors.ArmorManager;
+import com.alexjw.thematicarmor.server.event.CommonEventHandler;
 import com.alexjw.thematicarmor.server.event.SpecialistHandler;
 import com.alexjw.thematicarmor.server.event.SoulboundHandler;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,6 +17,7 @@ public class ServerProxy {
         ArmorManager.init();
         this.registerEventHandler(new SpecialistHandler());
         this.registerEventHandler(new SoulboundHandler());
+        this.registerEventHandler(new CommonEventHandler());
     }
 
     public void init() {

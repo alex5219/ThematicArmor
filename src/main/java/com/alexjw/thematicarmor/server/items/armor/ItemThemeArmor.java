@@ -7,7 +7,6 @@ import com.alexjw.thematicarmor.client.renderer.SiegeRendererManager;
 import com.alexjw.thematicarmor.server.armors.Armor;
 import com.alexjw.thematicarmor.server.helper.ThematicHelper;
 import com.alexjw.thematicarmor.server.items.ModItems;
-import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 import com.alexjw.thematicarmor.server.specialists.SpecialistSkill;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.Minecraft;
@@ -19,7 +18,6 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
@@ -42,12 +40,10 @@ public class ItemThemeArmor extends ItemArmor {
             UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150")};
     private final Armor armor;
     private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("armor", "thematicArmor", 16384, new int[]{15, 15, 15, 15}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
-    private boolean isOperator;
 
-    public ItemThemeArmor(Armor armor, boolean isOperator) {
+    public ItemThemeArmor(Armor armor) {
         super(armorMaterial, 0, EntityEquipmentSlot.CHEST);
         this.armor = armor;
-        this.isOperator = isOperator;
         this.setUnlocalizedName(armor.getUnlocalizedName() + "_" + EntityEquipmentSlot.CHEST.toString().toLowerCase());
         this.setRegistryName(ThematicArmor.MODID, armor.getUnlocalizedName() + "_" + EntityEquipmentSlot.CHEST.toString().toLowerCase());
         if (!armor.isHidden()) {
@@ -67,7 +63,7 @@ public class ItemThemeArmor extends ItemArmor {
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack itemstack, World world, List list, ITooltipFlag iTooltipFlag) {
-        if(isOperator) {
+        if(armor.getSpeed() != 0 && armor.getArmor() != 0) {
             switch (armor.getSpeed()) {
                 case 1:
                     list.add("Armor: " + TextFormatting.WHITE + "***");
@@ -145,41 +141,8 @@ public class ItemThemeArmor extends ItemArmor {
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
         Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
         if (equipmentSlot == this.armorType) {
-            float speed = 0, armor = 0;
-            switch (this.armor.getSpeed()) {
-                case 1:
-                    speed = -0.060f;
-                    break;
-                case 2:
-                    speed = 0.0f;
-                    break;
-                case 3:
-                    speed = 0.060f;
-                    break;
-            }
-            switch (this.armor.getArmor()) {
-                case 1:
-                    armor = -0.25f;
-                    break;
-                case 2:
-                    armor = -0.2f;
-                    break;
-                case 3:
-                    armor = -0.15f;
-                    break;
-            }
-            if(this.getArmor().getSpecialistSkill() != null) {
-                if (this.getArmor().getSpecialistSkill().contains(SpecialistManager.specialistLightfooted))
-                    speed = speed + 0.025f;
-            }
-            if(this.getArmor().getSpecialistSkill() != null) {
-                if (this.getArmor().getSpecialistSkill().contains(SpecialistManager.specialistTank))
-                    armor = armor + 1.0f;
-            }
-            multimap.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor speed", speed, 1));
-            multimap.put(SharedMonsterAttributes.MAX_HEALTH.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], "Armor health", armor, 1));
+            this.getArmor().getAttributeModifiers(null, (attr, amount, operation) -> multimap.put(attr.getName(), new AttributeModifier(ARMOR_MODIFIERS[equipmentSlot.getIndex()], attr.getName(), amount, operation)));
         }
-
         return multimap;
     }
 }

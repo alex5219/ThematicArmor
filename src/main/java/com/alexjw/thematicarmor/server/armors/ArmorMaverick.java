@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorMaverick extends Armor {
     public ArmorMaverick() {
-        super(true, SpecialistManager.specialistFireStarter, SpecialistManager.specialistLightfooted);
+        super(SpecialistManager.specialistFireStarter, SpecialistManager.specialistLightfooted);
     }
 
     public int getSpeed() {

@@ -11,6 +11,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -53,22 +54,29 @@ public class SpecialistHandler {
             if (attackerSkills != null) {
                 /* Specialist Firestarter */
                 if (attackerSkills.contains(SpecialistManager.specialistFireStarter)) {
-                    if (random.nextInt(20) == 1) {
-                        victim.setFire(50);
+                    if (random.nextInt(10) == 1) {
+                        attacker.setFire(120);
                     }
                 }
                 /* Specialist Infection */
                 if (attackerSkills.contains(SpecialistManager.specialistInfection)) {
-                    if (random.nextInt(20) == 1) {
-                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(9), 30, 0));
+                    if (random.nextInt(10) == 1) {
+                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 100, 0));
                     }
                 }
                 /* Specialist Execution */
                 if (attackerSkills.contains(SpecialistManager.specialistExecution)) {
-                    if (event.getEntityLiving().getHealth() <= event.getEntityLiving().getMaxHealth() * 0.8f) {
+                    if (event.getEntityLiving().getHealth() <= event.getEntityLiving().getMaxHealth() * 0.3f) {
                         if (random.nextBoolean()) {
                             event.setAmount(event.getEntityLiving().getHealth());
                         }
+                    }
+                }
+                /* Specialist Neutralize */
+                if (attackerSkills.contains(SpecialistManager.specialistNeutralize)) {
+                    if (random.nextInt(10) == 1) {
+                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(4), 150, 2));
+                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(2), 150, 2));
                     }
                 }
                 /* Specialist Disarm */
@@ -84,6 +92,12 @@ public class SpecialistHandler {
                 /* Specialist Buff */
                 if (attackerSkills.contains(SpecialistManager.specialistBuff)) {
                     event.setAmount(event.getAmount() * 1.1f);
+                }
+                /* Specialist Lifesteal */
+                if (attackerSkills.contains(SpecialistManager.specialistLifesteal)) {
+                    if (random.nextBoolean()) {
+                        attacker.setHealth(attacker.getHealth() + (event.getAmount() * 0.25f));
+                    }
                 }
             }
             if (victimSkills != null) {
@@ -101,36 +115,17 @@ public class SpecialistHandler {
                         event.setCanceled(true);
                     }
                 }
-                /* Specialist Infection */
-                if (victimSkills.contains(SpecialistManager.specialistInfection)) {
-                    if (random.nextInt(20) == 1) {
-                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(19), 30, 0));
-                    }
-                }
-                /* Specialist Neutralize */
-                if (victimSkills.contains(SpecialistManager.specialistNeutralize)) {
-                    if (random.nextInt(25) == 1) {
-                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(4), 30, 2));
-                        event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(2), 30, 2));
-                    }
-                }
-                /* Specialist Lifesteal */
-                if (victimSkills.contains(SpecialistManager.specialistLifesteal)) {
-                    if (random.nextBoolean()) {
-                        attacker.setHealth(attacker.getHealth() + (event.getAmount() * 0.1f));
-                    }
-                }
                 /* Specialist Parting Shot */
                 if (victimSkills.contains(SpecialistManager.specialistPartingShot)) {
                     if (event.getAmount() >= victim.getHealth()) {
-                        attacker.setHealth(attacker.getHealth() - event.getAmount() * 3.0f);
+                        attacker.attackEntityFrom(DamageSource.causePlayerDamage(attacker), event.getAmount() * 3.0f);
                     }
                 }
                 /* Specialist Payback */
                 if (victimSkills.contains(SpecialistManager.specialistPayback)) {
                     if (event.getAmount() > 3.0f) {
                         if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
-                            attacker.setHealth(attacker.getHealth() - event.getAmount() * 0.05f);
+                            attacker.attackEntityFrom(DamageSource.causePlayerDamage(attacker), event.getAmount() * 0.25f);
                         }
                     }
                 }
@@ -154,6 +149,7 @@ public class SpecialistHandler {
                         if (!TADataManager.HAS_DIED.getBoolean(victim)) {
                             event.setCanceled(true);
                             victim.setHealth(victim.getMaxHealth());
+                            victim.attackEntityFrom(DamageSource.OUT_OF_WORLD, victim.getMaxHealth() * 10.0f);
                             TADataManager.HAS_DIED.put(victim, true);
                             TADataManager.TIME_DEAD.put(victim, 0);
                         }

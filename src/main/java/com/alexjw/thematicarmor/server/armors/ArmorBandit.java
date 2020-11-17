@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorBandit extends Armor {
     public ArmorBandit() {
-        super(true, SpecialistManager.specialistTenacity);
+        super(SpecialistManager.specialistTenacity);
     }
 
     public int getSpeed() {

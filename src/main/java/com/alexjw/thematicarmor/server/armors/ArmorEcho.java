@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorEcho extends Armor {
     public ArmorEcho() {
-        super(true, SpecialistManager.specialistConfuse, SpecialistManager.specialistSpider, SpecialistManager.specialistDisarm);
+        super(SpecialistManager.specialistConfuse, SpecialistManager.specialistSpider, SpecialistManager.specialistDisarm);
     }
 
     public int getSpeed() {

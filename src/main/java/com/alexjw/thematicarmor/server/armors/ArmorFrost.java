@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorFrost extends Armor {
     public ArmorFrost() {
-        super(true, SpecialistManager.specialistExecution, SpecialistManager.specialistLifesteal);
+        super(SpecialistManager.specialistExecution, SpecialistManager.specialistLifesteal);
     }
 
     public int getSpeed() {

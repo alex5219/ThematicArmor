@@ -4,7 +4,7 @@ import com.alexjw.thematicarmor.server.specialists.SpecialistManager;
 
 public class ArmorDoc extends Armor {
     public ArmorDoc() {
-        super(true, SpecialistManager.specialistTank, SpecialistManager.specialistOverheal, SpecialistManager.specialistHealingFactor);
+        super(SpecialistManager.specialistTank, SpecialistManager.specialistOverheal, SpecialistManager.specialistHealingFactor);
     }
 
     public int getSpeed() {
