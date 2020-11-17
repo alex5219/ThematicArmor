@@ -22,16 +22,14 @@ public class CommonEventHandler {
         EntityPlayer player = event.player;
 
         if (event.phase == TickEvent.Phase.END) {
-            if (!player.world.isRemote)
-            {
+            if (!player.world.isRemote) {
                 ThematicAttributes.applyModifiers(player);
             }
         }
     }
 
     @SubscribeEvent
-    public void onLivingJump(LivingEvent.LivingJumpEvent event)
-    {
+    public void onLivingJump(LivingEvent.LivingJumpEvent event) {
         EntityLivingBase entity = event.getEntityLiving();
         if (entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) entity;
@@ -47,41 +45,32 @@ public class CommonEventHandler {
     }
 
     @SubscribeEvent
-    public void onLivingHurt(LivingHurtEvent event)
-    {
+    public void onLivingHurt(LivingHurtEvent event) {
         EntityPlayer attacker = null;
 
-        if (event.getSource().getImmediateSource() instanceof EntityPlayer)
-        {
+        if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
             attacker = (EntityPlayer) event.getSource().getImmediateSource();
         }
 
         EntityLivingBase entity = event.getEntityLiving();
 
-        float originalAmount = event.getAmount();
-
-        if (attacker != null)
-        {
+        if (attacker != null) {
             Armor armor2 = ThematicHelper.getTheme(attacker);
 
-            if (ThematicServerUtils.isMeleeDamage(event.getSource()))
-            {
+            if (ThematicServerUtils.isMeleeDamage(event.getSource())) {
                 int i = 0;
 
-                if (entity != null)
-                {
+                if (entity != null) {
                     i += EnchantmentHelper.getKnockbackModifier(entity);
                 }
 
-                if (attacker.isSprinting())
-                {
+                if (attacker.isSprinting()) {
                     ++i;
                 }
 
                 float knockback = ThematicAttributes.KNOCKBACK.get(attacker, armor2, i);
 
-                if (knockback > 0)
-                {
+                if (knockback > 0) {
                     if (entity != null) {
                         entity.addVelocity(-MathHelper.sin(attacker.rotationYaw * (float) Math.PI / 180F) * knockback * 0.5, 0, MathHelper.cos(attacker.rotationYaw * (float) Math.PI / 180F) * knockback * 0.5);
                     }
@@ -89,12 +78,9 @@ public class CommonEventHandler {
 
                 event.setAmount(ThematicAttributes.ATTACK_DAMAGE.get(attacker, armor2, event.getAmount()));
 
-                if (ThematicHelper.isHoldingSword(attacker))
-                {
+                if (ThematicHelper.isHoldingSword(attacker)) {
                     event.setAmount(ThematicAttributes.SWORD_DAMAGE.get(attacker, armor2, event.getAmount()));
-                }
-                else
-                {
+                } else {
                     event.setAmount(ThematicAttributes.PUNCH_DAMAGE.get(attacker, armor2, event.getAmount()));
                 }
             }
