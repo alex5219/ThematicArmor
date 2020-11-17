@@ -24,11 +24,7 @@ public class ModelBillyButcher extends ModelBiped {
 		super(0.1f, 0.0f, 128, 128);
 		textureWidth = 128;
 		textureHeight = 128;
-		this.bipedLeftArm.mirror = false;
-		this.bipedLeftArm = new ModelRenderer(this);
-		this.bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-		this.bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 32, 48, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		this.bipedLeftArm.mirror = false;
+
 
 		bipedHeadHair = new ModelRenderer(this);
 		bipedHeadHair.setRotationPoint(0.0F, 24.0F, 0.0F);
