@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "Pictures/Chimichanga Texture",
-		"particle": "Pictures/Chimichanga Texture"
-	},
+      "0": "thematicarmor:items/drug_chimichanga",
+      "particle": "thematicarmor:items/drug_chimichanga"
+    },
 	"elements": [
 		{
 			"from": [7.2, 0.2, 7.2],

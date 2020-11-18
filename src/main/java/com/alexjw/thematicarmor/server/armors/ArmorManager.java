@@ -32,7 +32,7 @@ public class ArmorManager {
     public static ArmorMario gameMario = new ArmorMario();
     public static ArmorDeadpool armorDeadpool = new ArmorDeadpool();
 
-    public static void init() {
+    public static void registerArmor() {
         for (Armor armor : armorArrayList) armor.init();
     }
 }

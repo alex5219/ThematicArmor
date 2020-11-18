@@ -84,8 +84,8 @@ public class SpecialistHandler {
                 /* Specialist Neutralize */
                 if (attackerSkills.contains(SpecialistManager.specialistNeutralize)) {
                     if (random.nextInt(10) == 1) {
-                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(4), 150, 2));
-                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(2), 150, 2));
+                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(4), 150, 0));
+                        attacker.addPotionEffect(new PotionEffect(Potion.getPotionById(2), 150, 0));
                     }
                 }
                 /* Specialist Disarm */
