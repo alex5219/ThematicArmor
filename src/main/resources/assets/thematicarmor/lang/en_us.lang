@@ -1,7 +1,10 @@
 CREATIVE TABS:
 itemGroup.tabThematicArmors=Armors
 
-OPERATOR ITEMS:
+"FOOD ITEMS":
+item.drug_cimichanga.name=Chimichanga
+
+ARMOR ITEMS:
 armor.finka=Finka
 armor.bandit=Bandit
 armor.batman=Batman
@@ -31,5 +34,17 @@ armor.smokeelite=Smoke - Sanguine Arsenic
 armor.mario=Mario
 armor.randy=Randy Marsh
 armor.deadpool=Deadpool
+
 ENCHANTMENTS:
 enchantment.thematiccore.soulbound=Soulbound
+
+ATTRIBUTES:
+attribute.name.armor.attackDamage=Attack Damage
+attribute.name.armor.jumpHeight=Jump Height
+attribute.name.armor.bulletDamage=Bullet Damage
+attribute.name.armor.sprintSpeed=Sprint Speed
+attribute.name.armor.swordDamage=Sword Damage
+attribute.name.armor.maxHealth=Max Health
+attribute.name.armor.punchDamage=Punch Damage
+attribute.name.armor.bulletPenetration=Bullet Penetration
+attribute.name.armor.knockback=Knockback
