@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
+import techguns.damagesystem.TGDamageSource;
 
 import java.util.List;
 import java.util.Random;
@@ -47,6 +48,14 @@ public class SpecialistHandler {
                 victimArmor = ThematicHelper.getTheme(victim);
                 if (victimArmor != null) {
                     victimSkills = victimArmor.getSpecialistSkill();
+                }
+            }
+        }
+        if (ThematicArmor.isTGLoaded) {
+            if (event.getSource() instanceof TGDamageSource) {
+                TGDamageSource tgDamageSource = (TGDamageSource) event.getSource();
+                if (tgDamageSource.attacker instanceof EntityPlayer) {
+                    attacker = (EntityPlayer) tgDamageSource.attacker;
                 }
             }
         }

@@ -28,6 +28,10 @@ minecraft {
     mappings = "snapshot_20171003"
 }
 
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+
 processResources {
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
@@ -40,8 +44,4 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
-}
-
-dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
 }

@@ -14,6 +14,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
+import techguns.damagesystem.TGDamageSource;
 
 @Mod.EventBusSubscriber(modid = ThematicArmor.MODID)
 public class CommonEventHandler {
@@ -82,6 +83,17 @@ public class CommonEventHandler {
                     event.setAmount(ThematicAttributes.SWORD_DAMAGE.get(attacker, armor2, event.getAmount()));
                 } else {
                     event.setAmount(ThematicAttributes.PUNCH_DAMAGE.get(attacker, armor2, event.getAmount()));
+                }
+            }
+        }
+        if (ThematicArmor.isTGLoaded) {
+            if (event.getSource() instanceof TGDamageSource) {
+                TGDamageSource tgDamageSource = (TGDamageSource) event.getSource();
+                if (tgDamageSource.attacker instanceof EntityPlayer) {
+                    attacker = (EntityPlayer) tgDamageSource.attacker;
+                    Armor armor2 = ThematicHelper.getTheme(attacker);
+                    tgDamageSource.armorPenetration *= ThematicAttributes.BULLET_PENETRATION.get(attacker, armor2, tgDamageSource.armorPenetration);
+                    event.setAmount(ThematicAttributes.BULLET_PENETRATION.get(attacker, armor2, event.getAmount()));
                 }
             }
         }

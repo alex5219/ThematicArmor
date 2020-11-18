@@ -6,7 +6,6 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -21,6 +20,8 @@ public class ThematicAttributes {
     public static final ArmorAttribute PUNCH_DAMAGE = new ArmorAttribute("punchDamage", true);
     public static final ArmorAttribute SPRINT_SPEED = new ArmorAttribute("sprintSpeed", true);
     public static final ArmorAttribute SWORD_DAMAGE = new ArmorAttribute("swordDamage", true);
+    public static final ArmorAttribute BULLET_DAMAGE = new ArmorAttribute("bulletDamage", true);
+    public static final ArmorAttribute BULLET_PENETRATION = new ArmorAttribute("bulletPenetration", true);
 
     public static AttributeWrapper getAttribute(EntityPlayer entity, ArmorAttribute attribute) {
         return getAttribute(entity, ThematicHelper.getTheme(entity), attribute);
