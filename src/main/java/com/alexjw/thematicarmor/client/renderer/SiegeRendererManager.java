@@ -41,6 +41,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer smokeelite = new SiegeRenderer(ArmorManager.operatorSmokeElite, new ModelOperatorSmokeElite());
     public static SiegeRenderer mario = new SiegeRenderer(ArmorManager.gameMario, new ModelMario());
     public static SiegeRenderer deadpool = new SiegeRenderer(ArmorManager.armorDeadpool, new ModelDeadpool());
+
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
 

@@ -1,9 +1,10 @@
 package com.alexjw.thematicarmor.server.proxy;
 
 import com.alexjw.thematicarmor.server.armors.ArmorManager;
+import com.alexjw.thematicarmor.server.drugs.DrugManager;
 import com.alexjw.thematicarmor.server.event.CommonEventHandler;
-import com.alexjw.thematicarmor.server.event.SpecialistHandler;
 import com.alexjw.thematicarmor.server.event.SoulboundHandler;
+import com.alexjw.thematicarmor.server.event.SpecialistHandler;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -14,7 +15,8 @@ public class ServerProxy {
     }
 
     public void preInit() {
-        ArmorManager.init();
+        ArmorManager.registerArmor();
+        DrugManager.registerDrugs();
         this.registerEventHandler(new SpecialistHandler());
         this.registerEventHandler(new SoulboundHandler());
         this.registerEventHandler(new CommonEventHandler());
