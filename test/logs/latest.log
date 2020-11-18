@@ -1,138 +1,106 @@
-[16:05:21] [main/INFO]: Extra: []
-[16:05:21] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/brend/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
-[16:05:21] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[16:05:21] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[16:05:21] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
-[16:05:21] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[16:05:21] [main/INFO]: Forge Mod Loader version 14.23.5.2772 for Minecraft 1.12.2 loading
-[16:05:21] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_201, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_201\jre
-[16:05:21] [main/ERROR]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[16:05:21] [main/ERROR]: Full: C:\Users\brend\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[16:05:21] [main/ERROR]: Trimmed: c:/users/brend/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[16:05:21] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[16:05:21] [main/INFO]: Detected deobfuscated environment, loading log configs for colored console logs.
-[16:05:21] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugininecraftFormatting
-[16:05:21] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugininecraftFormatting
-[16:05:21] [main/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweakerinecraftFormatting
-[16:05:21] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugininecraftFormatting
-[16:05:21] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugininecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
-[16:05:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
-[16:05:22] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thinginecraftFormatting
-[16:05:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
-[16:05:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
-[16:05:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
-[16:05:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
-[16:05:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
-[16:05:22] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}inecraftFormatting
-[16:05:22] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: Player170inecraftFormatting
-[16:05:24] [main/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
-[16:05:24] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4inecraftFormatting
-[16:05:25] [main/INFO] [FML]: -- System Details --
+[16:42:21] [main/INFO]: Extra: []
+[16:42:21] [main/INFO]: Found and added coremod: techguns.core.TechgunsFMLPlugin
+[16:42:21] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/brend/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:42:21] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:42:21] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:42:21] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:42:21] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:42:21] [main/INFO]: Forge Mod Loader version 14.23.5.2772 for Minecraft 1.12.2 loading
+[16:42:21] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_201, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_201\jre
+[16:42:21] [main/ERROR]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[16:42:21] [main/ERROR]: Full: C:\Users\brend\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[16:42:21] [main/ERROR]: Trimmed: c:/users/brend/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[16:42:21] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[16:42:21] [main/INFO]: Detected deobfuscated environment, loading log configs for colored console logs.
+[16:42:21] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugininecraftFormatting
+[16:42:21] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugininecraftFormatting
+[16:42:21] [main/INFO] [FML]: Found a command line coremod : techguns.core.TechgunsFMLPlugininecraftFormatting
+[16:42:21] [main/INFO] [FML]: Ignoring missing certificate for coremod Techguns Core (techguns.core.TechgunsFMLPlugin), as this is probably a dev workspaceinecraftFormatting
+[16:42:21] [main/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweakerinecraftFormatting
+[16:42:21] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugininecraftFormatting
+[16:42:21] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugininecraftFormatting
+[16:42:21] [main/INFO] [GradleStart]: Injecting location in coremod techguns.core.TechgunsFMLPlugininecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
+[16:42:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
+[16:42:22] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thinginecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
+[16:42:22] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}inecraftFormatting
+[16:42:22] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: Player160inecraftFormatting
+[16:42:24] [main/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
+[16:42:24] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4inecraftFormatting
+[16:42:24] [main/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_201, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 262396664 bytes (250 MB) / 590872576 bytes (563 MB) up to 3799515136 bytes (3623 MB)
+	Memory: 217145808 bytes (207 MB) / 586678272 bytes (559 MB) up to 3799515136 bytes (3623 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
 	Loaded coremods (and transformers): 
+Techguns Core (techguns-1.12.2-2.0.2.0_pre3.2.jar)
+  techguns.core.TechgunsASMTransformer
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 432.00' Renderer: 'GeForce GTX 1060 6GB/PCIe/SSE2'inecraftFormatting
-[16:05:25] [main/INFO] [FML]: MinecraftForge v14.23.5.2772 InitializedinecraftFormatting
-[16:05:25] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.inecraftFormatting
-[16:05:25] [main/INFO] [FML]: Replaced 1036 ore ingredientsinecraftFormatting
-[16:05:25] [main/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Forge Mod Loader has identified 5 mods to loadinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, thematicarmor] at CLIENTinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, thematicarmor] at SERVERinecraftFormatting
-[16:05:26] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:ThematicArmorinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Processing ObjectHolder annotationsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Found 1168 ObjectHolder annotationsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Identifying ItemStackHolder annotationsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Found 0 ItemStackHolder annotationsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Configured a dormant chunk cache size of 0inecraftFormatting
-[16:05:26] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.jsoninecraftFormatting
-[16:05:26] [main/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Injecting itemstacksinecraftFormatting
-[16:05:26] [main/INFO] [FML]: Itemstack injection completeinecraftFormatting
-[16:05:27] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 125259700 nanosinecraftFormatting
-[16:05:27] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2854inecraftFormatting
-[16:05:28] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/breach_charge.ogg does not exist, cannot add it to event thematicarmor:breachchargeinecraftFormatting
-[16:05:28] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/thermite.ogg does not exist, cannot add it to event thematicarmor:thermiteinecraftFormatting
-[16:05:28] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/menu_music.ogg does not exist, cannot add it to event thematicarmor:menu_musicinecraftFormatting
-[16:05:28] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...inecraftFormatting
-[16:05:28] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenALinecraftFormatting
-[16:05:28] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)inecraftFormatting
-[16:05:28] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.inecraftFormatting
-[16:05:28] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine startedinecraftFormatting
-[16:05:30] [main/INFO] [FML]: Max texture size: 16384inecraftFormatting
-[16:05:30] [main/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 1024x1024 textures-atlasinecraftFormatting
-[16:05:31] [main/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:05:31] [main/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:05:31] [main/INFO] [FML]: Injecting itemstacksinecraftFormatting
-[16:05:31] [main/INFO] [FML]: Itemstack injection completeinecraftFormatting
-[16:05:31] [main/INFO] [FML]: Forge Mod Loader has successfully loaded 5 modsinecraftFormatting
-[16:05:31] [main/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
-[16:05:31] [main/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loadedinecraftFormatting
-[16:05:32] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session idinecraftFormatting
-[16:05:36] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2inecraftFormatting
-[16:05:36] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypairinecraftFormatting
-[16:05:36] [Server thread/INFO] [FML]: Injecting existing registry data into this server instanceinecraftFormatting
-[16:05:36] [Server thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:05:36] [Server thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:05:37] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@5d172d0a)inecraftFormatting
-[16:05:37] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancementsinecraftFormatting
-[16:05:37] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@5d172d0a)inecraftFormatting
-[16:05:37] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@5d172d0a)inecraftFormatting
-[16:05:37] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0inecraftFormatting
-[16:05:38] [Server thread/INFO] [FML]: Unloading dimension -1inecraftFormatting
-[16:05:38] [Server thread/INFO] [FML]: Unloading dimension 1inecraftFormatting
-[16:05:38] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10inecraftFormatting
-[16:05:39] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2inecraftFormatting
-[16:05:39] [Netty Server IO #1/INFO] [FML]: Client protocol version 2inecraftFormatting
-[16:05:39] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2772,mcp@9.42,thematicarmor@1.0.2inecraftFormatting
-[16:05:39] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection establishedinecraftFormatting
-[16:05:39] [Server thread/INFO] [FML]: [Server thread] Server side modded connection establishedinecraftFormatting
-[16:05:39] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player170[local:E:883aa338] logged in with entity id 215 at (1027.7368359135978, 77.61813811185147, -205.03446342177904)inecraftFormatting
-[16:05:39] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player170 joined the gameinecraftFormatting
-[16:05:40] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...inecraftFormatting
-[16:05:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
-[16:06:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player170 has made the advancement [Monster Hunter]inecraftFormatting
-[16:06:15] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player170 has made the advancement [Monster Hunter]inecraftFormatting
-[16:06:15] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 10 advancementsinecraftFormatting
-[16:06:16] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:06:29] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:06:31] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:06:38] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:10:58] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:11:17] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:11:31] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 15 advancementsinecraftFormatting
-[16:11:39] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...inecraftFormatting
-[16:11:39] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping serverinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving playersinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player170 lost connection: DisconnectedinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player170 left the gameinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged outinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worldsinecraftFormatting
-[16:11:40] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
-[16:11:40] [Server thread/INFO] [FML]: Unloading dimension 0inecraftFormatting
-[16:11:40] [Server thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[16:11:40] [Server thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[16:11:42] [main/INFO] [net.minecraft.client.Minecraft]: Stopping!inecraftFormatting
-[16:11:42] [main/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...inecraftFormatting
-[16:11:42] [main/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.cominecraftFormatting
+[16:42:24] [main/INFO] [FML]: MinecraftForge v14.23.5.2772 InitializedinecraftFormatting
+[16:42:24] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.inecraftFormatting
+[16:42:24] [main/INFO] [FML]: Replaced 1036 ore ingredientsinecraftFormatting
+[16:42:25] [main/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
+[16:42:25] [main/INFO] [FML]: Forge Mod Loader has identified 7 mods to loadinecraftFormatting
+[16:42:25] [main/FATAL] [FML]: net.minecraftforge.fml.common.MissingModsException: Mod techguns (Techguns) requires [forge@[14.23.5.2807,)]inecraftFormatting
+[16:42:25] [main/ERROR] [FML]: An exception was thrown, the game will display an error screen and halt.inecraftFormatting
+net.minecraftforge.fml.common.MissingModsException: Mod techguns (Techguns) requires [forge@[14.23.5.2807,)]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:264) ~[Loader.class:?]
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:570) ~[Loader.class:?]
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:232) [FMLClientHandler.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:466) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:377) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+[16:42:25] [main/WARN] [FML]: EventBus 0 shutting down - future events will not be posted.inecraftFormatting
+[16:42:25] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Techguns, FMLFileResourcePack:ThematicArmorinecraftFormatting
+[16:42:25] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderModel:482]: Successfully patched 2 arg RenderItem.RenderModel with ASMinecraftFormatting
+[16:42:25] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItem2:370]: Successfully patched 2 arg RenderItem.RenderItem with ASMinecraftFormatting
+[16:42:25] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItem:301]: Successfully patched 4 arg RenderItem.RenderItem with ASMinecraftFormatting
+[16:42:25] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItemGUI:425]: Successfully patched RenderItem.renderItemModelIntoGUI with ASMinecraftFormatting
+[16:42:26] [main/WARN] [FML]: There were errors previously. Not beginning mod initialization phaseinecraftFormatting
+[16:42:27] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 82788200 nanosinecraftFormatting
+[16:42:27] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File techguns:sounds/guns/shishkebap_swing_b.ogg does not exist, cannot add it to event techguns:guns.shishkebabfireinecraftFormatting
+[16:42:27] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File techguns:sounds/guns/shishkebap_swing_c.ogg does not exist, cannot add it to event techguns:guns.shishkebabfireinecraftFormatting
+[16:42:27] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/breach_charge.ogg does not exist, cannot add it to event thematicarmor:breachchargeinecraftFormatting
+[16:42:27] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/thermite.ogg does not exist, cannot add it to event thematicarmor:thermiteinecraftFormatting
+[16:42:27] [main/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/menu_music.ogg does not exist, cannot add it to event thematicarmor:menu_musicinecraftFormatting
+[16:42:27] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...inecraftFormatting
+[16:42:27] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderEntityItem:169]: Successfully patched RenderEntityItem with ASMinecraftFormatting
+[16:42:27] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderEntityItem:169]: Successfully patched RenderEntityItem with ASMinecraftFormatting
+[16:42:27] [main/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchItemRenderer_updateEquippedItem:530]: Successfully patched ItemRenderer.updateEquippedItem with ASMinecraftFormatting
+[16:42:27] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenALinecraftFormatting
+[16:42:27] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)inecraftFormatting
+[16:42:27] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.inecraftFormatting
+[16:42:27] [main/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loadedinecraftFormatting
+[16:42:27] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine startedinecraftFormatting
+[16:42:28] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session idinecraftFormatting
+[16:42:59] [main/INFO] [net.minecraft.client.Minecraft]: Stopping!inecraftFormatting
+[16:42:59] [main/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...inecraftFormatting
+[16:42:59] [main/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.cominecraftFormatting
