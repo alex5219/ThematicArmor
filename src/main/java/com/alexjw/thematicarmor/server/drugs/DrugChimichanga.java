@@ -4,6 +4,6 @@ import com.alexjw.thematicarmor.server.drugs.modifiers.DrugEffects;
 
 public class DrugChimichanga extends Drug {
     public DrugChimichanga() {
-        super(3, 8, 3, DrugEffects.drugEffectScramble, DrugEffects.drugEffectFire, DrugEffects.drugEffectPotion);
+        super(20, 8, 3, DrugEffects.drugEffectScramble, DrugEffects.drugEffectPotion);
     }
 }

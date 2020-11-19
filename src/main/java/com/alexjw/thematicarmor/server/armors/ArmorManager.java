@@ -31,6 +31,8 @@ public class ArmorManager {
     public static ArmorSmokeElite operatorSmokeElite = new ArmorSmokeElite();
     public static ArmorMario gameMario = new ArmorMario();
     public static ArmorDeadpool armorDeadpool = new ArmorDeadpool();
+    public static ArmorJoker armorJoker = new ArmorJoker();
+    public static ArmorAmongUs armorAmongUs = new ArmorAmongUs();
 
     public static void registerArmor() {
         for (Armor armor : armorArrayList) armor.init();
