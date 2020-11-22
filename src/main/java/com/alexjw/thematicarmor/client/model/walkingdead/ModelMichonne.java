@@ -27,14 +27,21 @@ public class ModelMichonne extends ModelBiped {
         super(0.1f, 0.0f, 128, 128);
         textureWidth = 128;
         textureHeight = 128;
+        this.bipedLeftLeg.mirror = false;
+        bipedLeftLeg = new ModelRenderer(this);
+        bipedLeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
+        bipedLeftLeg.cubeList.add(new ModelBox(bipedLeftLeg, 16, 48, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
+        this.bipedLeftLeg.mirror = false;
+
+
 
         bipedHeadDetail = new ModelRenderer(this);
         bipedHeadDetail.setRotationPoint(0.0F, 24.0F, 0.0F);
         bipedHead.addChild(bipedHeadDetail);
-        bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.0F, -31.5F, -4.5F, 1, 9, 1, 0.0F, false));
+        bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.0F, -31.5F, -4.5F, 1, 9, 1, 0.05F, false));
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 60, 6, -3.5F, -32.625F, -4.5F, 8, 2, 6, -0.075F, false));
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 60, 6, -3.5F, -32.625F, 1.25F, 8, 2, 3, -0.075F, false));
-        bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.5F, -31.5F, -3.75F, 1, 10, 1, 0.0F, false));
+        bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.5F, -31.5F, -3.825F, 1, 10, 1, 0.05F, false));
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.75F, -31.75F, -3.0F, 1, 10, 1, 0.0F, false));
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.5F, -31.75F, -2.0F, 1, 10, 1, 0.0F, false));
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 69, 5, 3.5F, -31.75F, -0.5F, 1, 10, 1, 0.0F, false));
@@ -168,7 +175,7 @@ public class ModelMichonne extends ModelBiped {
         bipedBodyDetail3 = new ModelRenderer(this);
         bipedBodyDetail3.setRotationPoint(2.75F, 16.25F, 0.0F);
         bipedBody.addChild(bipedBodyDetail3);
-        bipedBodyDetail3.cubeList.add(new ModelBox(bipedBodyDetail3, 99, 20, -3.2626F, -11.5267F, -2.25F, 1, 6, 1, -0.15F, false));
+        bipedBodyDetail3.cubeList.add(new ModelBox(bipedBodyDetail3, 99, 20, -3.2626F, -11.5267F, -2.45F, 1, 6, 1, -0.15F, false));
         bipedBodyDetail3.cubeList.add(new ModelBox(bipedBodyDetail3, 99, 20, -1.2626F, -6.1017F, -2.25F, 2, 1, 1, -0.025F, false));
         bipedBodyDetail3.cubeList.add(new ModelBox(bipedBodyDetail3, 99, 20, -0.5126F, -6.1267F, -2.25F, 2, 1, 1, -0.025F, false));
         bipedBodyDetail3.cubeList.add(new ModelBox(bipedBodyDetail3, 99, 20, -1.0126F, -8.3517F, -2.5F, 2, 1, 1, -0.3F, false));
