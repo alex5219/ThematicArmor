@@ -4,10 +4,7 @@ import com.alexjw.thematicarmor.client.model.games.ModelAmongUs;
 import com.alexjw.thematicarmor.client.model.games.ModelMario;
 import com.alexjw.thematicarmor.client.model.operators.*;
 import com.alexjw.thematicarmor.client.model.southpark.ModelRandy;
-import com.alexjw.thematicarmor.client.model.supes.ModelBatman;
-import com.alexjw.thematicarmor.client.model.supes.ModelDeadpool;
-import com.alexjw.thematicarmor.client.model.supes.ModelJoker;
-import com.alexjw.thematicarmor.client.model.supes.ModelTheLegend;
+import com.alexjw.thematicarmor.client.model.supes.*;
 import com.alexjw.thematicarmor.client.model.theboys.ModelBillyButcher;
 import com.alexjw.thematicarmor.client.model.walkingdead.ModelMichonne;
 import com.alexjw.thematicarmor.client.model.walkingdead.ModelRickGrimes;
@@ -49,6 +46,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer amongus = new SiegeRenderer(ArmorManager.armorAmongUs, new ModelAmongUs());
     public static SiegeRenderer thelegend = new SiegeRenderer(ArmorManager.armorTheLegend, new ModelTheLegend());
     public static SiegeRenderer michonne = new SiegeRenderer(ArmorManager.armorMichonne, new ModelMichonne());
+    public static SiegeRenderer catwoman = new SiegeRenderer(ArmorManager.armorCatwoman, new ModelCatwoman());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
