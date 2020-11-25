@@ -1,7 +1,7 @@
 package com.alexjw.thematicarmor.server.drugs;
 
 import com.alexjw.thematicarmor.server.drugs.modifiers.DrugEffect;
-import com.alexjw.thematicarmor.server.items.ItemDrug;
+import com.alexjw.thematicarmor.server.items.specials.ItemDrug;
 import net.minecraft.entity.player.EntityPlayer;
 
 import java.util.ArrayList;
@@ -11,8 +11,8 @@ import java.util.Random;
 public class Drug {
     public ItemDrug itemDrug;
     public ArrayList<DrugEffect> buffs;
-    private Random random = new Random();
-    private int count = 1;
+    public Random random = new Random();
+    public int count = 1;
 
     public Drug(int amount, float saturation, int count, DrugEffect... effects) {
         itemDrug = new ItemDrug(this, amount, saturation);

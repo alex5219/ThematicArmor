@@ -1,8 +1,9 @@
-package com.alexjw.thematicarmor.server.items;
+package com.alexjw.thematicarmor.server.items.specials;
 
 import com.alexjw.thematicarmor.ThematicArmor;
 import com.alexjw.thematicarmor.ThematicTabs;
 import com.alexjw.thematicarmor.server.drugs.Drug;
+import com.alexjw.thematicarmor.server.items.ModItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;

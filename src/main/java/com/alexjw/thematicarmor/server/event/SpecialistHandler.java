@@ -33,6 +33,7 @@ public class SpecialistHandler {
         EntityPlayer attacker = null;
         EntityPlayer victim = null;
         Armor victimArmor = null;
+
         List<SpecialistSkill> victimSkills = null;
         if (event.getSource().getImmediateSource() != null) {
             if (event.getSource().getImmediateSource() instanceof EntityPlayer) {
@@ -196,6 +197,7 @@ public class SpecialistHandler {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onRespawn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent event) {
+        TADataManager.TENACITY.put(event.player, false);
         if (TADataManager.TENACITY.getBoolean(event.player)) {
             TADataManager.TENACITY.put(event.player, false);
         }
