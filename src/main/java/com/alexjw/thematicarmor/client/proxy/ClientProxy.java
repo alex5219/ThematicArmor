@@ -1,5 +1,6 @@
 package com.alexjw.thematicarmor.client.proxy;
 
+import com.alexjw.thematicarmor.client.event.ClientEventHandler;
 import com.alexjw.thematicarmor.client.event.RenderHandler;
 import com.alexjw.thematicarmor.client.renderer.SiegeRendererManager;
 import com.alexjw.thematicarmor.server.proxy.ServerProxy;
@@ -19,6 +20,7 @@ public class ClientProxy extends ServerProxy {
         super.preInit();
         SiegeRendererManager.register();
         this.registerEventHandler(new RenderHandler());
+        this.registerEventHandler(new ClientEventHandler());
     }
 
     public void init() {

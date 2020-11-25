@@ -40,6 +40,8 @@ public class ItemThemeArmor extends ItemArmor {
             UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150")};
     private final Armor armor;
     private static final ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial("armor", "thematicArmor", 16384, new int[]{15, 15, 15, 15}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+    public static boolean hideSpecialists = false;
+    public static boolean hideStats = false;
 
     public ItemThemeArmor(Armor armor) {
         super(armorMaterial, 0, EntityEquipmentSlot.CHEST);
@@ -57,34 +59,42 @@ public class ItemThemeArmor extends ItemArmor {
     }
 
     @SideOnly(Side.CLIENT)
-    public String getItemStackDisplayName(ItemStack itemstack) {
-        return I18n.format(ThematicHelper.getThemeFromArmor(itemstack).getUnlocalizedName().replace('_', '.'));
+    public String getItemStackDisplayName(ItemStack itemStack) {
+        return I18n.format(ThematicHelper.getThemeFromArmor(itemStack).getUnlocalizedName().replace('_', '.'));
     }
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack itemstack, World world, List list, ITooltipFlag iTooltipFlag) {
-        if(armor.getSpeed() != 0 && armor.getArmor() != 0) {
-            switch (armor.getSpeed()) {
-                case 1:
-                    list.add("Armor: " + TextFormatting.WHITE + "***");
-                    list.add("Speed: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
-                    break;
-                case 2:
-                    list.add("Armor: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
-                    list.add("Speed: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
-                    break;
-                case 3:
-                    list.add("Armor: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
-                    list.add("Speed: " + TextFormatting.WHITE + "***");
-                    break;
-            }
-            list.add("");
-        }
-        if(armor.getSpecialistSkill() != null) {
-            for (SpecialistSkill specialistSkill : armor.getSpecialistSkill()) {
-                list.add("" + TextFormatting.UNDERLINE + specialistSkill.getName());
-                list.add("" + specialistSkill.getLore());
+        if (armor.getSpeed() != 0 && armor.getArmor() != 0) {
+            if (!hideStats) {
+                switch (armor.getSpeed()) {
+                    case 1:
+                        list.add("Armor: " + TextFormatting.WHITE + "***");
+                        list.add("Speed: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
+                        break;
+                    case 2:
+                        list.add("Armor: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
+                        list.add("Speed: " + TextFormatting.WHITE + "**" + TextFormatting.DARK_GRAY + "*");
+                        break;
+                    case 3:
+                        list.add("Armor: " + TextFormatting.WHITE + "*" + TextFormatting.DARK_GRAY + "**");
+                        list.add("Speed: " + TextFormatting.WHITE + "***");
+                        break;
+                }
                 list.add("");
+            } else {
+                list.add(TextFormatting.GRAY + "Hold " + TextFormatting.BLUE + "CNTR" + TextFormatting.GRAY + " to view stats.");
+            }
+        }
+        if (armor.getSpecialistSkill() != null) {
+            if (!hideSpecialists) {
+                for (SpecialistSkill specialistSkill : armor.getSpecialistSkill()) {
+                    list.add("" + TextFormatting.UNDERLINE + specialistSkill.getName());
+                    list.add("" + specialistSkill.getLore());
+                    list.add("");
+                }
+            } else {
+                list.add(TextFormatting.GRAY + "Hold " + TextFormatting.BLUE + "SHIFT" + TextFormatting.GRAY + " to view stats.");
             }
         }
     }
