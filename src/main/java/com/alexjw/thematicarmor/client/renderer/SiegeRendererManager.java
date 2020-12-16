@@ -2,6 +2,7 @@ package com.alexjw.thematicarmor.client.renderer;
 
 import com.alexjw.thematicarmor.client.model.games.ModelAmongUs;
 import com.alexjw.thematicarmor.client.model.games.ModelMario;
+import com.alexjw.thematicarmor.client.model.games.ModelWoods;
 import com.alexjw.thematicarmor.client.model.operators.*;
 import com.alexjw.thematicarmor.client.model.southpark.ModelRandy;
 import com.alexjw.thematicarmor.client.model.supes.*;
@@ -47,6 +48,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer thelegend = new SiegeRenderer(ArmorManager.armorTheLegend, new ModelTheLegend());
     public static SiegeRenderer michonne = new SiegeRenderer(ArmorManager.armorMichonne, new ModelMichonne());
     public static SiegeRenderer catwoman = new SiegeRenderer(ArmorManager.armorCatwoman, new ModelCatwoman());
+    public static SiegeRenderer woods = new SiegeRenderer(ArmorManager.armorWoods, new ModelWoods());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
