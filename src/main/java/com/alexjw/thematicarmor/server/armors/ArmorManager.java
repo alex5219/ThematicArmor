@@ -38,6 +38,7 @@ public class ArmorManager {
     public static ArmorCatwoman armorCatwoman = new ArmorCatwoman();
     public static ArmorWoods armorWoods = new ArmorWoods();
     public static ArmorJoel armorJoel = new ArmorJoel();
+    public static ArmorCptSparklez armorCptSparklez = new ArmorCptSparklez();
 
     public static void registerArmor() {
         for (Armor armor : armorArrayList) armor.init();
