@@ -1,10 +1,7 @@
 package com.alexjw.thematicarmor.client.renderer;
 
 import com.alexjw.thematicarmor.client.model.creators.ModelCptSparklez;
-import com.alexjw.thematicarmor.client.model.games.ModelAmongUs;
-import com.alexjw.thematicarmor.client.model.games.ModelJoel;
-import com.alexjw.thematicarmor.client.model.games.ModelMario;
-import com.alexjw.thematicarmor.client.model.games.ModelWoods;
+import com.alexjw.thematicarmor.client.model.games.*;
 import com.alexjw.thematicarmor.client.model.operators.*;
 import com.alexjw.thematicarmor.client.model.southpark.ModelRandy;
 import com.alexjw.thematicarmor.client.model.supes.*;
@@ -54,6 +51,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer joel = new SiegeRenderer(ArmorManager.armorJoel, new ModelJoel());
     public static SiegeRenderer cptsparklez = new SiegeRenderer(ArmorManager.armorCptSparklez, new ModelCptSparklez());
     public static SiegeRenderer greenarrow = new SiegeRenderer(ArmorManager.armorGreenArrow, new ModelGreenArrow());
+    public static SiegeRenderer scorpion = new SiegeRenderer(ArmorManager.armorScorpion, new ModelScorpion());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
