@@ -53,6 +53,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer woods = new SiegeRenderer(ArmorManager.armorWoods, new ModelWoods());
     public static SiegeRenderer joel = new SiegeRenderer(ArmorManager.armorJoel, new ModelJoel());
     public static SiegeRenderer cptsparklez = new SiegeRenderer(ArmorManager.armorCptSparklez, new ModelCptSparklez());
+    public static SiegeRenderer greenarrow = new SiegeRenderer(ArmorManager.armorGreenArrow, new ModelGreenArrow());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
