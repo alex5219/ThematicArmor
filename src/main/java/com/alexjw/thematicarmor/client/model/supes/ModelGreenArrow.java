@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 
 public class ModelGreenArrow extends ModelBiped {
     private final ModelRenderer bipedHeadDetail;
+    private final ModelRenderer bipedHeadDetail5;
     private final ModelRenderer bipedHeadDetail2;
     private final ModelRenderer bipedHeadDetail3;
     private final ModelRenderer bipedHeadDetail4;
@@ -20,6 +21,8 @@ public class ModelGreenArrow extends ModelBiped {
     private final ModelRenderer bipedBodyArrowSign2;
     private final ModelRenderer bipedBodyArrowSign3;
     private final ModelRenderer bipedBodyDetail;
+    private final ModelRenderer bipedRightArmArmor;
+    private final ModelRenderer bipedLeftArmArmor;
     private final ModelRenderer BipedRightLegArmor;
     private final ModelRenderer BipedLeftLegArmor;
 
@@ -29,13 +32,18 @@ public class ModelGreenArrow extends ModelBiped {
         textureWidth = 128;
         textureHeight = 128;
 
-
         bipedHeadDetail = new ModelRenderer(this);
         bipedHeadDetail.setRotationPoint(9.775F, 21.75F, 0.0F);
         bipedHead.addChild(bipedHeadDetail);
         setRotationAngle(bipedHeadDetail, 0.0F, 0.0F, -0.3927F);
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 11, 8, -1.9538F, -26.2309F, -4.3F, 2, 1, 1, 0.0F, false));
         bipedHeadDetail.cubeList.add(new ModelBox(bipedHeadDetail, 108, 64, -2.311F, -31.5035F, -4.55F, 4, 1, 1, 0.0F, false));
+
+        bipedHeadDetail5 = new ModelRenderer(this);
+        bipedHeadDetail5.setRotationPoint(24.0F, 7.875F, -0.25F);
+        bipedHead.addChild(bipedHeadDetail5);
+        setRotationAngle(bipedHeadDetail5, 0.0F, 0.0F, -0.7854F);
+        bipedHeadDetail5.cubeList.add(new ModelBox(bipedHeadDetail5, 114, 63, -6.9872F, -28.0349F, -4.3F, 1, 1, 1, 0.0F, false));
 
         bipedHeadDetail2 = new ModelRenderer(this);
         bipedHeadDetail2.setRotationPoint(13.25F, -24.3F, 0.0F);
@@ -172,6 +180,20 @@ public class ModelGreenArrow extends ModelBiped {
         bipedBodyDetail.cubeList.add(new ModelBox(bipedBodyDetail, 83, 13, 0.625F, -2.95F, 0.0F, 2, 1, 1, 0.175F, false));
         bipedBodyDetail.cubeList.add(new ModelBox(bipedBodyDetail, 83, 13, -3.875F, -2.95F, 0.0F, 2, 1, 1, 0.175F, false));
         bipedBodyDetail.cubeList.add(new ModelBox(bipedBodyDetail, 79, 14, -2.775F, 1.225F, -0.1F, 2, 1, 1, 0.0F, false));
+
+
+        bipedRightArmArmor = new ModelRenderer(this);
+        bipedRightArmArmor.setRotationPoint(5.0F, 22.0F, 0.0F);
+        bipedRightArm.addChild(bipedRightArmArmor);
+        bipedRightArmArmor.cubeList.add(new ModelBox(bipedRightArmArmor, 83, 19, -8.375F, -24.375F, -1.475F, 3, 3, 3, 0.025F, false));
+        bipedRightArmArmor.cubeList.add(new ModelBox(bipedRightArmArmor, 83, 19, -8.375F, -20.125F, -1.475F, 3, 6, 3, 0.025F, false));
+
+
+        bipedLeftArmArmor = new ModelRenderer(this);
+        bipedLeftArmArmor.setRotationPoint(-5.0F, 22.0F, 0.0F);
+        bipedLeftArm.addChild(bipedLeftArmArmor);
+        bipedLeftArmArmor.cubeList.add(new ModelBox(bipedLeftArmArmor, 78, 12, 5.375F, -24.375F, -1.475F, 3, 3, 3, 0.025F, false));
+        bipedLeftArmArmor.cubeList.add(new ModelBox(bipedLeftArmArmor, 86, 19, 5.375F, -20.125F, -1.475F, 3, 6, 3, 0.025F, false));
 
 
         BipedRightLegArmor = new ModelRenderer(this);

@@ -7,6 +7,7 @@ import com.alexjw.thematicarmor.client.model.southpark.ModelRandy;
 import com.alexjw.thematicarmor.client.model.supes.*;
 import com.alexjw.thematicarmor.client.model.theboys.ModelBillyButcher;
 import com.alexjw.thematicarmor.client.model.walkingdead.ModelMichonne;
+import com.alexjw.thematicarmor.client.model.walkingdead.ModelNegan;
 import com.alexjw.thematicarmor.client.model.walkingdead.ModelRickGrimes;
 import com.alexjw.thematicarmor.server.armors.ArmorManager;
 
@@ -52,6 +53,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer cptsparklez = new SiegeRenderer(ArmorManager.armorCptSparklez, new ModelCptSparklez());
     public static SiegeRenderer greenarrow = new SiegeRenderer(ArmorManager.armorGreenArrow, new ModelGreenArrow());
     public static SiegeRenderer scorpion = new SiegeRenderer(ArmorManager.armorScorpion, new ModelScorpion());
+    public static SiegeRenderer negan = new SiegeRenderer(ArmorManager.armorNegan, new ModelNegan());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();

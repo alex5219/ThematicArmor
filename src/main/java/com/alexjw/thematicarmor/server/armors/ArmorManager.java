@@ -41,6 +41,7 @@ public class ArmorManager {
     public static ArmorCptSparklez armorCptSparklez = new ArmorCptSparklez();
     public static ArmorGreenArrow armorGreenArrow = new ArmorGreenArrow();
     public static ArmorScorpion armorScorpion = new ArmorScorpion();
+    public static ArmorNegan armorNegan = new ArmorNegan();
 
     public static void registerArmor() {
         for (Armor armor : armorArrayList) armor.init();
