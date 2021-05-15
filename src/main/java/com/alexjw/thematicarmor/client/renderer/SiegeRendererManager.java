@@ -1,5 +1,6 @@
 package com.alexjw.thematicarmor.client.renderer;
 
+import com.alexjw.thematicarmor.client.model.Icons.ModelRonny;
 import com.alexjw.thematicarmor.client.model.creators.ModelCptSparklez;
 import com.alexjw.thematicarmor.client.model.games.*;
 import com.alexjw.thematicarmor.client.model.operators.*;
@@ -54,6 +55,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer greenarrow = new SiegeRenderer(ArmorManager.armorGreenArrow, new ModelGreenArrow());
     public static SiegeRenderer scorpion = new SiegeRenderer(ArmorManager.armorScorpion, new ModelScorpion());
     public static SiegeRenderer negan = new SiegeRenderer(ArmorManager.armorNegan, new ModelNegan());
+    public static SiegeRenderer ronny = new SiegeRenderer(ArmorManager.armorRonny, new ModelRonny());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
