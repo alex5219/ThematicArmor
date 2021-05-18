@@ -1,50 +1,50 @@
-[03:59:55] [main/INFO]: Extra: []
-[03:59:55] [main/INFO]: Found and added coremod: techguns.core.TechgunsFMLPlugin
-[03:59:55] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/brend/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
-[03:59:55] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[03:59:55] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[03:59:55] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
-[03:59:55] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[03:59:55] [main/INFO]: Forge Mod Loader version 14.23.5.2847 for Minecraft 1.12.2 loading
-[03:59:55] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_201, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_201\jre
-[03:59:55] [main/ERROR]: Apache Maven library folder was not in the format expected. Using default libraries directory.
-[03:59:55] [main/ERROR]: Full: C:\Users\brend\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
-[03:59:55] [main/ERROR]: Trimmed: c:/users/brend/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
-[03:59:55] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[03:59:55] [main/INFO]: Detected deobfuscated environment, loading log configs for colored console logs.
-[03:59:55] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugininecraftFormatting
-[03:59:55] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugininecraftFormatting
-[03:59:55] [main/INFO] [FML]: Found a command line coremod : techguns.core.TechgunsFMLPlugininecraftFormatting
-[03:59:55] [main/INFO] [FML]: Ignoring missing certificate for coremod Techguns Core (techguns.core.TechgunsFMLPlugin), as this is probably a dev workspaceinecraftFormatting
-[03:59:55] [main/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweakerinecraftFormatting
-[03:59:55] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugininecraftFormatting
-[03:59:55] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugininecraftFormatting
-[03:59:55] [main/INFO] [GradleStart]: Injecting location in coremod techguns.core.TechgunsFMLPlugininecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
-[03:59:55] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thinginecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
-[03:59:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
-[03:59:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
-[03:59:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
-[03:59:56] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
-[03:59:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
-[03:59:56] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}inecraftFormatting
-[03:59:56] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player20inecraftFormatting
-[03:59:57] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
-[03:59:57] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4inecraftFormatting
-[03:59:58] [Client thread/INFO] [FML]: -- System Details --
+[13:10:35] [main/INFO]: Extra: []
+[13:10:35] [main/INFO]: Found and added coremod: techguns.core.TechgunsFMLPlugin
+[13:10:35] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/brend/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[13:10:35] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[13:10:35] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[13:10:35] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[13:10:35] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[13:10:35] [main/INFO]: Forge Mod Loader version 14.23.5.2847 for Minecraft 1.12.2 loading
+[13:10:35] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_201, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_201\jre
+[13:10:35] [main/ERROR]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[13:10:35] [main/ERROR]: Full: C:\Users\brend\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[13:10:35] [main/ERROR]: Trimmed: c:/users/brend/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[13:10:35] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[13:10:35] [main/INFO]: Detected deobfuscated environment, loading log configs for colored console logs.
+[13:10:35] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugininecraftFormatting
+[13:10:35] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugininecraftFormatting
+[13:10:35] [main/INFO] [FML]: Found a command line coremod : techguns.core.TechgunsFMLPlugininecraftFormatting
+[13:10:35] [main/INFO] [FML]: Ignoring missing certificate for coremod Techguns Core (techguns.core.TechgunsFMLPlugin), as this is probably a dev workspaceinecraftFormatting
+[13:10:35] [main/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweakerinecraftFormatting
+[13:10:35] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugininecraftFormatting
+[13:10:35] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugininecraftFormatting
+[13:10:35] [main/INFO] [GradleStart]: Injecting location in coremod techguns.core.TechgunsFMLPlugininecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweakerinecraftFormatting
+[13:10:35] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
+[13:10:36] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thinginecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweakerinecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweakerinecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapperinecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweakerinecraftFormatting
+[13:10:36] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}inecraftFormatting
+[13:10:36] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player384inecraftFormatting
+[13:10:38] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
+[13:10:38] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4inecraftFormatting
+[13:10:38] [Client thread/INFO] [FML]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_201, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 245347344 bytes (233 MB) / 580911104 bytes (554 MB) up to 3799515136 bytes (3623 MB)
+	Memory: 251177936 bytes (239 MB) / 586678272 bytes (559 MB) up to 3799515136 bytes (3623 MB)
 	JVM Flags: 0 total; 
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -52,56 +52,56 @@ Details:
 Techguns Core (techguns-1.12.2-2.0.2.0_pre3.2.jar)
   techguns.core.TechgunsASMTransformer
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 456.71' Renderer: 'GeForce GTX 1060 6GB/PCIe/SSE2'inecraftFormatting
-[03:59:58] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2847 InitializedinecraftFormatting
-[03:59:58] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.inecraftFormatting
-[03:59:58] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...inecraftFormatting
-[03:59:58] [Client thread/INFO] [FML]: Replaced 1227 ore ingredientsinecraftFormatting
-[03:59:58] [Client thread/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
-[03:59:59] [Client thread/INFO] [FML]: Forge Mod Loader has identified 7 mods to loadinecraftFormatting
-[03:59:59] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, techguns_core, techguns, thematicarmor] at CLIENTinecraftFormatting
-[03:59:59] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, techguns_core, techguns, thematicarmor] at SERVERinecraftFormatting
-[03:59:59] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchItemRenderer_updateEquippedItem:530]: Successfully patched ItemRenderer.updateEquippedItem with ASMinecraftFormatting
-[03:59:59] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderModel:482]: Successfully patched 2 arg RenderItem.RenderModel with ASMinecraftFormatting
-[03:59:59] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItem2:370]: Successfully patched 2 arg RenderItem.RenderItem with ASMinecraftFormatting
-[03:59:59] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItem:301]: Successfully patched 4 arg RenderItem.RenderItem with ASMinecraftFormatting
-[03:59:59] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItemGUI:425]: Successfully patched RenderItem.renderItemModelIntoGUI with ASMinecraftFormatting
-[03:59:59] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Techguns, FMLFileResourcePack:ThematicArmorinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Processing ObjectHolder annotationsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Found 1187 ObjectHolder annotationsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotationsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotationsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0inecraftFormatting
-[04:00:00] [Forge Version Check/INFO] [forge.VersionCheck]: [techguns] Starting version check at https://raw.githubusercontent.com/pWn3d1337/Techguns2/master/update.jsoninecraftFormatting
-[04:00:00] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 21929200 nanosinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: OBJLoader: Domain techguns has been added.inecraftFormatting
-[04:00:00] [Forge Version Check/INFO] [forge.VersionCheck]: [techguns] Found status: AHEAD Target: nullinecraftFormatting
-[04:00:00] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.jsoninecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Injecting itemstacksinecraftFormatting
-[04:00:00] [Client thread/INFO] [FML]: Itemstack injection completeinecraftFormatting
-[04:00:01] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2855inecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File techguns:sounds/guns/shishkebap_swing_b.ogg does not exist, cannot add it to event techguns:guns.shishkebabfireinecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File techguns:sounds/guns/shishkebap_swing_c.ogg does not exist, cannot add it to event techguns:guns.shishkebabfireinecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/breach_charge.ogg does not exist, cannot add it to event thematicarmor:breachchargeinecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/thermite.ogg does not exist, cannot add it to event thematicarmor:thermiteinecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/menu_music.ogg does not exist, cannot add it to event thematicarmor:menu_musicinecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: techguns:guns.cyberdemonblasterreloadinecraftFormatting
-[04:00:02] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: techguns:jetpack.endinecraftFormatting
-[04:00:02] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...inecraftFormatting
-[04:00:02] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenALinecraftFormatting
-[04:00:02] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)inecraftFormatting
-[04:00:02] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.inecraftFormatting
-[04:00:02] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine startedinecraftFormatting
-[04:00:04] [Client thread/INFO] [FML]: Max texture size: 16384inecraftFormatting
-[04:00:05] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 2048x1024 textures-atlasinecraftFormatting
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant techguns:laserpistol#inventory for item "techguns:laserpistol", normal location exception: inecraftFormatting
+[13:10:38] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2847 InitializedinecraftFormatting
+[13:10:38] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.inecraftFormatting
+[13:10:38] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...inecraftFormatting
+[13:10:38] [Client thread/INFO] [FML]: Replaced 1227 ore ingredientsinecraftFormatting
+[13:10:39] [Client thread/INFO] [FML]: Searching C:\Users\brend\IdeaProjects\ThematicArmor\test\.\mods for modsinecraftFormatting
+[13:10:39] [Client thread/INFO] [FML]: Forge Mod Loader has identified 7 mods to loadinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, techguns_core, techguns, thematicarmor] at CLIENTinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, techguns_core, techguns, thematicarmor] at SERVERinecraftFormatting
+[13:10:40] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchItemRenderer_updateEquippedItem:530]: Successfully patched ItemRenderer.updateEquippedItem with ASMinecraftFormatting
+[13:10:40] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderModel:482]: Successfully patched 2 arg RenderItem.RenderModel with ASMinecraftFormatting
+[13:10:40] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItem2:370]: Successfully patched 2 arg RenderItem.RenderItem with ASMinecraftFormatting
+[13:10:40] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItem:301]: Successfully patched 4 arg RenderItem.RenderItem with ASMinecraftFormatting
+[13:10:40] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderItem_patchMethodRenderItemGUI:425]: Successfully patched RenderItem.renderItemModelIntoGUI with ASMinecraftFormatting
+[13:10:40] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Techguns, FMLFileResourcePack:ThematicArmorinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Processing ObjectHolder annotationsinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Found 1187 ObjectHolder annotationsinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotationsinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotationsinecraftFormatting
+[13:10:40] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0inecraftFormatting
+[13:10:40] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.jsoninecraftFormatting
+[13:10:41] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 100280000 nanosinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: OBJLoader: Domain techguns has been added.inecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Injecting itemstacksinecraftFormatting
+[13:10:41] [Client thread/INFO] [FML]: Itemstack injection completeinecraftFormatting
+[13:10:41] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2855inecraftFormatting
+[13:10:41] [Forge Version Check/INFO] [forge.VersionCheck]: [techguns] Starting version check at https://raw.githubusercontent.com/pWn3d1337/Techguns2/master/update.jsoninecraftFormatting
+[13:10:41] [Forge Version Check/INFO] [forge.VersionCheck]: [techguns] Found status: AHEAD Target: nullinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File techguns:sounds/guns/shishkebap_swing_b.ogg does not exist, cannot add it to event techguns:guns.shishkebabfireinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File techguns:sounds/guns/shishkebap_swing_c.ogg does not exist, cannot add it to event techguns:guns.shishkebabfireinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/breach_charge.ogg does not exist, cannot add it to event thematicarmor:breachchargeinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/thermite.ogg does not exist, cannot add it to event thematicarmor:thermiteinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundHandler]: File thematicarmor:sounds/menu_music.ogg does not exist, cannot add it to event thematicarmor:menu_musicinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: techguns:guns.cyberdemonblasterreloadinecraftFormatting
+[13:10:43] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: techguns:jetpack.endinecraftFormatting
+[13:10:43] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...inecraftFormatting
+[13:10:43] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenALinecraftFormatting
+[13:10:43] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)inecraftFormatting
+[13:10:43] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.inecraftFormatting
+[13:10:43] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine startedinecraftFormatting
+[13:10:45] [Client thread/INFO] [FML]: Max texture size: 16384inecraftFormatting
+[13:10:46] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 2048x1024 textures-atlasinecraftFormatting
+[13:10:46] [Client thread/ERROR] [FML]: Exception loading model for variant techguns:laserpistol#inventory for item "techguns:laserpistol", normal location exception: inecraftFormatting
 net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model techguns:item/laserpistol with loader VanillaLoader.INSTANCE, skipping
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
 	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
@@ -132,7 +132,7 @@ Caused by: java.io.FileNotFoundException: techguns:models/item/laserpistol.json
 	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
 	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant techguns:laserpistol#inventory for item "techguns:laserpistol", blockstate location exception: inecraftFormatting
+[13:10:46] [Client thread/ERROR] [FML]: Exception loading model for variant techguns:laserpistol#inventory for item "techguns:laserpistol", blockstate location exception: inecraftFormatting
 net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model techguns:laserpistol#inventory with loader VariantLoader.INSTANCE, skipping
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
 	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
@@ -160,240 +160,9 @@ Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$Missin
 	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
 	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant thematicarmor:armor_blackcanary_chest#inventory for item "thematicarmor:armor_blackcanary_chest", normal location exception: inecraftFormatting
-net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model thematicarmor:item/armor_blackcanary_chest with loader VanillaLoader.INSTANCE, skipping
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
-	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:513) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: com.google.gson.JsonSyntaxException: Expected scale[2] to be a Float, was ""
-	at net.minecraft.util.JsonUtils.getFloat(SourceFile:201) ~[JsonUtils.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.parseVector3f(ItemTransformVec3f.java:104) ~[ItemTransformVec3f$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.deserialize(ItemTransformVec3f.java:77) ~[ItemTransformVec3f$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.deserialize(ItemTransformVec3f.java:61) ~[ItemTransformVec3f$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:887) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.getTransform(ItemCameraTransforms.java:173) ~[ItemCameraTransforms$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.deserialize(ItemCameraTransforms.java:157) ~[ItemCameraTransforms$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.deserialize(ItemCameraTransforms.java:142) ~[ItemCameraTransforms$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:887) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock$Deserializer.deserialize(SourceFile:226) ~[ModelBlock$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock$Deserializer.deserialize(SourceFile:210) ~[ModelBlock$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at net.minecraft.util.JsonUtils.gsonDeserialize(SourceFile:492) ~[JsonUtils.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock.deserialize(SourceFile:61) ~[ModelBlock.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:338) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
-	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant thematicarmor:armor_blackcanary_chest#inventory for item "thematicarmor:armor_blackcanary_chest", blockstate location exception: inecraftFormatting
-net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model thematicarmor:armor_blackcanary_chest#inventory with loader VariantLoader.INSTANCE, skipping
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
-	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:513) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
-	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
-	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
-	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant thematicarmor:armor_blackcanary_chest#firstperson_lefthand for item "thematicarmor:armor_blackcanary_chest", normal location exception: inecraftFormatting
-net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model thematicarmor:item/armor_blackcanary_chest with loader VanillaLoader.INSTANCE, skipping
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
-	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:513) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: com.google.gson.JsonSyntaxException: Expected scale[2] to be a Float, was ""
-	at net.minecraft.util.JsonUtils.getFloat(SourceFile:201) ~[JsonUtils.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.parseVector3f(ItemTransformVec3f.java:104) ~[ItemTransformVec3f$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.deserialize(ItemTransformVec3f.java:77) ~[ItemTransformVec3f$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.deserialize(ItemTransformVec3f.java:61) ~[ItemTransformVec3f$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:887) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.getTransform(ItemCameraTransforms.java:173) ~[ItemCameraTransforms$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.deserialize(ItemCameraTransforms.java:157) ~[ItemCameraTransforms$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.deserialize(ItemCameraTransforms.java:142) ~[ItemCameraTransforms$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:887) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock$Deserializer.deserialize(SourceFile:226) ~[ModelBlock$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock$Deserializer.deserialize(SourceFile:210) ~[ModelBlock$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at net.minecraft.util.JsonUtils.gsonDeserialize(SourceFile:492) ~[JsonUtils.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock.deserialize(SourceFile:61) ~[ModelBlock.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:338) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
-	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant thematicarmor:armor_blackcanary_chest#firstperson_lefthand for item "thematicarmor:armor_blackcanary_chest", blockstate location exception: inecraftFormatting
-net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model thematicarmor:armor_blackcanary_chest#firstperson_lefthand with loader VariantLoader.INSTANCE, skipping
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
-	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:513) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
-	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
-	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
-	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant thematicarmor:armor_blackcanary_chest#thirdperson_righthand for item "thematicarmor:armor_blackcanary_chest", normal location exception: inecraftFormatting
-net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model thematicarmor:item/armor_blackcanary_chest with loader VanillaLoader.INSTANCE, skipping
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
-	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:513) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: com.google.gson.JsonSyntaxException: Expected scale[2] to be a Float, was ""
-	at net.minecraft.util.JsonUtils.getFloat(SourceFile:201) ~[JsonUtils.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.parseVector3f(ItemTransformVec3f.java:104) ~[ItemTransformVec3f$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.deserialize(ItemTransformVec3f.java:77) ~[ItemTransformVec3f$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemTransformVec3f$Deserializer.deserialize(ItemTransformVec3f.java:61) ~[ItemTransformVec3f$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:887) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.getTransform(ItemCameraTransforms.java:173) ~[ItemCameraTransforms$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.deserialize(ItemCameraTransforms.java:157) ~[ItemCameraTransforms$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ItemCameraTransforms$Deserializer.deserialize(ItemCameraTransforms.java:142) ~[ItemCameraTransforms$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:887) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock$Deserializer.deserialize(SourceFile:226) ~[ModelBlock$Deserializer.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock$Deserializer.deserialize(SourceFile:210) ~[ModelBlock$Deserializer.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[TreeTypeAdapter.class:?]
-	at net.minecraft.util.JsonUtils.gsonDeserialize(SourceFile:492) ~[JsonUtils.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBlock.deserialize(SourceFile:61) ~[ModelBlock.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:338) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
-	... 20 more
-[04:00:05] [Client thread/ERROR] [FML]: Exception loading model for variant thematicarmor:armor_blackcanary_chest#thirdperson_righthand for item "thematicarmor:armor_blackcanary_chest", blockstate location exception: inecraftFormatting
-net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model thematicarmor:armor_blackcanary_chest#thirdperson_righthand with loader VariantLoader.INSTANCE, skipping
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
-	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
-	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
-	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
-	at net.minecraft.client.Minecraft.init(Minecraft.java:513) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:378) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
-	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
-	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
-	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
-	... 20 more
-[04:00:05] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderEntityItem:169]: Successfully patched RenderEntityItem with ASMinecraftFormatting
-[04:00:05] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderEntityItem:169]: Successfully patched RenderEntityItem with ASMinecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:techguns_manual_altinecraftFormatting
+[13:10:46] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderEntityItem:169]: Successfully patched RenderEntityItem with ASMinecraftFormatting
+[13:10:46] [Client thread/INFO] [STDOUT]: [techguns.core.TechgunsASMTransformer:patchRenderEntityItem:169]: Successfully patched RenderEntityItem with ASMinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:techguns_manual_altinecraftFormatting
 com.google.gson.JsonSyntaxException: Unknown item 'patchouli:guide_book'
 	at net.minecraftforge.common.crafting.CraftingHelper.getItemStack(CraftingHelper.java:214) ~[CraftingHelper.class:?]
 	at net.minecraftforge.common.crafting.CraftingHelper.lambda$init$15(CraftingHelper.java:538) ~[CraftingHelper.class:?]
@@ -420,7 +189,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'patchouli:guide_book'
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
 	at GradleStart.main(GradleStart.java:25) [start/:?]
-[04:00:06] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:techguns_manualinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:techguns_manualinecraftFormatting
 com.google.gson.JsonSyntaxException: Unknown item 'patchouli:guide_book'
 	at net.minecraftforge.common.crafting.CraftingHelper.getItemStack(CraftingHelper.java:214) ~[CraftingHelper.class:?]
 	at net.minecraftforge.common.crafting.CraftingHelper.lambda$init$15(CraftingHelper.java:538) ~[CraftingHelper.class:?]
@@ -447,7 +216,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'patchouli:guide_book'
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
 	at GradleStart.main(GradleStart.java:25) [start/:?]
-[04:00:06] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:shishkebap_altinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:shishkebap_altinecraftFormatting
 com.google.gson.JsonSyntaxException: Unknown item 'techguns:shishkebap'
 	at net.minecraftforge.common.crafting.CraftingHelper.getItemStack(CraftingHelper.java:214) ~[CraftingHelper.class:?]
 	at net.minecraftforge.oredict.ShapedOreRecipe.factory(ShapedOreRecipe.java:254) ~[ShapedOreRecipe.class:?]
@@ -474,7 +243,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'techguns:shishkebap'
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
 	at GradleStart.main(GradleStart.java:25) [start/:?]
-[04:00:06] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:shishkebapinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML]: Parsing error loading recipe techguns:shishkebapinecraftFormatting
 com.google.gson.JsonSyntaxException: Unknown item 'techguns:shishkebap'
 	at net.minecraftforge.common.crafting.CraftingHelper.getItemStack(CraftingHelper.java:214) ~[CraftingHelper.class:?]
 	at net.minecraftforge.oredict.ShapedOreRecipe.factory(ShapedOreRecipe.java:254) ~[ShapedOreRecipe.class:?]
@@ -501,82 +270,92 @@ com.google.gson.JsonSyntaxException: Unknown item 'techguns:shishkebap'
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
 	at GradleStart.main(GradleStart.java:25) [start/:?]
-[04:00:06] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:06] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:06] [Client thread/INFO] [FML]: Injecting itemstacksinecraftFormatting
-[04:00:06] [Client thread/INFO] [FML]: Itemstack injection completeinecraftFormatting
-[04:00:06] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 7 modsinecraftFormatting
-[04:00:06] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
-[04:00:06] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loadedinecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: The following texture errors were found.inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   DOMAIN techgunsinecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: --------------------------------------------------inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   domain techguns is missing 16 texturesinecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     domain techguns has 1 location:inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       mod techguns resources at C:\Users\brend\IdeaProjects\ThematicArmor\libs\techguns-1.12.2-2.0.2.0_pre3.2.jarinecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     The missing resources for domain techguns are:inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/assaultriflemagazineempty.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazine_incendiary.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/assaultriflemagazine.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/dummy.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/door3x3.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/lmgmagazine_incendiary.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/rocket_high_velocity.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazine_explosive.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazineempty.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/lmgmagazineempty.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/lmgmagazine.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/rocket.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/rocket_nuke.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/assaultriflemagazine_incendiary.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazine.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/bunkerdoor.pnginecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     No other errors exist for domain techgunsinecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================inecraftFormatting
-[04:00:06] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=inecraftFormatting
-[04:00:07] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session idinecraftFormatting
-[04:00:09] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2inecraftFormatting
-[04:00:09] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypairinecraftFormatting
-[04:00:09] [Server thread/INFO] [FML]: Injecting existing registry data into this server instanceinecraftFormatting
-[04:00:09] [Server thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:09] [Server thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:09] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@2c2e9f6d)inecraftFormatting
-[04:00:09] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancementsinecraftFormatting
-[04:00:09] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@2c2e9f6d)inecraftFormatting
-[04:00:09] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@2c2e9f6d)inecraftFormatting
-[04:00:09] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0inecraftFormatting
-[04:00:10] [Server thread/INFO] [FML]: Unloading dimension -1inecraftFormatting
-[04:00:11] [Server thread/INFO] [FML]: Unloading dimension 1inecraftFormatting
-[04:00:11] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10inecraftFormatting
-[04:00:11] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
-[04:00:11] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
-[04:00:11] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
-[04:00:11] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
-[04:00:12] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2inecraftFormatting
-[04:00:12] [Netty Server IO #1/INFO] [FML]: Client protocol version 2inecraftFormatting
-[04:00:12] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 7 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2847,techguns_core@1.12.2-1.0,mcp@9.42,thematicarmor@1.0.2,techguns@2.0.2.0inecraftFormatting
-[04:00:12] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection establishedinecraftFormatting
-[04:00:12] [Server thread/INFO] [FML]: [Server thread] Server side modded connection establishedinecraftFormatting
-[04:00:12] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player20[local:E:c03a934f] logged in with entity id 218 at (413.7003752698033, 63.0, -88.40131450483813)inecraftFormatting
-[04:00:12] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player20 joined the gameinecraftFormatting
-[04:00:13] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...inecraftFormatting
-[04:00:13] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
-[04:00:18] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...inecraftFormatting
-[04:00:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping serverinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving playersinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player20 lost connection: DisconnectedinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player20 left the gameinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged outinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worldsinecraftFormatting
-[04:00:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
-[04:00:19] [Server thread/INFO] [FML]: Unloading dimension 0inecraftFormatting
-[04:00:19] [Server thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
-[04:00:19] [Server thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
-[04:00:21] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!inecraftFormatting
-[04:00:21] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...inecraftFormatting
-[04:00:21] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.cominecraftFormatting
+[13:10:47] [Client thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:10:47] [Client thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:10:47] [Client thread/INFO] [FML]: Injecting itemstacksinecraftFormatting
+[13:10:47] [Client thread/INFO] [FML]: Itemstack injection completeinecraftFormatting
+[13:10:47] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 7 modsinecraftFormatting
+[13:10:47] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:inecraftFormatting
+[13:10:47] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loadedinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: The following texture errors were found.inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   DOMAIN techgunsinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: --------------------------------------------------inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   domain techguns is missing 16 texturesinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     domain techguns has 1 location:inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       mod techguns resources at C:\Users\brend\IdeaProjects\ThematicArmor\libs\techguns-1.12.2-2.0.2.0_pre3.2.jarinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     The missing resources for domain techguns are:inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/assaultriflemagazineempty.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazine_incendiary.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/assaultriflemagazine.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/dummy.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/door3x3.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/lmgmagazine_incendiary.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/rocket_high_velocity.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazine_explosive.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazineempty.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/lmgmagazineempty.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/lmgmagazine.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/rocket.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/rocket_nuke.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/assaultriflemagazine_incendiary.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/as50magazine.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items/bunkerdoor.pnginecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     No other errors exist for domain techgunsinecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================inecraftFormatting
+[13:10:47] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=inecraftFormatting
+[13:10:48] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session idinecraftFormatting
+[13:11:08] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2inecraftFormatting
+[13:11:08] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypairinecraftFormatting
+[13:11:08] [Server thread/INFO] [FML]: Injecting existing registry data into this server instanceinecraftFormatting
+[13:11:08] [Server thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:11:08] [Server thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:11:08] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@5db0b708)inecraftFormatting
+[13:11:08] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancementsinecraftFormatting
+[13:11:08] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@5db0b708)inecraftFormatting
+[13:11:08] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@5db0b708)inecraftFormatting
+[13:11:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0inecraftFormatting
+[13:11:09] [Server thread/INFO] [FML]: Unloading dimension -1inecraftFormatting
+[13:11:09] [Server thread/INFO] [FML]: Unloading dimension 1inecraftFormatting
+[13:11:09] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10inecraftFormatting
+[13:11:10] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
+[13:11:10] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
+[13:11:10] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
+[13:11:10] [Server thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.player.EntityPlayer from class techguns.capabilities.TGExtendedPlayerinecraftFormatting
+[13:11:10] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2inecraftFormatting
+[13:11:10] [Netty Server IO #1/INFO] [FML]: Client protocol version 2inecraftFormatting
+[13:11:10] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 7 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2847,techguns_core@1.12.2-1.0,mcp@9.42,thematicarmor@1.0.2,techguns@2.0.2.0inecraftFormatting
+[13:11:10] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection establishedinecraftFormatting
+[13:11:10] [Server thread/INFO] [FML]: [Server thread] Server side modded connection establishedinecraftFormatting
+[13:11:10] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player384[local:E:29a24f4c] logged in with entity id 218 at (387.1582692395246, 63.0, -106.06397613829269)inecraftFormatting
+[13:11:10] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player384 joined the gameinecraftFormatting
+[13:11:12] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...inecraftFormatting
+[13:11:12] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
+[13:11:37] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] minecraft:vex, minecraft:villager, minecraft:villager_golem, minecraft:vindication_illagerinecraftFormatting
+[13:11:38] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] minecraft:vex, minecraft:villager, minecraft:villager_golem, minecraft:vindication_illagerinecraftFormatting
+[13:11:39] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [Player384: Object successfully summoned]inecraftFormatting
+[13:11:39] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Object successfully summonedinecraftFormatting
+[13:11:46] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] minecraft:diamond, minecraft:diamond_axe, minecraft:diamond_block, minecraft:diamond_boots, minecraft:diamond_chestplate, minecraft:diamond_helmet, minecraft:diamond_hoe, minecraft:diamond_horse_armor, minecraft:diamond_leggings, minecraft:diamond_ore, minecraft:diamond_pickaxe, minecraft:diamond_shovel, minecraft:diamond_sword, minecraft:dirt, minecraft:dispenserinecraftFormatting
+[13:11:48] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] minecraft:diamond_shovel, minecraft:diamond_swordinecraftFormatting
+[13:11:48] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] minecraft:diamond_shovel, minecraft:diamond_swordinecraftFormatting
+[13:11:49] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [Player384: Given [Diamond Sword] * 1 to Player384]inecraftFormatting
+[13:11:49] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Given [Diamond Sword] * 1 to Player384inecraftFormatting
+[13:11:51] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 9 advancementsinecraftFormatting
+[13:12:19] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...inecraftFormatting
+[13:12:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping serverinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving playersinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player384 lost connection: DisconnectedinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player384 left the gameinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged outinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worldsinecraftFormatting
+[13:12:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworldinecraftFormatting
+[13:12:21] [Server thread/INFO] [FML]: Unloading dimension 0inecraftFormatting
+[13:12:21] [Server thread/INFO] [FML]: Applying holder lookupsinecraftFormatting
+[13:12:21] [Server thread/INFO] [FML]: Holder lookups appliedinecraftFormatting
+[13:12:23] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!inecraftFormatting
+[13:12:23] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...inecraftFormatting
+[13:12:23] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.cominecraftFormatting

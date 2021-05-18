@@ -44,6 +44,8 @@ public class ArmorManager {
     public static ArmorNegan armorNegan = new ArmorNegan();
     public static ArmorRonny armorRonny = new ArmorRonny();
     public static ArmorBlackCanary armorBlackCanary = new ArmorBlackCanary();
+    public static ArmorHerobrine armorHerobrine = new ArmorHerobrine();
+
 
     public static void registerArmor() {
         for (Armor armor : armorArrayList) armor.init();

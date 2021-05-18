@@ -806,7 +806,7 @@
 			"scale": [0.15, 0.15, 0.15]
 		},
 		"firstperson_lefthand": {
-			"scale": [0.15, 0.15, ""]
+			"scale": [0.15, 0.15, 0.15]
 		},
 		"ground": {
 			"translation": [0, -1, 0],

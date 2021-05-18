@@ -57,7 +57,7 @@ public class SiegeRendererManager {
     public static SiegeRenderer negan = new SiegeRenderer(ArmorManager.armorNegan, new ModelNegan());
     public static SiegeRenderer ronny = new SiegeRenderer(ArmorManager.armorRonny, new ModelRonny());
     public static SiegeRenderer blackcanary = new SiegeRenderer(ArmorManager.armorBlackCanary, new ModelBlackCanary());
-
+    public static SiegeRenderer herobrine = new SiegeRenderer(ArmorManager.armorHerobrine, new ModelHerobrine());
 
     public static void register() {
         Field[] fields = SiegeRendererManager.class.getFields();
